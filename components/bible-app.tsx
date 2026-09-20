@@ -1,17 +1,19 @@
 "use client";
 
-import { useDeferredValue, useEffect, useMemo, useState } from "react";
+import { useCallback, useDeferredValue, useEffect, useMemo, useState } from "react";
 import {
-  BookOpen, BookText, ChevronLeft, ChevronRight, Download, FileText,
-  GraduationCap, Highlighter, Info, MessageSquareText, Palette,
-  Search, Sparkles, X,
+  BarChart3, BookOpen, BookText, ChevronLeft, ChevronRight, Download,
+  ExternalLink, FileText, GraduationCap, Highlighter, Info, LogIn, LogOut,
+  MessageSquareText, Palette, Save, Search, ShieldCheck, Sparkles, UserRound, X,
 } from "lucide-react";
+import type { User } from "@supabase/supabase-js";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Sheet, SheetContent, SheetHeader, SheetTitle } from "@/components/ui/sheet";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
 import { BOOK_INFO, BOOK_NAMES, ORIGINAL_WORDS, STUDIES, TOPICS, type ScriptureRef } from "@/lib/bible-content";
+import { supabase } from "@/lib/supabase";
 
 type BibleVerse = { number: number; text: string };
 type BibleChapter = { chapter: number; verses: BibleVerse[] };
@@ -27,6 +29,14 @@ type View = "bible" | "dictionary" | "topics" | "studies" | "appeal";
 type Theme = "default" | "brown" | "red" | "black";
 type Annotation = { color?: string; note?: string };
 type VerseSelection = { book: number; chapter: number; verse: BibleVerse };
+type AuthMode = "login" | "register";
+type StatsRange = "day" | "month" | "year" | "all";
+type SiteSettings = {
+  external_button_label: string;
+  external_button_url: string;
+  information_content: string;
+};
+type AccessStats = { guest: number; registered: number; total: number; users: number };
 
 const COLORS = [
   { name: "Amarelo", value: "#F8E58C" }, { name: "Azul", value: "#9FD6F5" },
@@ -37,6 +47,22 @@ const COLORS = [
 const themeLabels: Record<Theme, string> = { default: "Padrão", brown: "Marrom", red: "Vermelho", black: "Preto" };
 const normalize = (value: string) => value.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
 const verseKey = (book: number, chapter: number, verse: number) => `${book}-${chapter}-${verse}`;
+const defaultSettings: SiteSettings = { external_button_label: "", external_button_url: "", information_content: "" };
+
+function getVisitorId() {
+  const key = "lm-bible-visitor-id";
+  const existing = localStorage.getItem(key);
+  if (existing) return existing;
+  const created = crypto.randomUUID();
+  localStorage.setItem(key, created);
+  return created;
+}
+
+function brazilDate(date = new Date()) {
+  return new Intl.DateTimeFormat("en-CA", {
+    timeZone: "America/Sao_Paulo", year: "numeric", month: "2-digit", day: "2-digit",
+  }).format(date);
+}
 
 function loadLocal<T>(key: string, fallback: T): T {
   if (typeof window === "undefined") return fallback;
@@ -61,6 +87,24 @@ export function BibleApp() {
   const [annotations, setAnnotations] = useState<Record<string, Annotation>>({});
   const [noteDraft, setNoteDraft] = useState("");
   const [status, setStatus] = useState("");
+  const [authReady, setAuthReady] = useState(false);
+  const [authOpen, setAuthOpen] = useState(false);
+  const [authMode, setAuthMode] = useState<AuthMode>("login");
+  const [authName, setAuthName] = useState("");
+  const [authEmail, setAuthEmail] = useState("");
+  const [authPassword, setAuthPassword] = useState("");
+  const [authMessage, setAuthMessage] = useState("");
+  const [authBusy, setAuthBusy] = useState(false);
+  const [user, setUser] = useState<User | null>(null);
+  const [profileName, setProfileName] = useState("");
+  const [isAdmin, setIsAdmin] = useState(false);
+  const [adminOpen, setAdminOpen] = useState(false);
+  const [statsRange, setStatsRange] = useState<StatsRange>("month");
+  const [stats, setStats] = useState<AccessStats>({ guest: 0, registered: 0, total: 0, users: 0 });
+  const [statsLoading, setStatsLoading] = useState(false);
+  const [settings, setSettings] = useState<SiteSettings>(defaultSettings);
+  const [settingsDraft, setSettingsDraft] = useState<SiteSettings>(defaultSettings);
+  const [settingsBusy, setSettingsBusy] = useState(false);
   const deferredSearchText = useDeferredValue(searchText);
   const deferredDictionarySearch = useDeferredValue(dictionarySearch);
 
@@ -75,12 +119,70 @@ export function BibleApp() {
       setBible(bibleData as BibleData);
       setDictionary(dictionaryData as DictionaryData);
     });
-    setAnnotations(loadLocal("lm-bible-annotations", {}));
+    setAnnotations(loadLocal<Record<string, Annotation>>("lm-bible-annotations", {}));
     setTheme(loadLocal<Theme>("lm-bible-theme", "default"));
   }, []);
 
-  useEffect(() => { localStorage.setItem("lm-bible-annotations", JSON.stringify(annotations)); }, [annotations]);
+  useEffect(() => {
+    if (authReady && !user) localStorage.setItem("lm-bible-annotations", JSON.stringify(annotations));
+  }, [annotations, authReady, user]);
   useEffect(() => { localStorage.setItem("lm-bible-theme", JSON.stringify(theme)); }, [theme]);
+
+  const recordAccess = useCallback(async (currentUser: User | null) => {
+    const accessType = currentUser ? "registered" : "guest";
+    await supabase.from("access_logs").upsert({
+      visitor_id: getVisitorId(), access_date: brazilDate(), access_type: accessType,
+      user_id: currentUser?.id ?? null,
+    }, { onConflict: "visitor_id,access_date,access_type", ignoreDuplicates: true });
+  }, []);
+
+  const loadAccount = useCallback(async (currentUser: User | null) => {
+    setUser(currentUser);
+    if (!currentUser) {
+      setProfileName("");
+      setIsAdmin(false);
+      setAnnotations(loadLocal<Record<string, Annotation>>("lm-bible-annotations", {}));
+      await recordAccess(null);
+      return;
+    }
+
+    const [{ data: profile }, { data: adminRow }, { data: cloudRows }] = await Promise.all([
+      supabase.from("profiles").select("name").eq("id", currentUser.id).maybeSingle(),
+      supabase.from("admin_users").select("user_id").eq("user_id", currentUser.id).maybeSingle(),
+      supabase.from("annotations").select("verse_key,color,note").eq("user_id", currentUser.id),
+    ]);
+    setProfileName(profile?.name || currentUser.user_metadata?.name || "Usuário");
+    setIsAdmin(Boolean(adminRow));
+
+    const cloud: Record<string, Annotation> = Object.fromEntries((cloudRows || []).map((row) => [row.verse_key, {
+      color: row.color || undefined, note: row.note || undefined,
+    }]));
+    const migrationKey = `lm-bible-migrated-${currentUser.id}`;
+    const guest = loadLocal<Record<string, Annotation>>("lm-bible-annotations", {});
+    const merged = localStorage.getItem(migrationKey) ? cloud : { ...cloud, ...guest };
+    if (!localStorage.getItem(migrationKey) && Object.keys(guest).length) {
+      await supabase.from("annotations").upsert(Object.entries(merged).map(([key, value]) => ({
+        user_id: currentUser.id, verse_key: key, color: value.color || null, note: value.note || null,
+      })), { onConflict: "user_id,verse_key" });
+      localStorage.setItem(migrationKey, "true");
+    }
+    setAnnotations(merged);
+    await recordAccess(currentUser);
+  }, [recordAccess]);
+
+  useEffect(() => {
+    let active = true;
+    supabase.from("site_settings").select("external_button_label,external_button_url,information_content").eq("id", 1).maybeSingle()
+      .then(({ data }) => { if (active && data) { setSettings(data); setSettingsDraft(data); } });
+    supabase.auth.getSession().then(({ data }) => {
+      if (!active) return;
+      loadAccount(data.session?.user || null).finally(() => active && setAuthReady(true));
+    });
+    const { data: listener } = supabase.auth.onAuthStateChange((_event, session) => {
+      if (active) loadAccount(session?.user || null).finally(() => active && setAuthReady(true));
+    });
+    return () => { active = false; listener.subscription.unsubscribe(); };
+  }, [loadAccount]);
 
   const currentBook = bible?.books[bookIndex];
   const currentChapter = currentBook?.chapters.find((chapter) => chapter.chapter === chapterNumber);
@@ -127,17 +229,123 @@ export function BibleApp() {
     setNoteDraft(annotations[verseKey(bookIndex, chapterNumber, verse.number)]?.note || "");
   }
 
+  async function persistAnnotation(key: string, annotation: Annotation) {
+    if (!user) return;
+    const hasContent = Boolean(annotation.color || annotation.note?.trim());
+    const result = hasContent
+      ? await supabase.from("annotations").upsert({
+          user_id: user.id, verse_key: key, color: annotation.color || null,
+          note: annotation.note?.trim() || null, updated_at: new Date().toISOString(),
+        }, { onConflict: "user_id,verse_key" })
+      : await supabase.from("annotations").delete().eq("user_id", user.id).eq("verse_key", key);
+    if (result.error) {
+      setStatus("Não foi possível sincronizar agora.");
+      return;
+    }
+    setStatus("Salvo na sua conta.");
+    window.setTimeout(() => setStatus(""), 2400);
+  }
+
   function saveColor(color?: string) {
     if (!selectedVerse) return;
     const key = verseKey(selectedVerse.book, selectedVerse.chapter, selectedVerse.verse.number);
-    setAnnotations((old) => ({ ...old, [key]: { ...old[key], color } }));
+    const next = { ...annotations[key], color };
+    setAnnotations((old) => ({ ...old, [key]: next }));
+    persistAnnotation(key, next);
   }
 
   function saveNote() {
     if (!selectedVerse) return;
     const key = verseKey(selectedVerse.book, selectedVerse.chapter, selectedVerse.verse.number);
-    setAnnotations((old) => ({ ...old, [key]: { ...old[key], note: noteDraft.trim() } }));
-    setStatus("Nota salva neste aparelho.");
+    const next = { ...annotations[key], note: noteDraft.trim() };
+    setAnnotations((old) => ({ ...old, [key]: next }));
+    if (user) persistAnnotation(key, next);
+    else {
+      setStatus("Nota salva neste aparelho. Entre para sincronizar.");
+      window.setTimeout(() => setStatus(""), 2400);
+    }
+  }
+
+  async function submitAuth(event: React.FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    setAuthMessage("");
+    if (authMode === "register" && authName.trim().length < 2) {
+      setAuthMessage("Digite seu nome com pelo menos duas letras."); return;
+    }
+    if (authPassword.length < 6) {
+      setAuthMessage("A senha precisa ter pelo menos 6 caracteres."); return;
+    }
+    setAuthBusy(true);
+    const result = authMode === "register"
+      ? await supabase.auth.signUp({ email: authEmail.trim(), password: authPassword, options: { data: { name: authName.trim() } } })
+      : await supabase.auth.signInWithPassword({ email: authEmail.trim(), password: authPassword });
+    setAuthBusy(false);
+    if (result.error) {
+      const message = result.error.message.toLowerCase().includes("invalid login")
+        ? "E-mail ou senha incorretos."
+        : result.error.message.toLowerCase().includes("already registered")
+          ? "Este e-mail já possui cadastro."
+          : "Não foi possível concluir. Confira os dados e tente novamente.";
+      setAuthMessage(message);
+      return;
+    }
+    setAuthPassword("");
+    if (result.data.session) {
+      setAuthOpen(false);
+      setAuthMessage("");
+    } else {
+      setAuthMessage("Cadastro realizado. Confira seu e-mail para confirmar a conta.");
+    }
+  }
+
+  async function signOut() {
+    await supabase.auth.signOut();
+    setAuthOpen(false);
+    setAdminOpen(false);
+  }
+
+  const loadAdminStats = useCallback(async (range: StatsRange) => {
+    if (!isAdmin) return;
+    setStatsLoading(true);
+    const today = brazilDate();
+    const start = range === "day" ? today : range === "month" ? `${today.slice(0, 7)}-01` : range === "year" ? `${today.slice(0, 4)}-01-01` : null;
+    let accessQuery = supabase.from("access_logs").select("access_type");
+    if (start) accessQuery = accessQuery.gte("access_date", start);
+    const [{ data: accessRows }, { count: usersCount }] = await Promise.all([
+      accessQuery,
+      supabase.from("profiles").select("id", { count: "exact", head: true }),
+    ]);
+    const guest = (accessRows || []).filter((row) => row.access_type === "guest").length;
+    const registered = (accessRows || []).filter((row) => row.access_type === "registered").length;
+    setStats({ guest, registered, total: guest + registered, users: usersCount || 0 });
+    setStatsLoading(false);
+  }, [isAdmin]);
+
+  useEffect(() => {
+    if (adminOpen && isAdmin) loadAdminStats(statsRange);
+  }, [adminOpen, isAdmin, loadAdminStats, statsRange]);
+
+  async function saveSettings(event: React.FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    if (!user || !isAdmin) return;
+    const url = settingsDraft.external_button_url.trim();
+    if (url && !/^https?:\/\//i.test(url)) {
+      setStatus("O link externo deve começar com http:// ou https://"); return;
+    }
+    setSettingsBusy(true);
+    const clean = {
+      external_button_label: settingsDraft.external_button_label.trim(),
+      external_button_url: url,
+      information_content: settingsDraft.information_content.trim(),
+    };
+    const { error } = await supabase.from("site_settings").update({
+      ...clean, updated_at: new Date().toISOString(), updated_by: user.id,
+    }).eq("id", 1);
+    setSettingsBusy(false);
+    if (error) { setStatus("Não foi possível salvar as informações."); return; }
+    setSettings(clean);
+    setSettingsDraft(clean);
+    setStatus("Informações públicas atualizadas.");
     window.setTimeout(() => setStatus(""), 2400);
   }
 
@@ -190,6 +398,10 @@ export function BibleApp() {
           <button className="icon-button" onClick={() => setSearchOpen(true)} aria-label="Pesquisar na Bíblia"><Search size={20} /></button>
           <button className="icon-button" onClick={() => setThemeOpen(true)} aria-label="Escolher tema"><Palette size={20} /></button>
           <button className="icon-button" onClick={() => setAboutOpen(true)} aria-label="Informações"><Info size={20} /></button>
+          <button className="account-button" onClick={() => setAuthOpen(true)} aria-label={user ? "Abrir minha conta" : "Entrar na conta"}>
+            {user ? <UserRound size={16} /> : <LogIn size={16} />}
+            <span>{user ? (profileName.split(" ")[0] || "Conta") : "Entrar"}</span>
+          </button>
         </div>
       </header>
 
@@ -322,7 +534,49 @@ export function BibleApp() {
 
       <Sheet open={themeOpen} onOpenChange={setThemeOpen}><SheetContent side="right" className={`theme-sheet theme-${theme}`}><SheetHeader><SheetTitle>Escolha o tema</SheetTitle></SheetHeader><div className="theme-options">{(Object.keys(themeLabels) as Theme[]).map((item) => <button key={item} className={`theme-option preview-${item} ${theme === item ? "selected" : ""}`} onClick={() => { setTheme(item); setThemeOpen(false); }}><span/><strong>{themeLabels[item]}</strong>{theme === item && <small>Em uso</small>}</button>)}</div></SheetContent></Sheet>
 
-      <Dialog open={aboutOpen} onOpenChange={setAboutOpen}><DialogContent className={`about-dialog theme-${theme}`}><DialogHeader><DialogTitle>Sobre esta edição</DialogTitle></DialogHeader><div className="about-content"><p><strong>Bíblia:</strong> Almeida 1819 — Bíblia Livre. A fonte de dados identifica esta versão histórica como domínio público.</p><p><strong>Dicionário:</strong> Dicionário Teológico — Amplo Conhecimento, Projeto L.M. Lemos, por Luan Maciel de Lemos.</p><p><strong>Identidade:</strong> cristã evangélica, com influência reformada, cânon protestante de 66 livros e autoridade final das Escrituras.</p><p>Comentários, introduções e estudos são recursos humanos de apoio. Eles não possuem a mesma autoridade do texto bíblico.</p></div></DialogContent></Dialog>
+      <Dialog open={aboutOpen} onOpenChange={setAboutOpen}><DialogContent className={`about-dialog theme-${theme}`}><DialogHeader><DialogTitle>Informações do projeto</DialogTitle></DialogHeader><div className="about-content">
+        <div className="info-notice"><ShieldCheck /><div><strong>Projeto gratuito para todos</strong><p>É proibida a venda deste sistema. Ele foi criado para servir às pessoas e compartilhar a Palavra de Deus.</p></div></div>
+        <p>Devemos respeitar e sempre temer a Deus: não roubar, não trapacear e, sim, amar o próximo.</p>
+        {settings.information_content && <div className="custom-info"><strong>Informação adicional</strong><p>{settings.information_content}</p></div>}
+        {settings.external_button_label && settings.external_button_url && <a className="external-info-button" href={settings.external_button_url} target="_blank" rel="noopener noreferrer">{settings.external_button_label}<ExternalLink size={16} /></a>}
+        <p><strong>Bíblia:</strong> Almeida 1819 — Bíblia Livre. A fonte de dados identifica esta versão histórica como domínio público.</p><p><strong>Dicionário:</strong> Dicionário Teológico — Amplo Conhecimento, Projeto L.M. Lemos, por Luan Maciel de Lemos.</p><p><strong>Identidade:</strong> cristã evangélica, com influência reformada, cânon protestante de 66 livros e autoridade final das Escrituras.</p><p>Comentários, introduções e estudos são recursos humanos de apoio. Eles não possuem a mesma autoridade do texto bíblico.</p>
+      </div></DialogContent></Dialog>
+
+      <Dialog open={authOpen} onOpenChange={setAuthOpen}><DialogContent className={`auth-dialog theme-${theme}`}><DialogHeader><DialogTitle>{user ? "Minha conta" : "Acesse sua conta"}</DialogTitle></DialogHeader>
+        {user ? <div className="account-panel">
+          <div className="account-identity"><span><UserRound /></span><div><strong>{profileName || "Usuário"}</strong><small>{user.email}</small></div></div>
+          <p>Suas marcações e notas ficam sincronizadas nesta conta.</p>
+          {isAdmin && <Button onClick={() => { setAuthOpen(false); setAdminOpen(true); }}><ShieldCheck /> Painel administrador</Button>}
+          <Button variant="outline" onClick={signOut}><LogOut /> Sair da conta</Button>
+        </div> : <>
+          <div className="auth-tabs"><button className={authMode === "login" ? "active" : ""} onClick={() => { setAuthMode("login"); setAuthMessage(""); }}>Entrar</button><button className={authMode === "register" ? "active" : ""} onClick={() => { setAuthMode("register"); setAuthMessage(""); }}>Criar cadastro</button></div>
+          <form className="auth-form" onSubmit={submitAuth}>
+            {authMode === "register" && <label>Nome<input required autoComplete="name" value={authName} onChange={(event) => setAuthName(event.target.value)} placeholder="Seu nome" /></label>}
+            <label>E-mail<input required type="email" autoComplete="email" value={authEmail} onChange={(event) => setAuthEmail(event.target.value)} placeholder="voce@exemplo.com" /></label>
+            <label>Senha<input required minLength={6} type="password" autoComplete={authMode === "register" ? "new-password" : "current-password"} value={authPassword} onChange={(event) => setAuthPassword(event.target.value)} placeholder="Mínimo de 6 caracteres" /></label>
+            {authMessage && <p className="auth-message" role="status">{authMessage}</p>}
+            <Button type="submit" disabled={authBusy}>{authBusy ? "Aguarde..." : authMode === "register" ? "Criar minha conta" : "Entrar"}</Button>
+            <small>Ao entrar, suas notas e marcações deste aparelho serão levadas para sua conta.</small>
+          </form>
+        </>}
+      </DialogContent></Dialog>
+
+      <Dialog open={adminOpen} onOpenChange={setAdminOpen}><DialogContent className={`admin-dialog theme-${theme}`}><DialogHeader><DialogTitle><ShieldCheck /> Painel administrador</DialogTitle></DialogHeader>
+        <div className="admin-content">
+          <section><div className="admin-section-heading"><div><span>Visão geral</span><h3>Acessos ao projeto</h3></div><div className="stats-filters">{(["day", "month", "year", "all"] as StatsRange[]).map((range) => <button key={range} className={statsRange === range ? "active" : ""} onClick={() => setStatsRange(range)}>{{ day: "Dia", month: "Mês", year: "Ano", all: "Sempre" }[range]}</button>)}</div></div>
+            <div className="stats-grid"><StatCard icon={<UserRound />} label="Sem cadastro" value={statsLoading ? "—" : stats.guest} /><StatCard icon={<ShieldCheck />} label="Com cadastro" value={statsLoading ? "—" : stats.registered} /><StatCard icon={<BarChart3 />} label="Total de acessos" value={statsLoading ? "—" : stats.total} /><StatCard icon={<UserRound />} label="Contas criadas" value={statsLoading ? "—" : stats.users} /></div>
+            <small className="stats-note">Acessos são contados uma vez por aparelho, por dia e por tipo. Notas privadas dos usuários não ficam visíveis ao administrador.</small>
+          </section>
+          <section><div className="admin-section-heading"><div><span>Área pública</span><h3>Configurar informações</h3></div></div>
+            <form className="settings-form" onSubmit={saveSettings}>
+              <label>Nome do botão personalizado<input value={settingsDraft.external_button_label} onChange={(event) => setSettingsDraft((old) => ({ ...old, external_button_label: event.target.value }))} placeholder="Ex.: Conheça nosso ministério" /></label>
+              <label>Link externo<input type="url" value={settingsDraft.external_button_url} onChange={(event) => setSettingsDraft((old) => ({ ...old, external_button_url: event.target.value }))} placeholder="https://..." /></label>
+              <label>Informação adicional<Textarea rows={4} value={settingsDraft.information_content} onChange={(event) => setSettingsDraft((old) => ({ ...old, information_content: event.target.value }))} placeholder="Escreva o texto que aparecerá na página de informações." /></label>
+              <Button type="submit" disabled={settingsBusy}><Save /> {settingsBusy ? "Salvando..." : "Salvar informações"}</Button>{status && <span className="saved-status">{status}</span>}
+            </form>
+          </section>
+        </div>
+      </DialogContent></Dialog>
     </div>
   );
 }
@@ -331,3 +585,4 @@ function NavButton({ icon, label, active, onClick }: { icon: React.ReactNode; la
 function Fact({ label, value }: { label: string; value: string }) { return <div><span>{label}</span><strong>{value}</strong></div>; }
 function EntrySection({ title, text }: { title: string; text?: string }) { if (!text) return null; return <section><h3>{title}</h3><p>{text}</p></section>; }
 function ReaderSkeleton() { return <div className="reader-skeleton"><span/><span/><span/><span/><span/></div>; }
+function StatCard({ icon, label, value }: { icon: React.ReactNode; label: string; value: number | string }) { return <div className="stat-card"><span>{icon}</span><strong>{value}</strong><small>{label}</small></div>; }
