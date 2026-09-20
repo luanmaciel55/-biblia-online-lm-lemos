@@ -88,6 +88,7 @@ export function BibleApp() {
   const [moreResource, setMoreResource] = useState<MoreResource>(null);
   const [resourceSearch, setResourceSearch] = useState("");
   const [resourceLetter, setResourceLetter] = useState("TODAS");
+  const [externalResourceItems, setExternalResourceItems] = useState<Record<string, {title:string; text:string}[]>>({});
   const [resourceExternal, setResourceExternal] = useState<Record<string, {title:string; text:string; refs?:ScriptureRef[]}[]>>({});
   const [selectedEntry, setSelectedEntry] = useState<DictionaryEntry | null>(null);
   useEffect(() => {
@@ -240,6 +241,33 @@ export function BibleApp() {
         return a.term.localeCompare(b.term, "pt-BR", { sensitivity: "base" });
       });
   }, [dictionary, deferredDictionarySearch, dictionaryLetter]);
+
+  useEffect(() => {
+    if (!moreResource || externalResourceItems[moreResource]) return;
+    const urls: Partial<Record<Exclude<MoreResource, null>, string>> = {
+      "Strong": "https://raw.githubusercontent.com/BSB-publishing/bsb-data-output/main/base/lexicon/greek.json",
+      "Pessoas": "https://raw.githubusercontent.com/BSB-publishing/bsb-data-output/main/base/proper-names/people.json",
+      "Lugares": "https://raw.githubusercontent.com/BSB-publishing/bsb-data-output/main/base/proper-names/places.json",
+      "Mapas Bíblicos": "https://raw.githubusercontent.com/BSB-publishing/bsb-data-output/main/base/geography/places.json"
+    };
+    const url=urls[moreResource];
+    if(!url) return;
+    fetch(url).then(r=>r.ok?r.json():Promise.reject()).then((data:any)=>{
+      const rows=Array.isArray(data)?data:Object.entries(data||{}).map(([id,v]:any)=>({id,...(v||{})}));
+      const items=rows.slice(0,220).map((x:any)=>{
+        const name=x.name||x.uniqueName||x.lemma||x.word||x.id||x.strongs||"Entrada";
+        const title=moreResource==="Strong" ? [x.strongs||x.id,name,x.transliteration].filter(Boolean).join(" · ") : String(name).replace(/@.*$/,"");
+        const refs=(x.verses||x.references||x.refs||x.names?.flatMap((n:any)=>n.verses||[])||[]).slice(0,8);
+        const relations=x.relations ? Object.entries(x.relations).filter(([,v])=>v&&(!Array.isArray(v)||v.length)).map(([k,v])=>k+": "+(Array.isArray(v)?v.join(", "):v)).join("; ") : "";
+        const coords=x.coordinates?.lat!=null ? ` Coordenadas: ${x.coordinates.lat}, ${x.coordinates.lon}.` : "";
+        const modern=x.modern_place?.name ? " Identificação moderna: "+x.modern_place.name+"." : "";
+        const desc=x.description||x.definition||x.gloss||x.brief||x.short||x.article||x.meaning||x.strongs_def||x.kjv_def||"Registro bíblico identificado na base de dados.";
+        const text=[desc,relations&&(" Relações: "+relations+"."),refs.length&&(" Referências: "+refs.join(", ")+"."),coords,modern].filter(Boolean).join("");
+        return {title,text};
+      });
+      setExternalResourceItems(prev=>({...prev,[moreResource]:items}));
+    }).catch(()=>{});
+  },[moreResource,externalResourceItems]);
 
   const savedItems = useMemo(() => Object.entries(annotations).map(([key, annotation]) => {
     const [book, chapter, verse] = key.split("-").map(Number);
@@ -704,7 +732,7 @@ function ResourceContent({ resource, goToReference, search, setSearch, letter, s
   const baseItems=externalItems.length ? externalItems : (RESOURCE_DATA[resource]||[]);\n  const items=baseItems.filter(item=>{ const searchOk=!q||normalize(item.title+" "+item.text).includes(q); const letterOk=letter==="TODAS"||normalize(item.title).startsWith(normalize(letter)); return searchOk&&letterOk; }).sort((a,b)=>a.title.localeCompare(b.title,"pt-BR"));
   return <div className="resource-content">
     <label className="dictionary-search"><Search size={20}/><input value={search} onChange={e=>setSearch(e.target.value)} placeholder={"Pesquisar em "+resource+"..."} /></label>\n    <div className="dictionary-letters resource-letters" aria-label="Filtrar por letra"><button className={letter==="TODAS"?"active":""} onClick={()=>setLetter("TODAS")}>Todas</button>{"ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("").map(l=><button key={l} className={letter===l?"active":""} onClick={()=>setLetter(l)}>{l}</button>)}</div>
-    <div className="resource-note"><strong>{items.length} itens nesta seção</strong><p>{resource==="Strong" ? "Amostra ampliada de lemas muito usados. O banco STEP completo possui milhares de entradas e é grande demais para ser embutido manualmente nesta tela." : resource==="Mapas Bíblicos" ? "Catálogo geográfico inicial. As coordenadas completas podem vir do OpenBible.info Bible Geocoding Data." : "Conteúdo ampliado para estudo e consulta."}</p></div>
+    <div className="resource-note"><strong>{items.length} itens nesta seção</strong><p>{externalItems.length>=200 ? "Base aberta carregada: "+externalItems.length+" registros disponíveis nesta seleção." : resource==="Strong" ? "Conteúdo lexical selecionado para estudo." : "Conteúdo ampliado para estudo e consulta."}</p></div>
     <div className="resource-list">{items.length?items.map(item=><article key={item.title} className="resource-item"><h2>{item.title}</h2><p>{item.text}</p>{item.refs?.length?<div className="reference-list">{item.refs.map(ref=><button key={ref.label} onClick={()=>goToReference(ref)}>{ref.label}<ChevronRight size={14}/></button>)}</div>:null}</article>):<p className="empty-message">Nenhum item encontrado.</p>}</div>
     <div className="resource-credits"><strong>Fontes e atribuição</strong><p>Dados linguísticos e de nomes: STEP Bible Data, CC BY 4.0. Geografia: OpenBible.info Bible Geocoding Data, CC BY 4.0. Conteúdo temático pode ser ampliado com Nave's Topical Bible (obra em domínio público), respeitando a licença da compilação utilizada.</p></div>
   </div>;
