@@ -31,6 +31,7 @@ type Annotation = { color?: string; note?: string };
 type VerseSelection = { book: number; chapter: number; verse: BibleVerse };
 type AuthMode = "login" | "register";
 type StatsRange = "day" | "month" | "year" | "all";
+type SavedListMode = "notes" | "marks" | null;
 type SiteSettings = {
   external_button_label: string;
   external_button_url: string;
@@ -80,6 +81,9 @@ export function BibleApp() {
   const [searchOpen, setSearchOpen] = useState(false);
   const [searchText, setSearchText] = useState("");
   const [dictionarySearch, setDictionarySearch] = useState("");
+  const [dictionaryLetter, setDictionaryLetter] = useState("TODAS");
+  const [savedListMode, setSavedListMode] = useState<SavedListMode>(null);
+  const [selectedColor, setSelectedColor] = useState<string | null>(null);
   const [selectedEntry, setSelectedEntry] = useState<DictionaryEntry | null>(null);
   const [theme, setTheme] = useState<Theme>("default");
   const [themeOpen, setThemeOpen] = useState(false);
@@ -204,9 +208,17 @@ export function BibleApp() {
   const dictionaryResults = useMemo(() => {
     if (!dictionary) return [];
     const query = normalize(deferredDictionarySearch.trim());
-    if (!query) return dictionary.entries;
-    return dictionary.entries.filter((entry) => normalize(`${entry.term} ${entry.category} ${entry.definition}`).includes(query));
-  }, [dictionary, deferredDictionarySearch]);
+    return dictionary.entries
+      .filter((entry) => dictionaryLetter === "TODAS" || normalize(entry.term).startsWith(normalize(dictionaryLetter)))
+      .filter((entry) => !query || normalize(`${entry.term} ${entry.category} ${entry.definition} ${entry.importance || ""} ${entry.reading || ""} ${entry.perspective || ""} ${entry.distinction || ""} ${entry.application || ""} ${entry.deeper || ""}`).includes(query))
+      .sort((a, b) => a.term.localeCompare(b.term, "pt-BR", { sensitivity: "base" }));
+  }, [dictionary, deferredDictionarySearch, dictionaryLetter]);
+
+  const savedItems = useMemo(() => Object.entries(annotations).map(([key, annotation]) => {
+    const [book, chapter, verse] = key.split("-").map(Number);
+    const verseText = bible?.books[book]?.chapters.find((item) => item.chapter === chapter)?.verses.find((item) => item.number === verse)?.text || "";
+    return { key, book, chapter, verse, verseText, annotation };
+  }), [annotations, bible]);
 
   const bookExtremes = useMemo(() => {
     if (!currentBook) return null;
@@ -248,6 +260,8 @@ export function BibleApp() {
 
   function saveColor(color?: string) {
     if (!selectedVerse) return;
+    setSelectedColor(color || null);
+    window.setTimeout(() => setSelectedColor(null), 420);
     const key = verseKey(selectedVerse.book, selectedVerse.chapter, selectedVerse.verse.number);
     const next = { ...annotations[key], color };
     setAnnotations((old) => ({ ...old, [key]: next }));
@@ -465,7 +479,11 @@ export function BibleApp() {
             <section className="content-view dictionary-view">
               <div className="mode-switch"><button onClick={() => setView("bible")}><BookOpen size={17} /> Bíblia</button><button className="active" onClick={() => setView("dictionary")}><BookText size={17} /> Dicionário teológico</button></div>
               <div className="page-title"><span className="eyebrow">Projeto L.M. Lemos</span><h1>Dicionário Teológico</h1><p>Amplo Conhecimento · identidade evangélica · 260 verbetes</p></div>
-              <label className="dictionary-search"><Search size={20} /><input value={dictionarySearch} onChange={(e) => setDictionarySearch(e.target.value)} placeholder="Pesquise graça, justificação, Trindade..." /></label>
+              <label className="dictionary-search"><Search size={20} /><input value={dictionarySearch} onChange={(e) => setDictionarySearch(e.target.value)} placeholder="Pesquise qualquer palavra ou conteúdo..." /></label>
+              <div className="dictionary-letters" aria-label="Filtrar dicionário por letra">
+                <button className={dictionaryLetter === "TODAS" ? "active" : ""} onClick={() => setDictionaryLetter("TODAS")}>Todas</button>
+                {"ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("").map((letter) => <button key={letter} className={dictionaryLetter === letter ? "active" : ""} onClick={() => setDictionaryLetter(letter)}>{letter}</button>)}
+              </div>
               {!dictionary ? <ReaderSkeleton /> : selectedEntry ? (
                 <article className="dictionary-entry">
                   <button className="back-link" onClick={() => setSelectedEntry(null)}><ChevronLeft /> Voltar aos verbetes</button>
@@ -521,7 +539,7 @@ export function BibleApp() {
       <Sheet open={!!selectedVerse} onOpenChange={(open) => !open && setSelectedVerse(null)}>
         <SheetContent side="bottom" className={`verse-sheet theme-${theme}`}><SheetHeader><SheetTitle>{selectedVerse && `${BOOK_NAMES[selectedVerse.book]} ${selectedVerse.chapter}:${selectedVerse.verse.number}`}</SheetTitle></SheetHeader>
           {selectedVerse && <div className="verse-tools"><p className="selected-text">{selectedVerse.verse.text}</p>
-            <section><h3><Highlighter /> Marcar com cor</h3><div className="color-row">{COLORS.map((color) => <button key={color.value} onClick={() => saveColor(color.value)} title={color.name} aria-label={color.name} style={{ background: color.value }} />)}<button className="clear-color" onClick={() => saveColor(undefined)} aria-label="Remover cor"><X /></button></div></section>
+            <section><h3><Highlighter /> Marcar com cor</h3><div className="color-row">{COLORS.map((color) => <button key={color.value} className={selectedColor === color.value ? "color-selected" : ""} onClick={() => saveColor(color.value)} title={color.name} aria-label={`${color.name}${selectedColor === color.value ? " selecionado" : ""}`} style={{ background: color.value }} />)}<button className="clear-color" onClick={() => saveColor(undefined)} aria-label="Remover cor"><X /></button></div></section>
             <section><h3><FileText /> Minha nota</h3><Textarea value={noteDraft} onChange={(e) => setNoteDraft(e.target.value)} placeholder="Escreva aqui o que você aprendeu..." rows={4} /><Button onClick={saveNote}>Salvar nota</Button>{status && <span className="saved-status">{status}</span>}</section>
             <section><h3><Download /> Criar imagem</h3><p>Crie um cartão deste versículo no tema escolhido e salve ou compartilhe no celular.</p><Button variant="outline" onClick={createVerseImage}>Criar imagem do versículo</Button></section>
             <section className="deep-study"><h3><GraduationCap /> Estudo profundo</h3><div className="original-language"><span>{selectedVerse.book < 39 ? "Hebraico bíblico" : "Grego koiné"}</span>{originalWords.slice(0,4).map((word) => <div key={word.script}><b dir={selectedVerse.book < 39 ? "rtl" : "ltr"}>{word.script}</b><span><strong>{word.transliteration}</strong><small>Pronúncia aproximada: {word.pronunciation}</small><em>{word.meaning}</em></span></div>)}</div>
@@ -546,6 +564,10 @@ export function BibleApp() {
         {user ? <div className="account-panel">
           <div className="account-identity"><span><UserRound /></span><div><strong>{profileName || "Usuário"}</strong><small>{user.email}</small></div></div>
           <p>Suas marcações e notas ficam sincronizadas nesta conta.</p>
+          <div className="account-library-actions">
+            <Button variant="outline" onClick={() => setSavedListMode("notes")}><FileText /> Minhas anotações</Button>
+            <Button variant="outline" onClick={() => setSavedListMode("marks")}><Highlighter /> Minhas marcações</Button>
+          </div>
           {isAdmin && <Button onClick={() => { setAuthOpen(false); setAdminOpen(true); }}><ShieldCheck /> Painel administrador</Button>}
           <Button variant="outline" onClick={signOut}><LogOut /> Sair da conta</Button>
         </div> : <>
@@ -559,6 +581,17 @@ export function BibleApp() {
             <small>Ao entrar, suas notas e marcações deste aparelho serão levadas para sua conta.</small>
           </form>
         </>}
+      </DialogContent></Dialog>
+
+      <Dialog open={!!savedListMode} onOpenChange={(open) => !open && setSavedListMode(null)}><DialogContent className={`saved-list-dialog theme-${theme}`}><DialogHeader><DialogTitle>{savedListMode === "notes" ? "Minhas anotações" : "Minhas marcações"}</DialogTitle></DialogHeader>
+        <div className="saved-list">
+          {savedItems.filter((item) => savedListMode === "notes" ? Boolean(item.annotation.note?.trim()) : Boolean(item.annotation.color)).length === 0 ? <p className="empty-message">{savedListMode === "notes" ? "Você ainda não fez anotações." : "Você ainda não marcou versículos."}</p> :
+            savedItems.filter((item) => savedListMode === "notes" ? Boolean(item.annotation.note?.trim()) : Boolean(item.annotation.color)).map((item) => <button key={item.key} onClick={() => { setSavedListMode(null); setAuthOpen(false); goToReference({ book: item.book, chapter: item.chapter, verse: item.verse }); }}>
+              <span className="saved-reference">{item.annotation.color && <i style={{ background: item.annotation.color }} />}{BOOK_NAMES[item.book]} {item.chapter}:{item.verse}</span>
+              {savedListMode === "notes" && <strong>{item.annotation.note}</strong>}
+              <small>{item.verseText}</small>
+            </button>)}
+        </div>
       </DialogContent></Dialog>
 
       <Dialog open={adminOpen} onOpenChange={setAdminOpen}><DialogContent className={`admin-dialog theme-${theme}`}><DialogHeader><DialogTitle><ShieldCheck /> Painel administrador</DialogTitle></DialogHeader>
