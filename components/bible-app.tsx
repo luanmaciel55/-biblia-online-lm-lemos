@@ -87,6 +87,7 @@ export function BibleApp() {
   const [selectedColor, setSelectedColor] = useState<string | null>(null);
   const [moreResource, setMoreResource] = useState<MoreResource>(null);
   const [resourceSearch, setResourceSearch] = useState("");
+  const [resourceLetter, setResourceLetter] = useState("TODAS");
   const [selectedEntry, setSelectedEntry] = useState<DictionaryEntry | null>(null);
   const [theme, setTheme] = useState<Theme>("default");
   const [themeOpen, setThemeOpen] = useState(false);
@@ -514,9 +515,9 @@ export function BibleApp() {
           {view === "more" && (
             <section className="content-view more-resources-view">
               {moreResource ? <>
-                <button className="back-link" onClick={() => { setMoreResource(null); setResourceSearch(""); }}><ChevronLeft /> Voltar aos recursos</button>
+                <button className="back-link" onClick={() => { setMoreResource(null); setResourceSearch(""); setResourceLetter("TODAS"); }}><ChevronLeft /> Voltar aos recursos</button>
                 <div className="page-title"><span className="eyebrow">Mais recursos</span><h1>{moreResource}</h1></div>
-                <ResourceContent resource={moreResource} goToReference={goToReference} search={resourceSearch} setSearch={setResourceSearch} />
+                <ResourceContent resource={moreResource} goToReference={goToReference} search={resourceSearch} setSearch={setResourceSearch} letter={resourceLetter} setLetter={setResourceLetter} />
               </> : <>
                 <div className="page-title"><span className="eyebrow">Ferramentas para aprofundar</span><h1>Mais recursos</h1><p>Escolha uma ferramenta de estudo bíblico.</p></div>
                 <div className="more-resources-grid">
@@ -684,11 +685,11 @@ const RESOURCE_DATA: Record<string, {title:string; text:string; refs?: Scripture
   ].map(([title,text])=>({title,text:"Referências principais: "+text}))
 };
 
-function ResourceContent({ resource, goToReference, search, setSearch }: { resource: Exclude<MoreResource, null>; goToReference: (ref: ScriptureRef) => void; search:string; setSearch:(v:string)=>void }) {
+function ResourceContent({ resource, goToReference, search, setSearch, letter, setLetter }: { resource: Exclude<MoreResource, null>; goToReference: (ref: ScriptureRef) => void; search:string; setSearch:(v:string)=>void; letter:string; setLetter:(v:string)=>void }) {
   const q=normalize(search.trim());
-  const items=(RESOURCE_DATA[resource]||[]).filter(item=>!q||normalize(item.title+" "+item.text).includes(q));
+  const items=(RESOURCE_DATA[resource]||[]).filter(item=>{ const searchOk=!q||normalize(item.title+" "+item.text).includes(q); const letterOk=letter==="TODAS"||normalize(item.title).startsWith(normalize(letter)); return searchOk&&letterOk; }).sort((a,b)=>a.title.localeCompare(b.title,"pt-BR"));
   return <div className="resource-content">
-    <label className="dictionary-search"><Search size={20}/><input value={search} onChange={e=>setSearch(e.target.value)} placeholder={"Pesquisar em "+resource+"..."} /></label>
+    <label className="dictionary-search"><Search size={20}/><input value={search} onChange={e=>setSearch(e.target.value)} placeholder={"Pesquisar em "+resource+"..."} /></label>\n    <div className="dictionary-letters resource-letters" aria-label="Filtrar por letra"><button className={letter==="TODAS"?"active":""} onClick={()=>setLetter("TODAS")}>Todas</button>{"ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("").map(l=><button key={l} className={letter===l?"active":""} onClick={()=>setLetter(l)}>{l}</button>)}</div>
     <div className="resource-note"><strong>{items.length} itens nesta seção</strong><p>{resource==="Strong" ? "Amostra ampliada de lemas muito usados. O banco STEP completo possui milhares de entradas e é grande demais para ser embutido manualmente nesta tela." : resource==="Mapas Bíblicos" ? "Catálogo geográfico inicial. As coordenadas completas podem vir do OpenBible.info Bible Geocoding Data." : "Conteúdo ampliado para estudo e consulta."}</p></div>
     <div className="resource-list">{items.length?items.map(item=><article key={item.title} className="resource-item"><h2>{item.title}</h2><p>{item.text}</p>{item.refs?.length?<div className="reference-list">{item.refs.map(ref=><button key={ref.label} onClick={()=>goToReference(ref)}>{ref.label}<ChevronRight size={14}/></button>)}</div>:null}</article>):<p className="empty-message">Nenhum item encontrado.</p>}</div>
     <div className="resource-credits"><strong>Fontes e atribuição</strong><p>Dados linguísticos e de nomes: STEP Bible Data, CC BY 4.0. Geografia: OpenBible.info Bible Geocoding Data, CC BY 4.0. Conteúdo temático pode ser ampliado com Nave's Topical Bible (obra em domínio público), respeitando a licença da compilação utilizada.</p></div>
