@@ -300,14 +300,14 @@ export function BibleApp() {
       </nav>
 
       <Dialog open={searchOpen} onOpenChange={setSearchOpen}>
-        <DialogContent className="search-dialog"><DialogHeader><DialogTitle>Pesquisar na Bíblia</DialogTitle></DialogHeader>
+        <DialogContent className={`search-dialog theme-${theme}`}><DialogHeader><DialogTitle>Pesquisar na Bíblia</DialogTitle></DialogHeader>
           <label className="global-search"><Search /><input autoFocus value={searchText} onChange={(e) => setSearchText(e.target.value)} placeholder="Digite uma palavra ou frase..." /></label>
           <div className="search-results">{searchText.length < 2 ? <p className="empty-message">Digite pelo menos duas letras para pesquisar nos 31.102 versículos.</p> : searchResults.length ? searchResults.map((item) => <button key={`${item.book}-${item.chapter}-${item.verse}`} onClick={() => goToReference(item)}><strong>{BOOK_NAMES[item.book]} {item.chapter}:{item.verse}</strong><span>{item.text}</span></button>) : <p className="empty-message">Nenhum versículo encontrado.</p>}</div>
         </DialogContent>
       </Dialog>
 
       <Sheet open={!!selectedVerse} onOpenChange={(open) => !open && setSelectedVerse(null)}>
-        <SheetContent side="bottom" className="verse-sheet"><SheetHeader><SheetTitle>{selectedVerse && `${BOOK_NAMES[selectedVerse.book]} ${selectedVerse.chapter}:${selectedVerse.verse.number}`}</SheetTitle></SheetHeader>
+        <SheetContent side="bottom" className={`verse-sheet theme-${theme}`}><SheetHeader><SheetTitle>{selectedVerse && `${BOOK_NAMES[selectedVerse.book]} ${selectedVerse.chapter}:${selectedVerse.verse.number}`}</SheetTitle></SheetHeader>
           {selectedVerse && <div className="verse-tools"><p className="selected-text">{selectedVerse.verse.text}</p>
             <section><h3><Highlighter /> Marcar com cor</h3><div className="color-row">{COLORS.map((color) => <button key={color.value} onClick={() => saveColor(color.value)} title={color.name} aria-label={color.name} style={{ background: color.value }} />)}<button className="clear-color" onClick={() => saveColor(undefined)} aria-label="Remover cor"><X /></button></div></section>
             <section><h3><FileText /> Minha nota</h3><Textarea value={noteDraft} onChange={(e) => setNoteDraft(e.target.value)} placeholder="Escreva aqui o que você aprendeu..." rows={4} /><Button onClick={saveNote}>Salvar nota</Button>{status && <span className="saved-status">{status}</span>}</section>
@@ -320,9 +320,9 @@ export function BibleApp() {
         </SheetContent>
       </Sheet>
 
-      <Sheet open={themeOpen} onOpenChange={setThemeOpen}><SheetContent side="right" className="theme-sheet"><SheetHeader><SheetTitle>Escolha o tema</SheetTitle></SheetHeader><div className="theme-options">{(Object.keys(themeLabels) as Theme[]).map((item) => <button key={item} className={`theme-option preview-${item} ${theme === item ? "selected" : ""}`} onClick={() => { setTheme(item); setThemeOpen(false); }}><span/><strong>{themeLabels[item]}</strong>{theme === item && <small>Em uso</small>}</button>)}</div></SheetContent></Sheet>
+      <Sheet open={themeOpen} onOpenChange={setThemeOpen}><SheetContent side="right" className={`theme-sheet theme-${theme}`}><SheetHeader><SheetTitle>Escolha o tema</SheetTitle></SheetHeader><div className="theme-options">{(Object.keys(themeLabels) as Theme[]).map((item) => <button key={item} className={`theme-option preview-${item} ${theme === item ? "selected" : ""}`} onClick={() => { setTheme(item); setThemeOpen(false); }}><span/><strong>{themeLabels[item]}</strong>{theme === item && <small>Em uso</small>}</button>)}</div></SheetContent></Sheet>
 
-      <Dialog open={aboutOpen} onOpenChange={setAboutOpen}><DialogContent><DialogHeader><DialogTitle>Sobre esta edição</DialogTitle></DialogHeader><div className="about-content"><p><strong>Bíblia:</strong> Almeida 1819 — Bíblia Livre. A fonte de dados identifica esta versão histórica como domínio público.</p><p><strong>Dicionário:</strong> Dicionário Teológico — Amplo Conhecimento, Projeto L.M. Lemos, por Luan Maciel de Lemos.</p><p><strong>Identidade:</strong> cristã evangélica, com influência reformada, cânon protestante de 66 livros e autoridade final das Escrituras.</p><p>Comentários, introduções e estudos são recursos humanos de apoio. Eles não possuem a mesma autoridade do texto bíblico.</p></div></DialogContent></Dialog>
+      <Dialog open={aboutOpen} onOpenChange={setAboutOpen}><DialogContent className={`about-dialog theme-${theme}`}><DialogHeader><DialogTitle>Sobre esta edição</DialogTitle></DialogHeader><div className="about-content"><p><strong>Bíblia:</strong> Almeida 1819 — Bíblia Livre. A fonte de dados identifica esta versão histórica como domínio público.</p><p><strong>Dicionário:</strong> Dicionário Teológico — Amplo Conhecimento, Projeto L.M. Lemos, por Luan Maciel de Lemos.</p><p><strong>Identidade:</strong> cristã evangélica, com influência reformada, cânon protestante de 66 livros e autoridade final das Escrituras.</p><p>Comentários, introduções e estudos são recursos humanos de apoio. Eles não possuem a mesma autoridade do texto bíblico.</p></div></DialogContent></Dialog>
     </div>
   );
 }
