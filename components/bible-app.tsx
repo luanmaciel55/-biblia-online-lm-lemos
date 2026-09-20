@@ -244,16 +244,17 @@ export function BibleApp() {
 
   useEffect(() => {
     if (!moreResource || externalResourceItems[moreResource]) return;
-    supabase.from("bible_resources").select("title,body,sort_order").eq("category", moreResource).order("sort_order", { ascending: true }).limit(200)
-      .then(({data,error}) => {
+    const resource = moreResource;
+    const loadResources = async () => {
+      try {
+        const { data, error } = await supabase.from("bible_resources").select("title,body,sort_order").eq("category", resource).order("sort_order", { ascending: true }).limit(200);
         if (error || !data?.length) throw error || new Error("Sem dados");
-        setExternalResourceItems(prev => ({...prev,[moreResource]:data.map((x:any)=>({title:x.title,text:x.body}))}));
-      })
-      .catch(() => {
-        const resource = moreResource;
-        if (!resource) return;
+        setExternalResourceItems(prev => ({ ...prev, [resource]: data.map((x: { title: string; body: string }) => ({ title: x.title, text: x.body })) }));
+      } catch {
         setExternalResourceItems(prev => ({ ...prev, [resource]: RESOURCE_DATA[resource] || [] }));
-      });
+      }
+    };
+    void loadResources();
   }, [moreResource, externalResourceItems]);
 
   const savedItems = useMemo(() => Object.entries(annotations).map(([key, annotation]) => {
