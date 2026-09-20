@@ -221,3 +221,12 @@ button { cursor: pointer; }
   .more-resource-card { min-height: 94px; padding: 16px 42px 16px 16px; }
   .mobile-nav .more-nav-icon { font-size: 15px; }
 }
+
+.resource-content { display:grid; gap:18px; }
+.resource-note,.resource-credits { border:1px solid var(--border); border-radius:16px; padding:16px 18px; background:var(--card); }
+.resource-note p,.resource-credits p { margin:6px 0 0; opacity:.75; line-height:1.55; }
+.resource-list { display:grid; gap:12px; }
+.resource-item { border:1px solid var(--border); border-radius:16px; padding:18px; background:var(--card); }
+.resource-item h2 { margin:0 0 7px; font-size:1.08rem; }
+.resource-item p { margin:0; line-height:1.55; opacity:.82; }
+.resource-item .reference-list { margin-top:12px; }
