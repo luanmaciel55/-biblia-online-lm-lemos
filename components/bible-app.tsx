@@ -244,21 +244,11 @@ export function BibleApp() {
 
   useEffect(() => {
     if (!moreResource || externalResourceItems[moreResource]) return;
-    const files: Record<Exclude<MoreResource, null>, string> = {
-      "Strong": "strong",
-      "Estudos STEP Bible": "estudos-step",
-      "Mapas Bíblicos": "mapas",
-      "Pessoas": "pessoas",
-      "Lugares": "lugares",
-      "Genealogias": "genealogias",
-      "Referências Cruzadas": "referencias-cruzadas",
-      "Pesos e Medidas": "pesos-medidas",
-      "Viagens Bíblicas": "viagens",
-      "Assuntos Bíblicos": "assuntos"
-    };
-    fetch(`/data/resources/${files[moreResource]}.json`)
-      .then(r => r.ok ? r.json() : Promise.reject(new Error("Recurso não encontrado")))
-      .then((items: {title:string;text:string}[]) => setExternalResourceItems(prev => ({...prev,[moreResource]:items})))
+    supabase.from("bible_resources").select("title,body,sort_order").eq("category", moreResource).order("sort_order", { ascending: true }).limit(200)
+      .then(({data,error}) => {
+        if (error || !data?.length) throw error || new Error("Sem dados");
+        setExternalResourceItems(prev => ({...prev,[moreResource]:data.map((x:any)=>({title:x.title,text:x.body}))}));
+      })
       .catch(() => setExternalResourceItems(prev => ({...prev,[moreResource]:RESOURCE_DATA[moreResource]||[]})));
   }, [moreResource, externalResourceItems]);
 
