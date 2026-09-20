@@ -25,7 +25,7 @@ type DictionaryEntry = {
 };
 type DictionaryData = { title: string; project: string; author: string; identity: string; entries: DictionaryEntry[] };
 type DictionaryManifest = Omit<DictionaryData, "entries"> & { parts: string[] };
-type View = "bible" | "dictionary" | "topics" | "studies" | "appeal";
+type View = "bible" | "dictionary" | "topics" | "studies" | "appeal" | "more";
 type Theme = "default" | "brown" | "red" | "black";
 type Annotation = { color?: string; note?: string };
 type VerseSelection = { book: number; chapter: number; verse: BibleVerse };
@@ -435,6 +435,7 @@ export function BibleApp() {
           <NavButton icon={<Sparkles />} label="Assuntos" active={view === "topics"} onClick={() => setView("topics")} />
           <NavButton icon={<GraduationCap />} label="Estudos" active={view === "studies"} onClick={() => setView("studies")} />
           <NavButton icon={<MessageSquareText />} label="Conheça Jesus" active={view === "appeal"} onClick={() => setView("appeal")} />
+          <NavButton icon={<span className="more-nav-icon">👍🏻+</span>} label="Ver mais" active={view === "more"} onClick={() => setView("more")} />
           <div className="side-source"><span>Texto bíblico</span><strong>Almeida 1819</strong><small>Bíblia Livre · domínio público</small></div>
         </aside>
 
@@ -507,6 +508,30 @@ export function BibleApp() {
             </section>
           )}
 
+          {view === "more" && (
+            <section className="content-view more-resources-view">
+              <div className="page-title"><span className="eyebrow">Ferramentas para aprofundar</span><h1>Mais recursos</h1><p>Escolha uma ferramenta de estudo bíblico.</p></div>
+              <div className="more-resources-grid">
+                {[
+                  ["Strong", "Palavras do hebraico e grego, números Strong e significados."],
+                  ["Estudos STEP Bible", "Recursos para estudo dos textos e idiomas originais."],
+                  ["Mapas Bíblicos", "Explore os lugares e a geografia dos acontecimentos bíblicos."],
+                  ["Pessoas", "Conheça personagens, relações e referências bíblicas."],
+                  ["Lugares", "Consulte cidades, regiões e outros lugares mencionados na Bíblia."],
+                  ["Genealogias", "Acompanhe famílias e linhagens registradas nas Escrituras."],
+                  ["Referências Cruzadas", "Encontre outros textos relacionados a uma passagem."],
+                  ["Pesos e Medidas", "Entenda unidades, valores e medidas usadas no mundo bíblico."],
+                  ["Viagens Bíblicas", "Acompanhe jornadas e deslocamentos narrados na Bíblia."],
+                  ["Assuntos Bíblicos", "Estude temas bíblicos por assunto e suas referências."],
+                ].map(([title, description]) => (
+                  <button key={title} className="more-resource-card">
+                    <strong>{title}</strong><span>{description}</span><ChevronRight size={18} />
+                  </button>
+                ))}
+              </div>
+            </section>
+          )}
+
           {view === "topics" && (
             <section className="content-view"><div className="page-title"><span className="eyebrow">A Bíblia por tema</span><h1>Assuntos</h1><p>Abra um assunto e siga as principais passagens no próprio texto bíblico.</p></div>
               <div className="topics-grid">{TOPICS.map((topic) => <article key={topic.name} className="topic-card"><span className="topic-icon"><Sparkles size={18} /></span><h2>{topic.name}</h2><p>{topic.description}</p><div className="reference-list">{topic.refs.map((item) => <button key={item.label} onClick={() => goToReference(item)}>{item.label}<ChevronRight size={14} /></button>)}</div></article>)}</div>
@@ -536,6 +561,7 @@ export function BibleApp() {
         <NavButton icon={<Sparkles />} label="Assuntos" active={view === "topics"} onClick={() => setView("topics")} />
         <NavButton icon={<GraduationCap />} label="Estudos" active={view === "studies"} onClick={() => setView("studies")} />
         <NavButton icon={<MessageSquareText />} label="Jesus" active={view === "appeal"} onClick={() => setView("appeal")} />
+        <NavButton icon={<span className="more-nav-icon">👍🏻+</span>} label="Ver mais" active={view === "more"} onClick={() => setView("more")} />
       </nav>
 
       <Dialog open={searchOpen} onOpenChange={setSearchOpen}>
