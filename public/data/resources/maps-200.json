@@ -1,0 +1,807 @@
+{
+  "source": "OpenBible.info Bible Geocoding Data",
+  "license": "CC BY 4.0",
+  "count": 200,
+  "entries": [
+    {
+      "title": "Abana",
+      "text": "Ponto do atlas bíblico: Abana. Categoria: river. Posição de referência: 36.305000,33.513542. Identificação proposta: Barada River. O lugar aparece, entre outras passagens, em 2 Kgs 5:12. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Abarim",
+      "text": "Ponto do atlas bíblico: Abarim. Categoria: mountain range. Posição de referência: 35.715200,31.753900. Identificação proposta: Abarim. O lugar aparece, entre outras passagens, em Num 27:12, Num 33:47, Num 33:48, Deut 32:49, Jer 22:20. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Abdon",
+      "text": "Ponto do atlas bíblico: Abdon. Categoria: settlement. Posição de referência: 35.161916,33.047692. Identificação proposta: Tel Avdon. O lugar aparece, entre outras passagens, em Josh 21:30, 1 Chr 6:74. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Abel-beth-maacah",
+      "text": "Ponto do atlas bíblico: Abel-beth-maacah. Categoria: settlement. Posição de referência: 35.581007,33.258051. Identificação proposta: Tel Abel Beth Maacah. O lugar aparece, entre outras passagens, em 2 Sam 20:14, 2 Sam 20:15, 2 Sam 20:18, 1 Kgs 15:20, 2 Kgs 15:29. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Abel-keramim",
+      "text": "Ponto do atlas bíblico: Abel-keramim. Categoria: settlement. Posição de referência: 36.004860,31.875610. Identificação proposta: Sahab. O lugar aparece, entre outras passagens, em Judg 11:33. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Abel-meholah",
+      "text": "Ponto do atlas bíblico: Abel-meholah. Categoria: settlement. Posição de referência: 35.560890,32.374300. Identificação proposta: Tell Abu Sus. O lugar aparece, entre outras passagens, em Judg 7:22, 1 Kgs 4:12, 1 Kgs 19:16. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Abel-mizraim",
+      "text": "Ponto do atlas bíblico: Abel-mizraim. Categoria: settlement. Posição de referência: 35.530445,31.914888. Identificação proposta: near the mouth of the Jordan River. O lugar aparece, entre outras passagens, em Gen 50:11. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Abel-shittim",
+      "text": "Ponto do atlas bíblico: Abel-shittim. Categoria: campsite. Posição de referência: 35.673680,31.840180. Identificação proposta: Tall el Hammam. O lugar aparece, entre outras passagens, em Num 33:49. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Abiezer",
+      "text": "Ponto do atlas bíblico: Abiezer. Categoria: people group. Posição de referência: 35.290000,32.605700. Identificação proposta: about 15 km around Afula. O lugar aparece, entre outras passagens, em Judg 8:2. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Abila",
+      "text": "Ponto do atlas bíblico: Abila. Categoria: settlement. Posição de referência: 35.855908,31.905663. Identificação proposta: Merj Ekkeh. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Abila Lysaniou",
+      "text": "Ponto do atlas bíblico: Abila Lysaniou. Categoria: settlement. Posição de referência: 36.105833,33.626667. Identificação proposta: Souq Wadi Barada. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Abilene",
+      "text": "Ponto do atlas bíblico: Abilene. Categoria: region. Posição de referência: 36.105833,33.626667. Identificação proposta: Abilene. O lugar aparece, entre outras passagens, em Luke 3:1. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Abronah",
+      "text": "Ponto do atlas bíblico: Abronah. Categoria: campsite. Posição de referência: 34.999999,29.530676. Identificação proposta: Aqaba. O lugar aparece, entre outras passagens, em Num 33:34, Num 33:35. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Accad",
+      "text": "Ponto do atlas bíblico: Accad. Categoria: settlement. Posição de referência: 44.391944,33.025556. Identificação proposta: Tell Sheshubar. O lugar aparece, entre outras passagens, em Gen 10:10. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Acco",
+      "text": "Ponto do atlas bíblico: Acco. Categoria: settlement. Posição de referência: 35.088333,32.921111. Identificação proposta: Tel Akko. O lugar aparece, entre outras passagens, em Judg 1:31. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Achaia",
+      "text": "Ponto do atlas bíblico: Achaia. Categoria: region. Posição de referência: 22.540000,38.720000. Identificação proposta: Achaia. O lugar aparece, entre outras passagens, em Acts 18:12, Acts 18:27, Acts 19:21, Rom 15:26, 1 Cor 16:15. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Achshaph",
+      "text": "Ponto do atlas bíblico: Achshaph. Categoria: settlement. Posição de referência: 35.090270,32.758850. Identificação proposta: Tel Regev. O lugar aparece, entre outras passagens, em Josh 11:1, Josh 12:20, Josh 19:25. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Achzib 1",
+      "text": "Ponto do atlas bíblico: Achzib 1. Categoria: settlement. Posição de referência: 34.953019,31.642074. Identificação proposta: Tel el Beida. O lugar aparece, entre outras passagens, em Josh 15:44, Mic 1:14. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Achzib 2",
+      "text": "Ponto do atlas bíblico: Achzib 2. Categoria: settlement. Posição de referência: 35.102652,33.048278. Identificação proposta: Tel Achziv. O lugar aparece, entre outras passagens, em Josh 19:29, Judg 1:31. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Adadah",
+      "text": "Ponto do atlas bíblico: Adadah. Categoria: settlement. Posição de referência: 34.979070,31.152140. Identificação proposta: Khirbet Aro’er. O lugar aparece, entre outras passagens, em Josh 15:22. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Adam",
+      "text": "Ponto do atlas bíblico: Adam. Categoria: settlement. Posição de referência: 35.546789,32.103933. Identificação proposta: Tell ed Damiyeh. O lugar aparece, entre outras passagens, em Josh 3:16. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Adamah",
+      "text": "Ponto do atlas bíblico: Adamah. Categoria: settlement. Posição de referência: 35.459722,32.799722. Identificação proposta: Qarn Hattin. O lugar aparece, entre outras passagens, em Josh 19:36. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Adami-nekeb",
+      "text": "Ponto do atlas bíblico: Adami-nekeb. Categoria: settlement. Posição de referência: 35.459167,32.749167. Identificação proposta: Tel Adami. O lugar aparece, entre outras passagens, em Josh 19:33. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Adasa",
+      "text": "Ponto do atlas bíblico: Adasa. Categoria: settlement. Posição de referência: 35.163630,31.848810. Identificação proposta: Khirbet Adasa. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Addar",
+      "text": "Ponto do atlas bíblico: Addar. Categoria: settlement, special. Posição de referência: 34.484081,30.583378. Identificação proposta: Ein Qedeis. O lugar aparece, entre outras passagens, em Josh 15:3. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Addon",
+      "text": "Ponto do atlas bíblico: Addon. Categoria: settlement, special. Posição de referência: 44.422222,32.543333. Identificação proposta: in Babylonia. O lugar aparece, entre outras passagens, em Ezra 2:59, Neh 7:61. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Adithaim",
+      "text": "Ponto do atlas bíblico: Adithaim. Categoria: settlement. Posição de referência: 34.951764,31.963319. Identificação proposta: Al Haditha. O lugar aparece, entre outras passagens, em Josh 15:36. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Admah",
+      "text": "Ponto do atlas bíblico: Admah. Categoria: settlement. Posição de referência: 35.449223,31.208490. Identificação proposta: in the region south of the Lisan. O lugar aparece, entre outras passagens, em Gen 10:19, Gen 14:2, Gen 14:8, Deut 29:23, Hos 11:8. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Adoraim",
+      "text": "Ponto do atlas bíblico: Adoraim. Categoria: settlement. Posição de referência: 35.027500,31.505060. Identificação proposta: Dura. O lugar aparece, entre outras passagens, em 2 Chr 11:9. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Adramyttium",
+      "text": "Ponto do atlas bíblico: Adramyttium. Categoria: settlement. Posição de referência: 26.932716,39.500667. Identificação proposta: Oren. O lugar aparece, entre outras passagens, em Acts 27:2. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Adriatic Sea",
+      "text": "Ponto do atlas bíblico: Adriatic Sea. Categoria: body of water. Posição de referência: 19.000000,38.000000. Identificação proposta: Adriatic and Ionian Seas. O lugar aparece, entre outras passagens, em Acts 27:27. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Adulis",
+      "text": "Ponto do atlas bíblico: Adulis. Categoria: settlement. Posição de referência: 39.660552,15.263061. Identificação proposta: Adulis. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Adullam",
+      "text": "Ponto do atlas bíblico: Adullam. Categoria: settlement. Posição de referência: 35.001667,31.651667. Identificação proposta: Khirbet esh Sheikh Madhkur. O lugar aparece, entre outras passagens, em Gen 38:1, Josh 12:15, Josh 15:35, 1 Sam 22:1, 2 Sam 23:13. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Adummim",
+      "text": "Ponto do atlas bíblico: Adummim. Categoria: road. Posição de referência: 35.361505,31.817500. Identificação proposta: Adummim. O lugar aparece, entre outras passagens, em Josh 15:7, Josh 18:17. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Aenon",
+      "text": "Ponto do atlas bíblico: Aenon. Categoria: settlement. Posição de referência: 35.528210,32.381520. Identificação proposta: Umm el Umdan. O lugar aparece, entre outras passagens, em John 3:23. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Ahava",
+      "text": "Ponto do atlas bíblico: Ahava. Categoria: canal, settlement. Posição de referência: 44.422222,32.543333. Identificação proposta: within 250 km of Babylon. O lugar aparece, entre outras passagens, em Ezra 8:15, Ezra 8:21, Ezra 8:31. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Ahlab",
+      "text": "Ponto do atlas bíblico: Ahlab. Categoria: settlement. Posição de referência: 35.243368,33.317804. Identificação proposta: Khirbet al Mahalib. O lugar aparece, entre outras passagens, em Judg 1:31. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Ai 1",
+      "text": "Ponto do atlas bíblico: Ai 1. Categoria: settlement. Posição de referência: 35.261111,31.916944. Identificação proposta: Et Tell. O lugar aparece, entre outras passagens, em Gen 12:8, Gen 13:3, Josh 7:2, Josh 7:3, Josh 7:4. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Ai 2",
+      "text": "Ponto do atlas bíblico: Ai 2. Categoria: settlement, special. Identificação proposta: not a proper name. O lugar aparece, entre outras passagens, em Jer 49:3. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Ai 3",
+      "text": "Ponto do atlas bíblico: Ai 3. Categoria: settlement. Posição de referência: 35.261111,31.916944. Identificação proposta: Et Tell. O lugar aparece, entre outras passagens, em Ezra 2:28, Neh 7:32. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Aiath",
+      "text": "Ponto do atlas bíblico: Aiath. Categoria: settlement. Posição de referência: 35.261111,31.916944. Identificação proposta: Et Tell. O lugar aparece, entre outras passagens, em Isa 10:28. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Aija",
+      "text": "Ponto do atlas bíblico: Aija. Categoria: settlement. Posição de referência: 35.261111,31.916944. Identificação proposta: Et Tell. O lugar aparece, entre outras passagens, em Neh 11:31. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Aijalon 1",
+      "text": "Ponto do atlas bíblico: Aijalon 1. Categoria: settlement. Posição de referência: 35.023611,31.841111. Identificação proposta: Yalo. O lugar aparece, entre outras passagens, em Josh 19:42, Josh 21:24, Judg 1:35, 1 Sam 14:31, 1 Chr 6:69. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Aijalon 2",
+      "text": "Ponto do atlas bíblico: Aijalon 2. Categoria: settlement. Posição de referência: 35.309023,32.814086. Identificação proposta: Tel el Butmeh. O lugar aparece, entre outras passagens, em Judg 12:12. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Ain 1",
+      "text": "Ponto do atlas bíblico: Ain 1. Categoria: settlement. Posição de referência: 35.667910,32.718650. Identificação proposta: Khirbet Ayun. O lugar aparece, entre outras passagens, em Num 34:11. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Ain 2",
+      "text": "Ponto do atlas bíblico: Ain 2. Categoria: settlement. Posição de referência: 34.865640,31.383330. Identificação proposta: Tel Halif. O lugar aparece, entre outras passagens, em Josh 15:32, Josh 19:7, 1 Chr 4:32. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Ain 3",
+      "text": "Ponto do atlas bíblico: Ain 3. Categoria: settlement. Posição de referência: 34.865640,31.383330. Identificação proposta: Tel Halif. O lugar aparece, entre outras passagens, em Josh 21:16. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Akeldama",
+      "text": "Ponto do atlas bíblico: Akeldama. Categoria: field. Posição de referência: 35.232880,31.768410. Identificação proposta: Akeldama. O lugar aparece, entre outras passagens, em Matt 27:8, Acts 1:19. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Akrabbim",
+      "text": "Ponto do atlas bíblico: Akrabbim. Categoria: mountain pass. Posição de referência: 35.131259,30.906602. Identificação proposta: Ma’ale Akrabbim. O lugar aparece, entre outras passagens, em Num 34:4, Josh 15:3, Judg 1:36. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Alemeth",
+      "text": "Ponto do atlas bíblico: Alemeth. Categoria: settlement. Posição de referência: 35.273498,31.824903. Identificação proposta: Khirbet Almit. O lugar aparece, entre outras passagens, em 1 Chr 6:60. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Alexandria",
+      "text": "Ponto do atlas bíblico: Alexandria. Categoria: settlement. Posição de referência: 29.896500,31.182500. Identificação proposta: Alexandria. O lugar aparece, entre outras passagens, em Acts 6:9, Acts 18:24, Acts 27:6, Acts 28:11. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Allammelech",
+      "text": "Ponto do atlas bíblico: Allammelech. Categoria: settlement. Posição de referência: 35.155668,32.771772. Identificação proposta: Tel Alil. O lugar aparece, entre outras passagens, em Josh 19:26. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Allon",
+      "text": "Ponto do atlas bíblico: Allon. Categoria: tree. Posição de referência: 35.410640,32.721130. Identificação proposta: in Hanot Taggarim. O lugar aparece, entre outras passagens, em Josh 19:33. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Allon-bacuth",
+      "text": "Ponto do atlas bíblico: Allon-bacuth. Categoria: tree. Posição de referência: 35.241389,31.922778. Identificação proposta: within 1 km of Beitin. O lugar aparece, entre outras passagens, em Gen 35:8. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Almon",
+      "text": "Ponto do atlas bíblico: Almon. Categoria: settlement. Posição de referência: 35.273498,31.824903. Identificação proposta: Khirbet Almit. O lugar aparece, entre outras passagens, em Josh 21:18. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Almon-diblathaim",
+      "text": "Ponto do atlas bíblico: Almon-diblathaim. Categoria: settlement. Posição de referência: 35.826578,31.638727. Identificação proposta: Duleilat esh Sharqiyeh. O lugar aparece, entre outras passagens, em Num 33:46, Num 33:47. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Alush",
+      "text": "Ponto do atlas bíblico: Alush. Categoria: campsite. Posição de referência: 33.767493,28.770311. Identificação proposta: along Wadi el Esh. O lugar aparece, entre outras passagens, em Num 33:13, Num 33:14. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Ama",
+      "text": "Ponto do atlas bíblico: Ama. Categoria: settlement. Posição de referência: 47.869402,31.782302. Identificação proposta: along the Karkheh River. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Amad",
+      "text": "Ponto do atlas bíblico: Amad. Categoria: settlement. Posição de referência: 35.023333,32.672500. Identificação proposta: within 10 km of Mount Carmel. O lugar aparece, entre outras passagens, em Josh 19:26. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Amalek",
+      "text": "Ponto do atlas bíblico: Amalek. Categoria: region. Posição de referência: 34.422222,30.648333. Identificação proposta: Amalek. O lugar aparece, entre outras passagens, em Ex 17:8, Ex 17:9, Ex 17:10, Ex 17:11, Ex 17:13. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Amam",
+      "text": "Ponto do atlas bíblico: Amam. Categoria: settlement. Posição de referência: 34.906840,31.218500. Identificação proposta: Be’er Nevatim. O lugar aparece, entre outras passagens, em Josh 15:26. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Amana",
+      "text": "Ponto do atlas bíblico: Amana. Categoria: mountain, mountain ridge. Posição de referência: 36.031667,33.688889. Identificação proposta: Jebel Zabadani. O lugar aparece, entre outras passagens, em Sng 4:8. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Amate",
+      "text": "Ponto do atlas bíblico: Amate. Categoria: settlement. Posição de referência: 47.869402,31.782302. Identificação proposta: along the Karkheh River. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Amaw",
+      "text": "Ponto do atlas bíblico: Amaw. Categoria: region, special. Posição de referência: 38.086500,36.701400. Identificação proposta: between Aleppo and Carchemish. O lugar aparece, entre outras passagens, em Num 22:5. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Ammah",
+      "text": "Ponto do atlas bíblico: Ammah. Categoria: hill. Posição de referência: 35.279535,31.841047. Identificação proposta: in the region east of Gibeon. O lugar aparece, entre outras passagens, em 2 Sam 2:24. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Ammon",
+      "text": "Ponto do atlas bíblico: Ammon. Categoria: region. Posição de referência: 35.934300,31.954700. Identificação proposta: Ammon. O lugar aparece, entre outras passagens, em Gen 19:38, Num 21:24, Deut 2:19, Deut 2:37, Deut 3:11. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Amphipolis",
+      "text": "Ponto do atlas bíblico: Amphipolis. Categoria: settlement. Posição de referência: 23.847209,40.820159. Identificação proposta: Amphipolis. O lugar aparece, entre outras passagens, em Acts 17:1. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Anab",
+      "text": "Ponto do atlas bíblico: Anab. Categoria: settlement. Posição de referência: 34.954900,31.412100. Identificação proposta: Khirbet Anab es Seghireh. O lugar aparece, entre outras passagens, em Josh 11:21, Josh 15:50. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Anaharath",
+      "text": "Ponto do atlas bíblico: Anaharath. Categoria: settlement. Posição de referência: 35.466140,32.653446. Identificação proposta: Tell Rekhesh. O lugar aparece, entre outras passagens, em Josh 19:19. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Ananiah",
+      "text": "Ponto do atlas bíblico: Ananiah. Categoria: settlement. Posição de referência: 35.255903,31.771661. Identificação proposta: Al Eizariya. O lugar aparece, entre outras passagens, em Neh 11:32. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Anathoth",
+      "text": "Ponto do atlas bíblico: Anathoth. Categoria: settlement. Posição de referência: 35.257580,31.807520. Identificação proposta: Ras el Kharruba. O lugar aparece, entre outras passagens, em Josh 21:18, 2 Sam 23:27, 1 Kgs 2:26, 1 Chr 6:60, 1 Chr 11:28. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Anem",
+      "text": "Ponto do atlas bíblico: Anem. Categoria: settlement. Posição de referência: 35.495439,32.713549. Identificação proposta: Khirbet Beit Jann. O lugar aparece, entre outras passagens, em 1 Chr 6:73. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Aner",
+      "text": "Ponto do atlas bíblico: Aner. Categoria: settlement. Posição de referência: 35.219122,32.521526. Identificação proposta: Tell Ta’anakh. O lugar aparece, entre outras passagens, em 1 Chr 6:70. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Angle",
+      "text": "Ponto do atlas bíblico: Angle. Categoria: structure. Posição de referência: 35.234167,31.776667. Identificação proposta: in Jerusalem. O lugar aparece, entre outras passagens, em 2 Chr 26:9, Neh 3:19, Neh 3:20, Neh 3:24, Neh 3:25. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Anim",
+      "text": "Ponto do atlas bíblico: Anim. Categoria: settlement. Posição de referência: 35.063521,31.353601. Identificação proposta: Horbat Anim. O lugar aparece, entre outras passagens, em Josh 15:50. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Antioch 1",
+      "text": "Ponto do atlas bíblico: Antioch 1. Categoria: settlement. Posição de referência: 36.171743,36.226691. Identificação proposta: Antioch on the Orontes. O lugar aparece, entre outras passagens, em Acts 6:5, Acts 11:19, Acts 11:20, Acts 11:22, Acts 11:26. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Antioch 2",
+      "text": "Ponto do atlas bíblico: Antioch 2. Categoria: settlement. Posição de referência: 31.189167,38.306111. Identificação proposta: Antioch in Pisidia. O lugar aparece, entre outras passagens, em Acts 13:14, Acts 14:19, Acts 14:21, 2 Tim 3:11. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Aphek 1",
+      "text": "Ponto do atlas bíblico: Aphek 1. Categoria: settlement. Posição de referência: 35.111900,32.846100. Identificação proposta: Tel Afek. O lugar aparece, entre outras passagens, em Josh 19:30. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Aphek 2",
+      "text": "Ponto do atlas bíblico: Aphek 2. Categoria: settlement. Posição de referência: 34.930417,32.105000. Identificação proposta: Tell Ras el Ain. O lugar aparece, entre outras passagens, em Josh 12:18, 1 Sam 4:1, 1 Sam 29:1, Acts 23:31. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Aphek 3",
+      "text": "Ponto do atlas bíblico: Aphek 3. Categoria: settlement. Posição de referência: 35.637290,32.783679. Identificação proposta: Tel Ein Gev. O lugar aparece, entre outras passagens, em 1 Kgs 20:26, 1 Kgs 20:30, 2 Kgs 13:17. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Aphek 4",
+      "text": "Ponto do atlas bíblico: Aphek 4. Categoria: settlement. Posição de referência: 35.886111,34.069167. Identificação proposta: Afqa. O lugar aparece, entre outras passagens, em Josh 13:4. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Aphekah",
+      "text": "Ponto do atlas bíblico: Aphekah. Categoria: settlement. Posição de referência: 34.997500,31.455500. Identificação proposta: Khirbet al Hadab. O lugar aparece, entre outras passagens, em Josh 15:53. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Aphik",
+      "text": "Ponto do atlas bíblico: Aphik. Categoria: settlement. Posição de referência: 35.111900,32.846100. Identificação proposta: Tel Afek. O lugar aparece, entre outras passagens, em Judg 1:31. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Apollonia",
+      "text": "Ponto do atlas bíblico: Apollonia. Categoria: settlement. Posição de referência: 23.469685,40.623703. Identificação proposta: Apollonia. O lugar aparece, entre outras passagens, em Acts 17:1. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Ar",
+      "text": "Ponto do atlas bíblico: Ar. Categoria: settlement. Posição de referência: 35.782764,31.359913. Identificação proposta: Khirbet al Balua. O lugar aparece, entre outras passagens, em Num 21:15, Num 21:28, Deut 2:9, Deut 2:10, Deut 2:18. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Arab",
+      "text": "Ponto do atlas bíblico: Arab. Categoria: settlement. Posição de referência: 35.029570,31.431880. Identificação proposta: Khirbet er Rabiyeh. O lugar aparece, entre outras passagens, em Josh 15:52. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Arabah",
+      "text": "Ponto do atlas bíblico: Arabah. Categoria: region. Posição de referência: 35.151389,30.416944. Identificação proposta: Arabah. O lugar aparece, entre outras passagens, em Deut 1:1, Deut 1:7, Deut 2:8, Deut 3:17, Deut 4:49. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Arabia 1",
+      "text": "Ponto do atlas bíblico: Arabia 1. Categoria: region. Posição de referência: 46.000000,23.000000. Identificação proposta: Arabian Peninsula. O lugar aparece, entre outras passagens, em 1 Kgs 10:15, 2 Chr 9:14, Isa 21:13, Jer 25:24, Ezek 27:21. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Arabia 2",
+      "text": "Ponto do atlas bíblico: Arabia 2. Categoria: region. Posição de referência: 35.350000,30.070000. Identificação proposta: Arabia Petraea. O lugar aparece, entre outras passagens, em Gal 1:17, Gal 4:25. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Arad 1",
+      "text": "Ponto do atlas bíblico: Arad 1. Categoria: settlement. Posição de referência: 35.125000,31.280833. Identificação proposta: Tel Arad. O lugar aparece, entre outras passagens, em Num 21:1, Num 33:40, Josh 12:14. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Arad 2",
+      "text": "Ponto do atlas bíblico: Arad 2. Categoria: settlement. Posição de referência: 35.125000,31.280833. Identificação proposta: Tel Arad. O lugar aparece, entre outras passagens, em Judg 1:16. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Aram",
+      "text": "Ponto do atlas bíblico: Aram. Categoria: region. Posição de referência: 36.306390,33.511112. Identificação proposta: Aram. O lugar aparece, entre outras passagens, em Num 23:7, Judg 18:7, Judg 18:28, 2 Sam 8:6, 2 Sam 15:8. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Aram-naharaim",
+      "text": "Ponto do atlas bíblico: Aram-naharaim. Categoria: region. Posição de referência: 39.032778,36.864444. Identificação proposta: Aram-naharaim. O lugar aparece, entre outras passagens, em Ps 60:1. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Ararat",
+      "text": "Ponto do atlas bíblico: Ararat. Categoria: region. Posição de referência: 44.300381,39.702761. Identificação proposta: Urartu. O lugar aparece, entre outras passagens, em Gen 8:4, 2 Kgs 19:37, Isa 37:38, Jer 51:27. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Arbela",
+      "text": "Ponto do atlas bíblico: Arbela. Categoria: settlement. Posição de referência: 35.483808,32.815137. Identificação proposta: Horbat Arbel. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Areopagus",
+      "text": "Ponto do atlas bíblico: Areopagus. Categoria: hill. Posição de referência: 23.723611,37.972222. Identificação proposta: Areopagus. O lugar aparece, entre outras passagens, em Acts 17:19, Acts 17:22, Acts 17:33. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Argob",
+      "text": "Ponto do atlas bíblico: Argob. Categoria: region. Posição de referência: 36.455383,32.969500. Identificação proposta: Argob. O lugar aparece, entre outras passagens, em Deut 3:4, Deut 3:13, Deut 3:14, 1 Kgs 4:13. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Ariel",
+      "text": "Ponto do atlas bíblico: Ariel. Categoria: settlement. Posição de referência: 35.234167,31.776667. Identificação proposta: Jerusalem. O lugar aparece, entre outras passagens, em Isa 29:1, Isa 29:2, Isa 29:7. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Arimathea",
+      "text": "Ponto do atlas bíblico: Arimathea. Categoria: settlement. Posição de referência: 35.019444,32.028056. Identificação proposta: Rantis. O lugar aparece, entre outras passagens, em Matt 27:57, Mark 15:43, Luke 23:50, John 19:38. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Armageddon",
+      "text": "Ponto do atlas bíblico: Armageddon. Categoria: mountain, river, settlement, special, valley. Posição de referência: 35.184444,32.585278. Identificação proposta: Tel Megiddo. O lugar aparece, entre outras passagens, em Rev 16:16. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Arnon",
+      "text": "Ponto do atlas bíblico: Arnon. Categoria: river. Posição de referência: 35.573333,31.465833. Identificação proposta: Wadi Mujib. O lugar aparece, entre outras passagens, em Num 21:13, Num 21:14, Num 21:24, Num 21:26, Num 21:28. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Aroer 1",
+      "text": "Ponto do atlas bíblico: Aroer 1. Categoria: settlement. Posição de referência: 35.819389,31.470800. Identificação proposta: Arair. O lugar aparece, entre outras passagens, em Num 32:34, Deut 2:36, Deut 3:12, Deut 4:48, Josh 12:2. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Aroer 2",
+      "text": "Ponto do atlas bíblico: Aroer 2. Categoria: settlement. Posição de referência: 35.871319,31.970160. Identificação proposta: Khirbet Udena. O lugar aparece, entre outras passagens, em Josh 13:25, Judg 11:33. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Aroer 3",
+      "text": "Ponto do atlas bíblico: Aroer 3. Categoria: settlement. Posição de referência: 34.979070,31.152140. Identificação proposta: Khirbet Aro’er. O lugar aparece, entre outras passagens, em 1 Sam 30:28. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Aroer 4",
+      "text": "Ponto do atlas bíblico: Aroer 4. Categoria: settlement. Posição de referência: 34.979070,31.152140. Identificação proposta: Khirbet Aro’er. O lugar aparece, entre outras passagens, em 1 Chr 11:44. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Arpad",
+      "text": "Ponto do atlas bíblico: Arpad. Categoria: settlement. Posição de referência: 37.094722,36.472500. Identificação proposta: Tell Rifat. O lugar aparece, entre outras passagens, em 2 Kgs 18:34, 2 Kgs 19:13, Isa 10:9, Isa 36:19, Isa 37:13. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Arsinoe",
+      "text": "Ponto do atlas bíblico: Arsinoe. Categoria: settlement. Posição de referência: 32.266667,30.566667. Identificação proposta: in the region between Maghfar and Lake Timsah. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Arubboth",
+      "text": "Ponto do atlas bíblico: Arubboth. Categoria: settlement. Posição de referência: 35.133551,32.407310. Identificação proposta: Khirbet el Hamam. O lugar aparece, entre outras passagens, em 1 Kgs 4:10. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Arumah",
+      "text": "Ponto do atlas bíblico: Arumah. Categoria: settlement. Posição de referência: 35.321583,32.147556. Identificação proposta: Khirbet Urmah. O lugar aparece, entre outras passagens, em Judg 9:31, Judg 9:41. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Arvad",
+      "text": "Ponto do atlas bíblico: Arvad. Categoria: settlement. Posição de referência: 35.858333,34.856111. Identificação proposta: Arwad. O lugar aparece, entre outras passagens, em Ezek 27:8, Ezek 27:11. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Ashan",
+      "text": "Ponto do atlas bíblico: Ashan. Categoria: settlement. Posição de referência: 34.797404,31.281372. Identificação proposta: Khirbet Asan. O lugar aparece, entre outras passagens, em Josh 15:42, Josh 19:7, 1 Chr 4:32, 1 Chr 6:59. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Ashdod",
+      "text": "Ponto do atlas bíblico: Ashdod. Categoria: settlement. Posição de referência: 34.657800,31.757200. Identificação proposta: Tel Ashdod. O lugar aparece, entre outras passagens, em Josh 11:22, Josh 13:3, Josh 15:46, Josh 15:47, 1 Sam 5:1. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Ashkelon",
+      "text": "Ponto do atlas bíblico: Ashkelon. Categoria: settlement. Posição de referência: 34.545833,31.663889. Identificação proposta: Tel Ashkelon. O lugar aparece, entre outras passagens, em Josh 13:3, Judg 1:18, Judg 14:19, 1 Sam 6:17, 2 Sam 1:20. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Ashkenaz",
+      "text": "Ponto do atlas bíblico: Ashkenaz. Categoria: region. Posição de referência: 34.120560,44.942780. Identificação proposta: Scythia. O lugar aparece, entre outras passagens, em Jer 51:27. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Ashnah 1",
+      "text": "Ponto do atlas bíblico: Ashnah 1. Categoria: settlement, special. Posição de referência: 35.006303,31.784708. Identificação proposta: Islin. O lugar aparece, entre outras passagens, em Josh 15:33. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Ashnah 2",
+      "text": "Ponto do atlas bíblico: Ashnah 2. Categoria: settlement. Posição de referência: 34.976111,31.558611. Identificação proposta: Idhna. O lugar aparece, entre outras passagens, em Josh 15:43. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Ashtaroth",
+      "text": "Ponto do atlas bíblico: Ashtaroth. Categoria: settlement. Posição de referência: 36.015833,32.804167. Identificação proposta: Tell Ashtara. O lugar aparece, entre outras passagens, em Deut 1:4, Josh 9:10, Josh 12:4, Josh 13:12, Josh 13:31. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Ashteroth-karnaim",
+      "text": "Ponto do atlas bíblico: Ashteroth-karnaim. Categoria: settlement. Posição de referência: 36.015833,32.804167. Identificação proposta: Tell Ashtara. O lugar aparece, entre outras passagens, em Gen 14:5. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Asia",
+      "text": "Ponto do atlas bíblico: Asia. Categoria: region. Posição de referência: 28.300000,38.400000. Identificação proposta: Asia. O lugar aparece, entre outras passagens, em Acts 2:9, Acts 6:9, Acts 16:6, Acts 19:10, Acts 19:22. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Asshur",
+      "text": "Ponto do atlas bíblico: Asshur. Categoria: settlement. Posição de referência: 43.262500,35.456667. Identificação proposta: Assur. O lugar aparece, entre outras passagens, em Num 24:22, Num 24:24, Ps 83:8, Ezek 27:23. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Assos",
+      "text": "Ponto do atlas bíblico: Assos. Categoria: settlement. Posição de referência: 26.336667,39.490556. Identificação proposta: Assos. O lugar aparece, entre outras passagens, em Acts 20:13, Acts 20:14. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Assyria",
+      "text": "Ponto do atlas bíblico: Assyria. Categoria: region. Posição de referência: 43.152800,36.359400. Identificação proposta: Assyria. O lugar aparece, entre outras passagens, em Gen 2:14, Gen 10:11, Gen 25:18, 2 Kgs 15:19, 2 Kgs 15:20. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Atad",
+      "text": "Ponto do atlas bíblico: Atad. Categoria: settlement. Posição de referência: 35.530445,31.914888. Identificação proposta: near the mouth of the Jordan River. O lugar aparece, entre outras passagens, em Gen 50:10, Gen 50:11. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Ataroth 1",
+      "text": "Ponto do atlas bíblico: Ataroth 1. Categoria: settlement. Posição de referência: 35.665938,31.575300. Identificação proposta: Khirbet Ataruz. O lugar aparece, entre outras passagens, em Num 32:3, Num 32:34. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Ataroth 2",
+      "text": "Ponto do atlas bíblico: Ataroth 2. Categoria: settlement. Posição de referência: 35.228500,31.880500. Identificação proposta: Kafr Aqab. O lugar aparece, entre outras passagens, em Josh 16:2. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Ataroth 3",
+      "text": "Ponto do atlas bíblico: Ataroth 3. Categoria: settlement. Posição de referência: 35.228500,31.880500. Identificação proposta: Kafr Aqab. O lugar aparece, entre outras passagens, em Josh 16:7. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Ataroth-addar",
+      "text": "Ponto do atlas bíblico: Ataroth-addar. Categoria: settlement. Posição de referência: 35.217520,31.879930. Identificação proposta: Khirbet Atara. O lugar aparece, entre outras passagens, em Josh 16:5, Josh 18:13. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Athach",
+      "text": "Ponto do atlas bíblico: Athach. Categoria: settlement. Posição de referência: 34.878300,31.615930. Identificação proposta: Khirbet el Ater. O lugar aparece, entre outras passagens, em 1 Sam 30:30. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Atharim",
+      "text": "Ponto do atlas bíblico: Atharim. Categoria: road, settlement, special. Posição de referência: 34.779822,30.878961. Identificação proposta: road between Kadesh-barnea and Arad. O lugar aparece, entre outras passagens, em Num 21:1. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Athens",
+      "text": "Ponto do atlas bíblico: Athens. Categoria: settlement. Posição de referência: 23.726738,37.971851. Identificação proposta: Athens. O lugar aparece, entre outras passagens, em Acts 17:15, Acts 17:16, Acts 17:21, Acts 17:22, Acts 18:1. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Atroth-beth-joab",
+      "text": "Ponto do atlas bíblico: Atroth-beth-joab. Categoria: settlement, special. Posição de referência: 35.207639,31.704306. Identificação proposta: within 5 km of Bethlehem. O lugar aparece, entre outras passagens, em 1 Chr 2:54. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Atroth-shophan",
+      "text": "Ponto do atlas bíblico: Atroth-shophan. Categoria: settlement. Posição de referência: 35.687420,31.591311. Identificação proposta: Rujm Ataruz. O lugar aparece, entre outras passagens, em Num 32:35. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Attalia",
+      "text": "Ponto do atlas bíblico: Attalia. Categoria: settlement. Posição de referência: 30.703614,36.881272. Identificação proposta: Antalya. O lugar aparece, entre outras passagens, em Acts 14:25, Acts 14:26. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Aven",
+      "text": "Ponto do atlas bíblico: Aven. Categoria: settlement, special. Posição de referência: 35.241389,31.922778. Identificação proposta: Beitin. O lugar aparece, entre outras passagens, em Hos 10:8. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Avith",
+      "text": "Ponto do atlas bíblico: Avith. Categoria: settlement. Posição de referência: 35.601921,30.206000. Identificação proposta: Rujum al Juththa. O lugar aparece, entre outras passagens, em Gen 36:35, 1 Chr 1:46. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Avva",
+      "text": "Ponto do atlas bíblico: Avva. Categoria: settlement, special. Posição de referência: 36.690556,34.684722. Identificação proposta: Kafr Aya. O lugar aparece, entre outras passagens, em 2 Kgs 17:24. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Avvim",
+      "text": "Ponto do atlas bíblico: Avvim. Categoria: settlement. Posição de referência: 35.261111,31.916944. Identificação proposta: Et Tell. O lugar aparece, entre outras passagens, em Josh 18:23. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Ayyah",
+      "text": "Ponto do atlas bíblico: Ayyah. Categoria: settlement. Posição de referência: 35.261111,31.916944. Identificação proposta: Et Tell. O lugar aparece, entre outras passagens, em 1 Chr 7:28. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Azal",
+      "text": "Ponto do atlas bíblico: Azal. Categoria: river, settlement, special. Posição de referência: 35.231667,31.760833. Identificação proposta: Nahal Azal. O lugar aparece, entre outras passagens, em Zech 14:5. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Azazel",
+      "text": "Ponto do atlas bíblico: Azazel. Categoria: natural area, special. Identificação proposta: not a place. O lugar aparece, entre outras passagens, em Lev 16:8, Lev 16:10, Lev 16:26. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Azekah",
+      "text": "Ponto do atlas bíblico: Azekah. Categoria: settlement. Posição de referência: 34.935696,31.700226. Identificação proposta: Tel Azekah. O lugar aparece, entre outras passagens, em Josh 10:10, Josh 10:11, Josh 15:35, 1 Sam 17:1, 2 Chr 11:9. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Azmaveth",
+      "text": "Ponto do atlas bíblico: Azmaveth. Categoria: settlement. Posição de referência: 35.261944,31.835000. Identificação proposta: Hizma. O lugar aparece, entre outras passagens, em Ezra 2:24, Neh 7:28, Neh 12:29. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Azmon",
+      "text": "Ponto do atlas bíblico: Azmon. Categoria: settlement. Posição de referência: 34.333333,30.687500. Identificação proposta: Ain Muweileh. O lugar aparece, entre outras passagens, em Num 34:4, Num 34:5, Josh 15:4. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Aznoth-tabor",
+      "text": "Ponto do atlas bíblico: Aznoth-tabor. Categoria: settlement. Posição de referência: 35.384444,32.727222. Identificação proposta: Tel Govel. O lugar aparece, entre outras passagens, em Josh 19:34. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Baalah 1",
+      "text": "Ponto do atlas bíblico: Baalah 1. Categoria: settlement, special. Identificação proposta: no valid locations. O lugar aparece, entre outras passagens, em Josh 15:29. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Baalah 2",
+      "text": "Ponto do atlas bíblico: Baalah 2. Categoria: settlement. Posição de referência: 35.103780,31.808957. Identificação proposta: Deir el Azar. O lugar aparece, entre outras passagens, em Josh 15:9, Josh 15:10, 1 Chr 13:6. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Baalath 1",
+      "text": "Ponto do atlas bíblico: Baalath 1. Categoria: hill, mountain, settlement. Posição de referência: 34.782250,31.838514. Identificação proposta: Al Maghar. O lugar aparece, entre outras passagens, em Josh 19:44. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Baalath 2",
+      "text": "Ponto do atlas bíblico: Baalath 2. Categoria: settlement, special. Posição de referência: 34.782250,31.838514. Identificação proposta: Al Maghar. O lugar aparece, entre outras passagens, em 1 Kgs 9:18, 2 Chr 8:6. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Baalath-beer",
+      "text": "Ponto do atlas bíblico: Baalath-beer. Categoria: settlement, special. Posição de referência: 34.911322,30.991038. Identificação proposta: Beer Yeroham. O lugar aparece, entre outras passagens, em Josh 19:8, 1 Chr 4:33. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Baale-judah",
+      "text": "Ponto do atlas bíblico: Baale-judah. Categoria: settlement. Posição de referência: 35.103780,31.808957. Identificação proposta: Deir el Azar. O lugar aparece, entre outras passagens, em 2 Sam 6:2. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Baal-gad",
+      "text": "Ponto do atlas bíblico: Baal-gad. Categoria: settlement. Posição de referência: 35.850000,33.400000. Identificação proposta: Mount Hermon. O lugar aparece, entre outras passagens, em Josh 11:17, Josh 12:7, Josh 13:5. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Baal-hamon",
+      "text": "Ponto do atlas bíblico: Baal-hamon. Categoria: settlement, special, structure. Posição de referência: 35.234167,31.776667. Identificação proposta: in Jerusalem. O lugar aparece, entre outras passagens, em Sng 8:11. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Baal-hazor",
+      "text": "Ponto do atlas bíblico: Baal-hazor. Categoria: mountain, settlement. Posição de referência: 35.286111,31.978611. Identificação proposta: Jebel Asur. O lugar aparece, entre outras passagens, em 2 Sam 13:23. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Baal-hermon",
+      "text": "Ponto do atlas bíblico: Baal-hermon. Categoria: mountain, settlement. Posição de referência: 35.850000,33.400000. Identificação proposta: Mount Hermon. O lugar aparece, entre outras passagens, em 1 Chr 5:23. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Baal-meon",
+      "text": "Ponto do atlas bíblico: Baal-meon. Categoria: settlement. Posição de referência: 35.735321,31.679501. Identificação proposta: Ma‘in. O lugar aparece, entre outras passagens, em Num 32:38, Josh 13:17, 1 Chr 5:8, Ezek 25:9. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Baal-peor",
+      "text": "Ponto do atlas bíblico: Baal-peor. Categoria: mountain, settlement. Posição de referência: 35.738498,31.777021. Identificação proposta: within 1 km of Khirbet Ayun Musa. O lugar aparece, entre outras passagens, em Deut 4:3, Hos 9:10. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Baal-perazim",
+      "text": "Ponto do atlas bíblico: Baal-perazim. Categoria: settlement. Posição de referência: 35.183317,31.741854. Identificação proposta: Ez Zuhur. O lugar aparece, entre outras passagens, em 2 Sam 5:20, 1 Chr 14:11. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Baal-shalishah",
+      "text": "Ponto do atlas bíblico: Baal-shalishah. Categoria: settlement, special. Posição de referência: 35.011820,32.110310. Identificação proposta: Khirbet Sirisye. O lugar aparece, entre outras passagens, em 2 Kgs 4:42. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Baal-tamar",
+      "text": "Ponto do atlas bíblico: Baal-tamar. Categoria: settlement. Posição de referência: 35.241283,31.831498. Identificação proposta: Ras et Tawil. O lugar aparece, entre outras passagens, em Judg 20:33. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Baal-zephon",
+      "text": "Ponto do atlas bíblico: Baal-zephon. Categoria: campsite. Posição de referência: 32.171389,30.860556. Identificação proposta: Tell Defenneh. O lugar aparece, entre outras passagens, em Ex 14:2, Ex 14:9, Num 33:7. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Babel",
+      "text": "Ponto do atlas bíblico: Babel. Categoria: settlement. Posição de referência: 44.422222,32.543333. Identificação proposta: Babylon. O lugar aparece, entre outras passagens, em Gen 10:10, Gen 11:9. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Babylon 1",
+      "text": "Ponto do atlas bíblico: Babylon 1. Categoria: settlement. Posição de referência: 44.422222,32.543333. Identificação proposta: Babylon. O lugar aparece, entre outras passagens, em 2 Kgs 17:24, 2 Kgs 17:30, 2 Kgs 20:12, 2 Kgs 20:14, 2 Kgs 20:17. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Babylon 2",
+      "text": "Ponto do atlas bíblico: Babylon 2. Categoria: settlement, special. Posição de referência: 12.485200,41.892200. Identificação proposta: Rome. O lugar aparece, entre outras passagens, em 1 Pet 5:13. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Babylon 3",
+      "text": "Ponto do atlas bíblico: Babylon 3. Categoria: settlement, special. Posição de referência: 12.485200,41.892200. Identificação proposta: Rome. O lugar aparece, entre outras passagens, em Rev 14:8, Rev 16:19, Rev 17:5, Rev 18:2, Rev 18:10. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Babylonia",
+      "text": "Ponto do atlas bíblico: Babylonia. Categoria: region. Posição de referência: 44.422222,32.543333. Identificação proposta: Babylonia. O lugar aparece, entre outras passagens, em Ezra 1:11, Ezra 2:1, Ezra 5:12, Ezra 6:1, Ezra 7:6. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Bahurim",
+      "text": "Ponto do atlas bíblico: Bahurim. Categoria: settlement. Posição de referência: 35.256940,31.791200. Identificação proposta: Ras Tumeim. O lugar aparece, entre outras passagens, em 2 Sam 3:16, 2 Sam 16:5, 2 Sam 17:18, 2 Sam 19:16, 2 Sam 23:31. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Balah",
+      "text": "Ponto do atlas bíblico: Balah. Categoria: settlement, special. Posição de referência: 34.912170,31.142053. Identificação proposta: Tulul el Medbah. O lugar aparece, entre outras passagens, em Josh 19:3. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Bamah",
+      "text": "Ponto do atlas bíblico: Bamah. Categoria: altar, special. Identificação proposta: unknown location. O lugar aparece, entre outras passagens, em Ezek 20:29. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Bamoth",
+      "text": "Ponto do atlas bíblico: Bamoth. Categoria: settlement. Posição de referência: 35.740891,31.731791. Identificação proposta: Khirbet el Quweiqiyeh. O lugar aparece, entre outras passagens, em Num 21:19, Num 21:20. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Bamoth-baal",
+      "text": "Ponto do atlas bíblico: Bamoth-baal. Categoria: settlement. Posição de referência: 35.740891,31.731791. Identificação proposta: Khirbet el Quweiqiyeh. O lugar aparece, entre outras passagens, em Num 22:41, Josh 13:17. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Bashan",
+      "text": "Ponto do atlas bíblico: Bashan. Categoria: region. Posição de referência: 35.934722,32.781111. Identificação proposta: Bashan. O lugar aparece, entre outras passagens, em Num 21:33, Num 32:33, Deut 1:4, Deut 3:1, Deut 3:3. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Batanea",
+      "text": "Ponto do atlas bíblico: Batanea. Categoria: region. Posição de referência: 36.199340,32.852034. Identificação proposta: Batanea. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Bath-rabbim",
+      "text": "Ponto do atlas bíblico: Bath-rabbim. Categoria: gate. Posição de referência: 35.809062,31.800811. Identificação proposta: in Tell Hesban. O lugar aparece, entre outras passagens, em Sng 7:4. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Bealoth 1",
+      "text": "Ponto do atlas bíblico: Bealoth 1. Categoria: settlement, special. Posição de referência: 34.911322,30.991038. Identificação proposta: Beer Yeroham. O lugar aparece, entre outras passagens, em Josh 15:24. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Bealoth 2",
+      "text": "Ponto do atlas bíblico: Bealoth 2. Categoria: settlement, special. Posição de referência: 34.911322,30.991038. Identificação proposta: Beer Yeroham. O lugar aparece, entre outras passagens, em 1 Kgs 4:16. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Beautiful Gate",
+      "text": "Ponto do atlas bíblico: Beautiful Gate. Categoria: gate. Posição de referência: 35.234167,31.776667. Identificação proposta: in Jerusalem. O lugar aparece, entre outras passagens, em Acts 3:2, Acts 3:10. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Beer 1",
+      "text": "Ponto do atlas bíblico: Beer 1. Categoria: campsite. Posição de referência: 35.893333,31.571944. Identificação proposta: along Wadi eth Themed. O lugar aparece, entre outras passagens, em Num 21:16. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Beer 2",
+      "text": "Ponto do atlas bíblico: Beer 2. Categoria: settlement. Posição de referência: 35.504150,32.608230. Identificação proposta: El Bira. O lugar aparece, entre outras passagens, em Judg 9:21. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Beer-elim",
+      "text": "Ponto do atlas bíblico: Beer-elim. Categoria: campsite, settlement. Posição de referência: 35.893333,31.571944. Identificação proposta: along Wadi eth Themed. O lugar aparece, entre outras passagens, em Isa 15:8. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Beer-lahai-roi",
+      "text": "Ponto do atlas bíblico: Beer-lahai-roi. Categoria: well. Posição de referência: 34.333333,30.687500. Identificação proposta: Ain Muweileh. O lugar aparece, entre outras passagens, em Gen 16:14, Gen 24:62, Gen 25:11. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Beeroth",
+      "text": "Ponto do atlas bíblico: Beeroth. Categoria: settlement. Posição de referência: 35.187200,31.823830. Identificação proposta: Khirbet el Burj. O lugar aparece, entre outras passagens, em Josh 9:17, Josh 18:25, 2 Sam 4:2, 2 Sam 4:3, 2 Sam 4:5. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Beeroth Bene-jaakan",
+      "text": "Ponto do atlas bíblico: Beeroth Bene-jaakan. Categoria: settlement. Posição de referência: 34.472522,30.791764. Identificação proposta: Birein. O lugar aparece, entre outras passagens, em Deut 10:6. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Beersheba 1",
+      "text": "Ponto do atlas bíblico: Beersheba 1. Categoria: settlement. Posição de referência: 34.840833,31.244722. Identificação proposta: Tel Beer Sheva. O lugar aparece, entre outras passagens, em Josh 15:28, Josh 19:2, Judg 20:1, 1 Sam 3:20, 1 Sam 8:2. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Beersheba 2",
+      "text": "Ponto do atlas bíblico: Beersheba 2. Categoria: settlement. Posição de referência: 34.840833,31.244722. Identificação proposta: Tel Beer Sheva. O lugar aparece, entre outras passagens, em Gen 21:14, Gen 21:31, Gen 21:32, Gen 21:33, Gen 22:19. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Beeshterah",
+      "text": "Ponto do atlas bíblico: Beeshterah. Categoria: settlement. Posição de referência: 36.015833,32.804167. Identificação proposta: Tell Ashtara. O lugar aparece, entre outras passagens, em Josh 21:27. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Belamon",
+      "text": "Ponto do atlas bíblico: Belamon. Categoria: settlement. Posição de referência: 35.581007,33.258051. Identificação proposta: Tel Abel Beth Maacah. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Bene-berak",
+      "text": "Ponto do atlas bíblico: Bene-berak. Categoria: settlement. Posição de referência: 34.827669,32.036675. Identificação proposta: Al Khayriyya. O lugar aparece, entre outras passagens, em Josh 19:45. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Bene-jaakan",
+      "text": "Ponto do atlas bíblico: Bene-jaakan. Categoria: settlement. Posição de referência: 34.472522,30.791764. Identificação proposta: Birein. O lugar aparece, entre outras passagens, em Num 33:31, Num 33:32. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Benjamin Gate",
+      "text": "Ponto do atlas bíblico: Benjamin Gate. Categoria: gate. Posição de referência: 35.234167,31.776667. Identificação proposta: in Jerusalem. O lugar aparece, entre outras passagens, em Jer 20:2, Jer 37:13, Jer 38:7, Zech 14:10. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Beon",
+      "text": "Ponto do atlas bíblico: Beon. Categoria: settlement. Posição de referência: 35.735321,31.679501. Identificação proposta: Ma‘in. O lugar aparece, entre outras passagens, em Num 32:3. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Berea",
+      "text": "Ponto do atlas bíblico: Berea. Categoria: settlement. Posição de referência: 22.200000,40.518333. Identificação proposta: Veria. O lugar aparece, entre outras passagens, em Acts 17:10, Acts 17:11, Acts 17:13, Acts 17:14, Acts 17:15. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Bered",
+      "text": "Ponto do atlas bíblico: Bered. Categoria: mountain, region, settlement. Posição de referência: 34.652000,31.097000. Identificação proposta: Haluza. O lugar aparece, entre outras passagens, em Gen 16:14. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Berothah",
+      "text": "Ponto do atlas bíblico: Berothah. Categoria: settlement, special. Posição de referência: 36.150833,33.935278. Identificação proposta: Brital. O lugar aparece, entre outras passagens, em Ezek 47:16. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Berothai",
+      "text": "Ponto do atlas bíblico: Berothai. Categoria: settlement, special. Posição de referência: 36.150833,33.935278. Identificação proposta: Brital. O lugar aparece, entre outras passagens, em 2 Sam 8:8. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Besor",
+      "text": "Ponto do atlas bíblico: Besor. Categoria: river. Posição de referência: 34.375680,31.464230. Identificação proposta: Nahal HaBesor. O lugar aparece, entre outras passagens, em 1 Sam 30:9, 1 Sam 30:10, 1 Sam 30:21. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Beten",
+      "text": "Ponto do atlas bíblico: Beten. Categoria: settlement. Posição de referência: 35.106580,32.764076. Identificação proposta: Khirbet Ibtin. O lugar aparece, entre outras passagens, em Josh 19:25. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Beth-anath",
+      "text": "Ponto do atlas bíblico: Beth-anath. Categoria: settlement. Posição de referência: 35.433060,33.200280. Identificação proposta: Safad el Battikh. O lugar aparece, entre outras passagens, em Josh 19:38, Judg 1:33. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Beth-anoth",
+      "text": "Ponto do atlas bíblico: Beth-anoth. Categoria: settlement. Posição de referência: 35.126220,31.562090. Identificação proposta: Khirbet Beit Anun. O lugar aparece, entre outras passagens, em Josh 15:59. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Bethany 1",
+      "text": "Ponto do atlas bíblico: Bethany 1. Categoria: settlement. Posição de referência: 35.255903,31.771661. Identificação proposta: Al Eizariya. O lugar aparece, entre outras passagens, em Matt 21:17, Matt 26:6, Mark 11:1, Mark 11:11, Mark 11:12. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    },
+    {
+      "title": "Bethany 2",
+      "text": "Ponto do atlas bíblico: Bethany 2. Categoria: ford, region, settlement, special, wadi. Posição de referência: 35.550301,31.837109. Identificação proposta: Al Maghtas. O lugar aparece, entre outras passagens, em John 1:28. Use este registro junto aos demais pontos do atlas para situar geograficamente a narrativa bíblica; identificações antigas podem ser debatidas e o conjunto preserva essa incerteza."
+    }
+  ]
+}
