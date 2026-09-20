@@ -1,0 +1,807 @@
+{
+  "source": "OpenBible.info Bible Geocoding Data",
+  "license": "CC BY 4.0",
+  "count": 200,
+  "entries": [
+    {
+      "title": "Abana",
+      "text": "Lugar bíblico do tipo river. Identificação moderna principal: Barada River. Coordenadas de referência: 36.305000,33.513542. Referências bíblicas: 2 Kgs 5:12. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Abarim",
+      "text": "Lugar bíblico do tipo mountain range. Identificação moderna principal: Abarim. Coordenadas de referência: 35.715200,31.753900. Referências bíblicas: Num 27:12, Num 33:47, Num 33:48, Deut 32:49, Jer 22:20. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Abdon",
+      "text": "Lugar bíblico do tipo settlement. Identificação moderna principal: Tel Avdon. Coordenadas de referência: 35.161916,33.047692. Referências bíblicas: Josh 21:30, 1 Chr 6:74. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Abel-beth-maacah",
+      "text": "Lugar bíblico do tipo settlement. Identificação moderna principal: Tel Abel Beth Maacah. Coordenadas de referência: 35.581007,33.258051. Referências bíblicas: 2 Sam 20:14, 2 Sam 20:15, 2 Sam 20:18, 1 Kgs 15:20, 2 Kgs 15:29, 2 Chr 16:4. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Abel-keramim",
+      "text": "Lugar bíblico do tipo settlement. Identificação moderna principal: Sahab. Coordenadas de referência: 36.004860,31.875610. Referências bíblicas: Judg 11:33. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Abel-meholah",
+      "text": "Lugar bíblico do tipo settlement. Identificação moderna principal: Tell Abu Sus. Coordenadas de referência: 35.560890,32.374300. Referências bíblicas: Judg 7:22, 1 Kgs 4:12, 1 Kgs 19:16. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Abel-mizraim",
+      "text": "Lugar bíblico do tipo settlement. Identificação moderna principal: near the mouth of the Jordan River. Coordenadas de referência: 35.530445,31.914888. Referências bíblicas: Gen 50:11. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Abel-shittim",
+      "text": "Lugar bíblico do tipo campsite. Identificação moderna principal: Tall el Hammam. Coordenadas de referência: 35.673680,31.840180. Referências bíblicas: Num 33:49. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Abiezer",
+      "text": "Lugar bíblico do tipo people group. Identificação moderna principal: about 15 km around Afula. Coordenadas de referência: 35.290000,32.605700. Referências bíblicas: Judg 8:2. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Abila",
+      "text": "Lugar bíblico do tipo settlement. Identificação moderna principal: Merj Ekkeh. Coordenadas de referência: 35.855908,31.905663.  A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Abila Lysaniou",
+      "text": "Lugar bíblico do tipo settlement. Identificação moderna principal: Souq Wadi Barada. Coordenadas de referência: 36.105833,33.626667.  A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Abilene",
+      "text": "Lugar bíblico do tipo region. Identificação moderna principal: Abilene. Coordenadas de referência: 36.105833,33.626667. Referências bíblicas: Luke 3:1. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Abronah",
+      "text": "Lugar bíblico do tipo campsite. Identificação moderna principal: Aqaba. Coordenadas de referência: 34.999999,29.530676. Referências bíblicas: Num 33:34, Num 33:35. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Accad",
+      "text": "Lugar bíblico do tipo settlement. Identificação moderna principal: Tell Sheshubar. Coordenadas de referência: 44.391944,33.025556. Referências bíblicas: Gen 10:10. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Acco",
+      "text": "Lugar bíblico do tipo settlement. Identificação moderna principal: Tel Akko. Coordenadas de referência: 35.088333,32.921111. Referências bíblicas: Judg 1:31. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Achaia",
+      "text": "Lugar bíblico do tipo region. Identificação moderna principal: Achaia. Coordenadas de referência: 22.540000,38.720000. Referências bíblicas: Acts 18:12, Acts 18:27, Acts 19:21, Rom 15:26, 1 Cor 16:15, 2 Cor 1:1, 2 Cor 9:2, 2 Cor 11:10. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Achshaph",
+      "text": "Lugar bíblico do tipo settlement. Identificação moderna principal: Tel Regev. Coordenadas de referência: 35.090270,32.758850. Referências bíblicas: Josh 11:1, Josh 12:20, Josh 19:25. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Achzib 1",
+      "text": "Lugar bíblico do tipo settlement. Identificação moderna principal: Tel el Beida. Coordenadas de referência: 34.953019,31.642074. Referências bíblicas: Josh 15:44, Mic 1:14. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Achzib 2",
+      "text": "Lugar bíblico do tipo settlement. Identificação moderna principal: Tel Achziv. Coordenadas de referência: 35.102652,33.048278. Referências bíblicas: Josh 19:29, Judg 1:31. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Adadah",
+      "text": "Lugar bíblico do tipo settlement. Identificação moderna principal: Khirbet Aro’er. Coordenadas de referência: 34.979070,31.152140. Referências bíblicas: Josh 15:22. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Adam",
+      "text": "Lugar bíblico do tipo settlement. Identificação moderna principal: Tell ed Damiyeh. Coordenadas de referência: 35.546789,32.103933. Referências bíblicas: Josh 3:16. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Adamah",
+      "text": "Lugar bíblico do tipo settlement. Identificação moderna principal: Qarn Hattin. Coordenadas de referência: 35.459722,32.799722. Referências bíblicas: Josh 19:36. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Adami-nekeb",
+      "text": "Lugar bíblico do tipo settlement. Identificação moderna principal: Tel Adami. Coordenadas de referência: 35.459167,32.749167. Referências bíblicas: Josh 19:33. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Adasa",
+      "text": "Lugar bíblico do tipo settlement. Identificação moderna principal: Khirbet Adasa. Coordenadas de referência: 35.163630,31.848810.  A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Addar",
+      "text": "Lugar bíblico do tipo settlement, special. Identificação moderna principal: Ein Qedeis. Coordenadas de referência: 34.484081,30.583378. Referências bíblicas: Josh 15:3. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Addon",
+      "text": "Lugar bíblico do tipo settlement, special. Identificação moderna principal: in Babylonia. Coordenadas de referência: 44.422222,32.543333. Referências bíblicas: Ezra 2:59, Neh 7:61. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Adithaim",
+      "text": "Lugar bíblico do tipo settlement. Identificação moderna principal: Al Haditha. Coordenadas de referência: 34.951764,31.963319. Referências bíblicas: Josh 15:36. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Admah",
+      "text": "Lugar bíblico do tipo settlement. Identificação moderna principal: in the region south of the Lisan. Coordenadas de referência: 35.449223,31.208490. Referências bíblicas: Gen 10:19, Gen 14:2, Gen 14:8, Deut 29:23, Hos 11:8. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Adoraim",
+      "text": "Lugar bíblico do tipo settlement. Identificação moderna principal: Dura. Coordenadas de referência: 35.027500,31.505060. Referências bíblicas: 2 Chr 11:9. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Adramyttium",
+      "text": "Lugar bíblico do tipo settlement. Identificação moderna principal: Oren. Coordenadas de referência: 26.932716,39.500667. Referências bíblicas: Acts 27:2. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Adriatic Sea",
+      "text": "Lugar bíblico do tipo body of water. Identificação moderna principal: Adriatic and Ionian Seas. Coordenadas de referência: 19.000000,38.000000. Referências bíblicas: Acts 27:27. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Adulis",
+      "text": "Lugar bíblico do tipo settlement. Identificação moderna principal: Adulis. Coordenadas de referência: 39.660552,15.263061.  A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Adullam",
+      "text": "Lugar bíblico do tipo settlement. Identificação moderna principal: Khirbet esh Sheikh Madhkur. Coordenadas de referência: 35.001667,31.651667. Referências bíblicas: Gen 38:1, Josh 12:15, Josh 15:35, 1 Sam 22:1, 2 Sam 23:13, 1 Chr 11:15, 2 Chr 11:7, Neh 11:30. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Adummim",
+      "text": "Lugar bíblico do tipo road. Identificação moderna principal: Adummim. Coordenadas de referência: 35.361505,31.817500. Referências bíblicas: Josh 15:7, Josh 18:17. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Aenon",
+      "text": "Lugar bíblico do tipo settlement. Identificação moderna principal: Umm el Umdan. Coordenadas de referência: 35.528210,32.381520. Referências bíblicas: John 3:23. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Ahava",
+      "text": "Lugar bíblico do tipo canal, settlement. Identificação moderna principal: within 250 km of Babylon. Coordenadas de referência: 44.422222,32.543333. Referências bíblicas: Ezra 8:15, Ezra 8:21, Ezra 8:31. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Ahlab",
+      "text": "Lugar bíblico do tipo settlement. Identificação moderna principal: Khirbet al Mahalib. Coordenadas de referência: 35.243368,33.317804. Referências bíblicas: Judg 1:31. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Ai 1",
+      "text": "Lugar bíblico do tipo settlement. Identificação moderna principal: Et Tell. Coordenadas de referência: 35.261111,31.916944. Referências bíblicas: Gen 12:8, Gen 13:3, Josh 7:2, Josh 7:3, Josh 7:4, Josh 7:5, Josh 8:1, Josh 8:2. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Ai 2",
+      "text": "Lugar bíblico do tipo settlement, special. Identificação moderna principal: not a proper name. Referências bíblicas: Jer 49:3. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Ai 3",
+      "text": "Lugar bíblico do tipo settlement. Identificação moderna principal: Et Tell. Coordenadas de referência: 35.261111,31.916944. Referências bíblicas: Ezra 2:28, Neh 7:32. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Aiath",
+      "text": "Lugar bíblico do tipo settlement. Identificação moderna principal: Et Tell. Coordenadas de referência: 35.261111,31.916944. Referências bíblicas: Isa 10:28. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Aija",
+      "text": "Lugar bíblico do tipo settlement. Identificação moderna principal: Et Tell. Coordenadas de referência: 35.261111,31.916944. Referências bíblicas: Neh 11:31. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Aijalon 1",
+      "text": "Lugar bíblico do tipo settlement. Identificação moderna principal: Yalo. Coordenadas de referência: 35.023611,31.841111. Referências bíblicas: Josh 19:42, Josh 21:24, Judg 1:35, 1 Sam 14:31, 1 Chr 6:69, 1 Chr 8:13, 2 Chr 11:10, 2 Chr 28:18. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Aijalon 2",
+      "text": "Lugar bíblico do tipo settlement. Identificação moderna principal: Tel el Butmeh. Coordenadas de referência: 35.309023,32.814086. Referências bíblicas: Judg 12:12. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Ain 1",
+      "text": "Lugar bíblico do tipo settlement. Identificação moderna principal: Khirbet Ayun. Coordenadas de referência: 35.667910,32.718650. Referências bíblicas: Num 34:11. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Ain 2",
+      "text": "Lugar bíblico do tipo settlement. Identificação moderna principal: Tel Halif. Coordenadas de referência: 34.865640,31.383330. Referências bíblicas: Josh 15:32, Josh 19:7, 1 Chr 4:32. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Ain 3",
+      "text": "Lugar bíblico do tipo settlement. Identificação moderna principal: Tel Halif. Coordenadas de referência: 34.865640,31.383330. Referências bíblicas: Josh 21:16. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Akeldama",
+      "text": "Lugar bíblico do tipo field. Identificação moderna principal: Akeldama. Coordenadas de referência: 35.232880,31.768410. Referências bíblicas: Matt 27:8, Acts 1:19. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Akrabbim",
+      "text": "Lugar bíblico do tipo mountain pass. Identificação moderna principal: Ma’ale Akrabbim. Coordenadas de referência: 35.131259,30.906602. Referências bíblicas: Num 34:4, Josh 15:3, Judg 1:36. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Alemeth",
+      "text": "Lugar bíblico do tipo settlement. Identificação moderna principal: Khirbet Almit. Coordenadas de referência: 35.273498,31.824903. Referências bíblicas: 1 Chr 6:60. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Alexandria",
+      "text": "Lugar bíblico do tipo settlement. Identificação moderna principal: Alexandria. Coordenadas de referência: 29.896500,31.182500. Referências bíblicas: Acts 6:9, Acts 18:24, Acts 27:6, Acts 28:11. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Allammelech",
+      "text": "Lugar bíblico do tipo settlement. Identificação moderna principal: Tel Alil. Coordenadas de referência: 35.155668,32.771772. Referências bíblicas: Josh 19:26. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Allon",
+      "text": "Lugar bíblico do tipo tree. Identificação moderna principal: in Hanot Taggarim. Coordenadas de referência: 35.410640,32.721130. Referências bíblicas: Josh 19:33. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Allon-bacuth",
+      "text": "Lugar bíblico do tipo tree. Identificação moderna principal: within 1 km of Beitin. Coordenadas de referência: 35.241389,31.922778. Referências bíblicas: Gen 35:8. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Almon",
+      "text": "Lugar bíblico do tipo settlement. Identificação moderna principal: Khirbet Almit. Coordenadas de referência: 35.273498,31.824903. Referências bíblicas: Josh 21:18. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Almon-diblathaim",
+      "text": "Lugar bíblico do tipo settlement. Identificação moderna principal: Duleilat esh Sharqiyeh. Coordenadas de referência: 35.826578,31.638727. Referências bíblicas: Num 33:46, Num 33:47. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Alush",
+      "text": "Lugar bíblico do tipo campsite. Identificação moderna principal: along Wadi el Esh. Coordenadas de referência: 33.767493,28.770311. Referências bíblicas: Num 33:13, Num 33:14. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Ama",
+      "text": "Lugar bíblico do tipo settlement. Identificação moderna principal: along the Karkheh River. Coordenadas de referência: 47.869402,31.782302.  A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Amad",
+      "text": "Lugar bíblico do tipo settlement. Identificação moderna principal: within 10 km of Mount Carmel. Coordenadas de referência: 35.023333,32.672500. Referências bíblicas: Josh 19:26. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Amalek",
+      "text": "Lugar bíblico do tipo region. Identificação moderna principal: Amalek. Coordenadas de referência: 34.422222,30.648333. Referências bíblicas: Ex 17:8, Ex 17:9, Ex 17:10, Ex 17:11, Ex 17:13, Ex 17:14, Ex 17:16, Num 13:29. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Amam",
+      "text": "Lugar bíblico do tipo settlement. Identificação moderna principal: Be’er Nevatim. Coordenadas de referência: 34.906840,31.218500. Referências bíblicas: Josh 15:26. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Amana",
+      "text": "Lugar bíblico do tipo mountain, mountain ridge. Identificação moderna principal: Jebel Zabadani. Coordenadas de referência: 36.031667,33.688889. Referências bíblicas: Sng 4:8. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Amate",
+      "text": "Lugar bíblico do tipo settlement. Identificação moderna principal: along the Karkheh River. Coordenadas de referência: 47.869402,31.782302.  A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Amaw",
+      "text": "Lugar bíblico do tipo region, special. Identificação moderna principal: between Aleppo and Carchemish. Coordenadas de referência: 38.086500,36.701400. Referências bíblicas: Num 22:5. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Ammah",
+      "text": "Lugar bíblico do tipo hill. Identificação moderna principal: in the region east of Gibeon. Coordenadas de referência: 35.279535,31.841047. Referências bíblicas: 2 Sam 2:24. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Ammon",
+      "text": "Lugar bíblico do tipo region. Identificação moderna principal: Ammon. Coordenadas de referência: 35.934300,31.954700. Referências bíblicas: Gen 19:38, Num 21:24, Deut 2:19, Deut 2:37, Deut 3:11, Deut 3:16, Josh 12:2, Josh 13:10. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Amphipolis",
+      "text": "Lugar bíblico do tipo settlement. Identificação moderna principal: Amphipolis. Coordenadas de referência: 23.847209,40.820159. Referências bíblicas: Acts 17:1. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Anab",
+      "text": "Lugar bíblico do tipo settlement. Identificação moderna principal: Khirbet Anab es Seghireh. Coordenadas de referência: 34.954900,31.412100. Referências bíblicas: Josh 11:21, Josh 15:50. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Anaharath",
+      "text": "Lugar bíblico do tipo settlement. Identificação moderna principal: Tell Rekhesh. Coordenadas de referência: 35.466140,32.653446. Referências bíblicas: Josh 19:19. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Ananiah",
+      "text": "Lugar bíblico do tipo settlement. Identificação moderna principal: Al Eizariya. Coordenadas de referência: 35.255903,31.771661. Referências bíblicas: Neh 11:32. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Anathoth",
+      "text": "Lugar bíblico do tipo settlement. Identificação moderna principal: Ras el Kharruba. Coordenadas de referência: 35.257580,31.807520. Referências bíblicas: Josh 21:18, 2 Sam 23:27, 1 Kgs 2:26, 1 Chr 6:60, 1 Chr 11:28, 1 Chr 12:3, 1 Chr 27:12, Ezra 2:23. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Anem",
+      "text": "Lugar bíblico do tipo settlement. Identificação moderna principal: Khirbet Beit Jann. Coordenadas de referência: 35.495439,32.713549. Referências bíblicas: 1 Chr 6:73. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Aner",
+      "text": "Lugar bíblico do tipo settlement. Identificação moderna principal: Tell Ta’anakh. Coordenadas de referência: 35.219122,32.521526. Referências bíblicas: 1 Chr 6:70. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Angle",
+      "text": "Lugar bíblico do tipo structure. Identificação moderna principal: in Jerusalem. Coordenadas de referência: 35.234167,31.776667. Referências bíblicas: 2 Chr 26:9, Neh 3:19, Neh 3:20, Neh 3:24, Neh 3:25. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Anim",
+      "text": "Lugar bíblico do tipo settlement. Identificação moderna principal: Horbat Anim. Coordenadas de referência: 35.063521,31.353601. Referências bíblicas: Josh 15:50. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Antioch 1",
+      "text": "Lugar bíblico do tipo settlement. Identificação moderna principal: Antioch on the Orontes. Coordenadas de referência: 36.171743,36.226691. Referências bíblicas: Acts 6:5, Acts 11:19, Acts 11:20, Acts 11:22, Acts 11:26, Acts 11:27, Acts 11:29, Acts 13:1. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Antioch 2",
+      "text": "Lugar bíblico do tipo settlement. Identificação moderna principal: Antioch in Pisidia. Coordenadas de referência: 31.189167,38.306111. Referências bíblicas: Acts 13:14, Acts 14:19, Acts 14:21, 2 Tim 3:11. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Aphek 1",
+      "text": "Lugar bíblico do tipo settlement. Identificação moderna principal: Tel Afek. Coordenadas de referência: 35.111900,32.846100. Referências bíblicas: Josh 19:30. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Aphek 2",
+      "text": "Lugar bíblico do tipo settlement. Identificação moderna principal: Tell Ras el Ain. Coordenadas de referência: 34.930417,32.105000. Referências bíblicas: Josh 12:18, 1 Sam 4:1, 1 Sam 29:1, Acts 23:31. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Aphek 3",
+      "text": "Lugar bíblico do tipo settlement. Identificação moderna principal: Tel Ein Gev. Coordenadas de referência: 35.637290,32.783679. Referências bíblicas: 1 Kgs 20:26, 1 Kgs 20:30, 2 Kgs 13:17. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Aphek 4",
+      "text": "Lugar bíblico do tipo settlement. Identificação moderna principal: Afqa. Coordenadas de referência: 35.886111,34.069167. Referências bíblicas: Josh 13:4. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Aphekah",
+      "text": "Lugar bíblico do tipo settlement. Identificação moderna principal: Khirbet al Hadab. Coordenadas de referência: 34.997500,31.455500. Referências bíblicas: Josh 15:53. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Aphik",
+      "text": "Lugar bíblico do tipo settlement. Identificação moderna principal: Tel Afek. Coordenadas de referência: 35.111900,32.846100. Referências bíblicas: Judg 1:31. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Apollonia",
+      "text": "Lugar bíblico do tipo settlement. Identificação moderna principal: Apollonia. Coordenadas de referência: 23.469685,40.623703. Referências bíblicas: Acts 17:1. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Ar",
+      "text": "Lugar bíblico do tipo settlement. Identificação moderna principal: Khirbet al Balua. Coordenadas de referência: 35.782764,31.359913. Referências bíblicas: Num 21:15, Num 21:28, Deut 2:9, Deut 2:10, Deut 2:18, Deut 2:29, Isa 15:1. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Arab",
+      "text": "Lugar bíblico do tipo settlement. Identificação moderna principal: Khirbet er Rabiyeh. Coordenadas de referência: 35.029570,31.431880. Referências bíblicas: Josh 15:52. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Arabah",
+      "text": "Lugar bíblico do tipo region. Identificação moderna principal: Arabah. Coordenadas de referência: 35.151389,30.416944. Referências bíblicas: Deut 1:1, Deut 1:7, Deut 2:8, Deut 3:17, Deut 4:49, Deut 11:30, Josh 8:14, Josh 11:2. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Arabia 1",
+      "text": "Lugar bíblico do tipo region. Identificação moderna principal: Arabian Peninsula. Coordenadas de referência: 46.000000,23.000000. Referências bíblicas: 1 Kgs 10:15, 2 Chr 9:14, Isa 21:13, Jer 25:24, Ezek 27:21, Ezek 30:5. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Arabia 2",
+      "text": "Lugar bíblico do tipo region. Identificação moderna principal: Arabia Petraea. Coordenadas de referência: 35.350000,30.070000. Referências bíblicas: Gal 1:17, Gal 4:25. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Arad 1",
+      "text": "Lugar bíblico do tipo settlement. Identificação moderna principal: Tel Arad. Coordenadas de referência: 35.125000,31.280833. Referências bíblicas: Num 21:1, Num 33:40, Josh 12:14. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Arad 2",
+      "text": "Lugar bíblico do tipo settlement. Identificação moderna principal: Tel Arad. Coordenadas de referência: 35.125000,31.280833. Referências bíblicas: Judg 1:16. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Aram",
+      "text": "Lugar bíblico do tipo region. Identificação moderna principal: Aram. Coordenadas de referência: 36.306390,33.511112. Referências bíblicas: Num 23:7, Judg 18:7, Judg 18:28, 2 Sam 8:6, 2 Sam 15:8, 2 Kgs 5:18, 2 Kgs 6:14, 2 Kgs 8:15. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Aram-naharaim",
+      "text": "Lugar bíblico do tipo region. Identificação moderna principal: Aram-naharaim. Coordenadas de referência: 39.032778,36.864444. Referências bíblicas: Ps 60:1. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Ararat",
+      "text": "Lugar bíblico do tipo region. Identificação moderna principal: Urartu. Coordenadas de referência: 44.300381,39.702761. Referências bíblicas: Gen 8:4, 2 Kgs 19:37, Isa 37:38, Jer 51:27. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Arbela",
+      "text": "Lugar bíblico do tipo settlement. Identificação moderna principal: Horbat Arbel. Coordenadas de referência: 35.483808,32.815137.  A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Areopagus",
+      "text": "Lugar bíblico do tipo hill. Identificação moderna principal: Areopagus. Coordenadas de referência: 23.723611,37.972222. Referências bíblicas: Acts 17:19, Acts 17:22, Acts 17:33. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Argob",
+      "text": "Lugar bíblico do tipo region. Identificação moderna principal: Argob. Coordenadas de referência: 36.455383,32.969500. Referências bíblicas: Deut 3:4, Deut 3:13, Deut 3:14, 1 Kgs 4:13. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Ariel",
+      "text": "Lugar bíblico do tipo settlement. Identificação moderna principal: Jerusalem. Coordenadas de referência: 35.234167,31.776667. Referências bíblicas: Isa 29:1, Isa 29:2, Isa 29:7. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Arimathea",
+      "text": "Lugar bíblico do tipo settlement. Identificação moderna principal: Rantis. Coordenadas de referência: 35.019444,32.028056. Referências bíblicas: Matt 27:57, Mark 15:43, Luke 23:50, John 19:38. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Armageddon",
+      "text": "Lugar bíblico do tipo mountain, river, settlement, special, valley. Identificação moderna principal: Tel Megiddo. Coordenadas de referência: 35.184444,32.585278. Referências bíblicas: Rev 16:16. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Arnon",
+      "text": "Lugar bíblico do tipo river. Identificação moderna principal: Wadi Mujib. Coordenadas de referência: 35.573333,31.465833. Referências bíblicas: Num 21:13, Num 21:14, Num 21:24, Num 21:26, Num 21:28, Num 22:36, Judg 11:13, Judg 11:18. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Aroer 1",
+      "text": "Lugar bíblico do tipo settlement. Identificação moderna principal: Arair. Coordenadas de referência: 35.819389,31.470800. Referências bíblicas: Num 32:34, Deut 2:36, Deut 3:12, Deut 4:48, Josh 12:2, Josh 13:9, Josh 13:16, Judg 11:26. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Aroer 2",
+      "text": "Lugar bíblico do tipo settlement. Identificação moderna principal: Khirbet Udena. Coordenadas de referência: 35.871319,31.970160. Referências bíblicas: Josh 13:25, Judg 11:33. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Aroer 3",
+      "text": "Lugar bíblico do tipo settlement. Identificação moderna principal: Khirbet Aro’er. Coordenadas de referência: 34.979070,31.152140. Referências bíblicas: 1 Sam 30:28. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Aroer 4",
+      "text": "Lugar bíblico do tipo settlement. Identificação moderna principal: Khirbet Aro’er. Coordenadas de referência: 34.979070,31.152140. Referências bíblicas: 1 Chr 11:44. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Arpad",
+      "text": "Lugar bíblico do tipo settlement. Identificação moderna principal: Tell Rifat. Coordenadas de referência: 37.094722,36.472500. Referências bíblicas: 2 Kgs 18:34, 2 Kgs 19:13, Isa 10:9, Isa 36:19, Isa 37:13, Jer 49:23. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Arsinoe",
+      "text": "Lugar bíblico do tipo settlement. Identificação moderna principal: in the region between Maghfar and Lake Timsah. Coordenadas de referência: 32.266667,30.566667.  A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Arubboth",
+      "text": "Lugar bíblico do tipo settlement. Identificação moderna principal: Khirbet el Hamam. Coordenadas de referência: 35.133551,32.407310. Referências bíblicas: 1 Kgs 4:10. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Arumah",
+      "text": "Lugar bíblico do tipo settlement. Identificação moderna principal: Khirbet Urmah. Coordenadas de referência: 35.321583,32.147556. Referências bíblicas: Judg 9:31, Judg 9:41. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Arvad",
+      "text": "Lugar bíblico do tipo settlement. Identificação moderna principal: Arwad. Coordenadas de referência: 35.858333,34.856111. Referências bíblicas: Ezek 27:8, Ezek 27:11. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Ashan",
+      "text": "Lugar bíblico do tipo settlement. Identificação moderna principal: Khirbet Asan. Coordenadas de referência: 34.797404,31.281372. Referências bíblicas: Josh 15:42, Josh 19:7, 1 Chr 4:32, 1 Chr 6:59. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Ashdod",
+      "text": "Lugar bíblico do tipo settlement. Identificação moderna principal: Tel Ashdod. Coordenadas de referência: 34.657800,31.757200. Referências bíblicas: Josh 11:22, Josh 13:3, Josh 15:46, Josh 15:47, 1 Sam 5:1, 1 Sam 5:3, 1 Sam 5:5, 1 Sam 5:6. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Ashkelon",
+      "text": "Lugar bíblico do tipo settlement. Identificação moderna principal: Tel Ashkelon. Coordenadas de referência: 34.545833,31.663889. Referências bíblicas: Josh 13:3, Judg 1:18, Judg 14:19, 1 Sam 6:17, 2 Sam 1:20, Jer 25:20, Jer 47:5, Jer 47:7. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Ashkenaz",
+      "text": "Lugar bíblico do tipo region. Identificação moderna principal: Scythia. Coordenadas de referência: 34.120560,44.942780. Referências bíblicas: Jer 51:27. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Ashnah 1",
+      "text": "Lugar bíblico do tipo settlement, special. Identificação moderna principal: Islin. Coordenadas de referência: 35.006303,31.784708. Referências bíblicas: Josh 15:33. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Ashnah 2",
+      "text": "Lugar bíblico do tipo settlement. Identificação moderna principal: Idhna. Coordenadas de referência: 34.976111,31.558611. Referências bíblicas: Josh 15:43. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Ashtaroth",
+      "text": "Lugar bíblico do tipo settlement. Identificação moderna principal: Tell Ashtara. Coordenadas de referência: 36.015833,32.804167. Referências bíblicas: Deut 1:4, Josh 9:10, Josh 12:4, Josh 13:12, Josh 13:31, 1 Chr 6:71, 1 Chr 11:44. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Ashteroth-karnaim",
+      "text": "Lugar bíblico do tipo settlement. Identificação moderna principal: Tell Ashtara. Coordenadas de referência: 36.015833,32.804167. Referências bíblicas: Gen 14:5. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Asia",
+      "text": "Lugar bíblico do tipo region. Identificação moderna principal: Asia. Coordenadas de referência: 28.300000,38.400000. Referências bíblicas: Acts 2:9, Acts 6:9, Acts 16:6, Acts 19:10, Acts 19:22, Acts 19:26, Acts 19:27, Acts 19:31. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Asshur",
+      "text": "Lugar bíblico do tipo settlement. Identificação moderna principal: Assur. Coordenadas de referência: 43.262500,35.456667. Referências bíblicas: Num 24:22, Num 24:24, Ps 83:8, Ezek 27:23. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Assos",
+      "text": "Lugar bíblico do tipo settlement. Identificação moderna principal: Assos. Coordenadas de referência: 26.336667,39.490556. Referências bíblicas: Acts 20:13, Acts 20:14. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Assyria",
+      "text": "Lugar bíblico do tipo region. Identificação moderna principal: Assyria. Coordenadas de referência: 43.152800,36.359400. Referências bíblicas: Gen 2:14, Gen 10:11, Gen 25:18, 2 Kgs 15:19, 2 Kgs 15:20, 2 Kgs 15:29, 2 Kgs 16:7, 2 Kgs 16:8. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Atad",
+      "text": "Lugar bíblico do tipo settlement. Identificação moderna principal: near the mouth of the Jordan River. Coordenadas de referência: 35.530445,31.914888. Referências bíblicas: Gen 50:10, Gen 50:11. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Ataroth 1",
+      "text": "Lugar bíblico do tipo settlement. Identificação moderna principal: Khirbet Ataruz. Coordenadas de referência: 35.665938,31.575300. Referências bíblicas: Num 32:3, Num 32:34. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Ataroth 2",
+      "text": "Lugar bíblico do tipo settlement. Identificação moderna principal: Kafr Aqab. Coordenadas de referência: 35.228500,31.880500. Referências bíblicas: Josh 16:2. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Ataroth 3",
+      "text": "Lugar bíblico do tipo settlement. Identificação moderna principal: Kafr Aqab. Coordenadas de referência: 35.228500,31.880500. Referências bíblicas: Josh 16:7. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Ataroth-addar",
+      "text": "Lugar bíblico do tipo settlement. Identificação moderna principal: Khirbet Atara. Coordenadas de referência: 35.217520,31.879930. Referências bíblicas: Josh 16:5, Josh 18:13. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Athach",
+      "text": "Lugar bíblico do tipo settlement. Identificação moderna principal: Khirbet el Ater. Coordenadas de referência: 34.878300,31.615930. Referências bíblicas: 1 Sam 30:30. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Atharim",
+      "text": "Lugar bíblico do tipo road, settlement, special. Identificação moderna principal: road between Kadesh-barnea and Arad. Coordenadas de referência: 34.779822,30.878961. Referências bíblicas: Num 21:1. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Athens",
+      "text": "Lugar bíblico do tipo settlement. Identificação moderna principal: Athens. Coordenadas de referência: 23.726738,37.971851. Referências bíblicas: Acts 17:15, Acts 17:16, Acts 17:21, Acts 17:22, Acts 18:1, 1 Thes 3:1. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Atroth-beth-joab",
+      "text": "Lugar bíblico do tipo settlement, special. Identificação moderna principal: within 5 km of Bethlehem. Coordenadas de referência: 35.207639,31.704306. Referências bíblicas: 1 Chr 2:54. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Atroth-shophan",
+      "text": "Lugar bíblico do tipo settlement. Identificação moderna principal: Rujm Ataruz. Coordenadas de referência: 35.687420,31.591311. Referências bíblicas: Num 32:35. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Attalia",
+      "text": "Lugar bíblico do tipo settlement. Identificação moderna principal: Antalya. Coordenadas de referência: 30.703614,36.881272. Referências bíblicas: Acts 14:25, Acts 14:26. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Aven",
+      "text": "Lugar bíblico do tipo settlement, special. Identificação moderna principal: Beitin. Coordenadas de referência: 35.241389,31.922778. Referências bíblicas: Hos 10:8. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Avith",
+      "text": "Lugar bíblico do tipo settlement. Identificação moderna principal: Rujum al Juththa. Coordenadas de referência: 35.601921,30.206000. Referências bíblicas: Gen 36:35, 1 Chr 1:46. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Avva",
+      "text": "Lugar bíblico do tipo settlement, special. Identificação moderna principal: Kafr Aya. Coordenadas de referência: 36.690556,34.684722. Referências bíblicas: 2 Kgs 17:24. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Avvim",
+      "text": "Lugar bíblico do tipo settlement. Identificação moderna principal: Et Tell. Coordenadas de referência: 35.261111,31.916944. Referências bíblicas: Josh 18:23. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Ayyah",
+      "text": "Lugar bíblico do tipo settlement. Identificação moderna principal: Et Tell. Coordenadas de referência: 35.261111,31.916944. Referências bíblicas: 1 Chr 7:28. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Azal",
+      "text": "Lugar bíblico do tipo river, settlement, special. Identificação moderna principal: Nahal Azal. Coordenadas de referência: 35.231667,31.760833. Referências bíblicas: Zech 14:5. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Azazel",
+      "text": "Lugar bíblico do tipo natural area, special. Identificação moderna principal: not a place. Referências bíblicas: Lev 16:8, Lev 16:10, Lev 16:26. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Azekah",
+      "text": "Lugar bíblico do tipo settlement. Identificação moderna principal: Tel Azekah. Coordenadas de referência: 34.935696,31.700226. Referências bíblicas: Josh 10:10, Josh 10:11, Josh 15:35, 1 Sam 17:1, 2 Chr 11:9, Neh 11:30, Jer 34:7. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Azmaveth",
+      "text": "Lugar bíblico do tipo settlement. Identificação moderna principal: Hizma. Coordenadas de referência: 35.261944,31.835000. Referências bíblicas: Ezra 2:24, Neh 7:28, Neh 12:29. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Azmon",
+      "text": "Lugar bíblico do tipo settlement. Identificação moderna principal: Ain Muweileh. Coordenadas de referência: 34.333333,30.687500. Referências bíblicas: Num 34:4, Num 34:5, Josh 15:4. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Aznoth-tabor",
+      "text": "Lugar bíblico do tipo settlement. Identificação moderna principal: Tel Govel. Coordenadas de referência: 35.384444,32.727222. Referências bíblicas: Josh 19:34. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Baalah 1",
+      "text": "Lugar bíblico do tipo settlement, special. Identificação moderna principal: no valid locations. Referências bíblicas: Josh 15:29. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Baalah 2",
+      "text": "Lugar bíblico do tipo settlement. Identificação moderna principal: Deir el Azar. Coordenadas de referência: 35.103780,31.808957. Referências bíblicas: Josh 15:9, Josh 15:10, 1 Chr 13:6. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Baalath 1",
+      "text": "Lugar bíblico do tipo hill, mountain, settlement. Identificação moderna principal: Al Maghar. Coordenadas de referência: 34.782250,31.838514. Referências bíblicas: Josh 19:44. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Baalath 2",
+      "text": "Lugar bíblico do tipo settlement, special. Identificação moderna principal: Al Maghar. Coordenadas de referência: 34.782250,31.838514. Referências bíblicas: 1 Kgs 9:18, 2 Chr 8:6. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Baalath-beer",
+      "text": "Lugar bíblico do tipo settlement, special. Identificação moderna principal: Beer Yeroham. Coordenadas de referência: 34.911322,30.991038. Referências bíblicas: Josh 19:8, 1 Chr 4:33. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Baale-judah",
+      "text": "Lugar bíblico do tipo settlement. Identificação moderna principal: Deir el Azar. Coordenadas de referência: 35.103780,31.808957. Referências bíblicas: 2 Sam 6:2. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Baal-gad",
+      "text": "Lugar bíblico do tipo settlement. Identificação moderna principal: Mount Hermon. Coordenadas de referência: 35.850000,33.400000. Referências bíblicas: Josh 11:17, Josh 12:7, Josh 13:5. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Baal-hamon",
+      "text": "Lugar bíblico do tipo settlement, special, structure. Identificação moderna principal: in Jerusalem. Coordenadas de referência: 35.234167,31.776667. Referências bíblicas: Sng 8:11. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Baal-hazor",
+      "text": "Lugar bíblico do tipo mountain, settlement. Identificação moderna principal: Jebel Asur. Coordenadas de referência: 35.286111,31.978611. Referências bíblicas: 2 Sam 13:23. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Baal-hermon",
+      "text": "Lugar bíblico do tipo mountain, settlement. Identificação moderna principal: Mount Hermon. Coordenadas de referência: 35.850000,33.400000. Referências bíblicas: 1 Chr 5:23. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Baal-meon",
+      "text": "Lugar bíblico do tipo settlement. Identificação moderna principal: Ma‘in. Coordenadas de referência: 35.735321,31.679501. Referências bíblicas: Num 32:38, Josh 13:17, 1 Chr 5:8, Ezek 25:9. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Baal-peor",
+      "text": "Lugar bíblico do tipo mountain, settlement. Identificação moderna principal: within 1 km of Khirbet Ayun Musa. Coordenadas de referência: 35.738498,31.777021. Referências bíblicas: Deut 4:3, Hos 9:10. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Baal-perazim",
+      "text": "Lugar bíblico do tipo settlement. Identificação moderna principal: Ez Zuhur. Coordenadas de referência: 35.183317,31.741854. Referências bíblicas: 2 Sam 5:20, 1 Chr 14:11. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Baal-shalishah",
+      "text": "Lugar bíblico do tipo settlement, special. Identificação moderna principal: Khirbet Sirisye. Coordenadas de referência: 35.011820,32.110310. Referências bíblicas: 2 Kgs 4:42. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Baal-tamar",
+      "text": "Lugar bíblico do tipo settlement. Identificação moderna principal: Ras et Tawil. Coordenadas de referência: 35.241283,31.831498. Referências bíblicas: Judg 20:33. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Baal-zephon",
+      "text": "Lugar bíblico do tipo campsite. Identificação moderna principal: Tell Defenneh. Coordenadas de referência: 32.171389,30.860556. Referências bíblicas: Ex 14:2, Ex 14:9, Num 33:7. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Babel",
+      "text": "Lugar bíblico do tipo settlement. Identificação moderna principal: Babylon. Coordenadas de referência: 44.422222,32.543333. Referências bíblicas: Gen 10:10, Gen 11:9. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Babylon 1",
+      "text": "Lugar bíblico do tipo settlement. Identificação moderna principal: Babylon. Coordenadas de referência: 44.422222,32.543333. Referências bíblicas: 2 Kgs 17:24, 2 Kgs 17:30, 2 Kgs 20:12, 2 Kgs 20:14, 2 Kgs 20:17, 2 Kgs 20:18, 2 Kgs 24:1, 2 Kgs 24:7. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Babylon 2",
+      "text": "Lugar bíblico do tipo settlement, special. Identificação moderna principal: Rome. Coordenadas de referência: 12.485200,41.892200. Referências bíblicas: 1 Pet 5:13. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Babylon 3",
+      "text": "Lugar bíblico do tipo settlement, special. Identificação moderna principal: Rome. Coordenadas de referência: 12.485200,41.892200. Referências bíblicas: Rev 14:8, Rev 16:19, Rev 17:5, Rev 18:2, Rev 18:10, Rev 18:21. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Babylonia",
+      "text": "Lugar bíblico do tipo region. Identificação moderna principal: Babylonia. Coordenadas de referência: 44.422222,32.543333. Referências bíblicas: Ezra 1:11, Ezra 2:1, Ezra 5:12, Ezra 6:1, Ezra 7:6, Ezra 7:9, Ezra 7:16, Ezra 8:1. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Bahurim",
+      "text": "Lugar bíblico do tipo settlement. Identificação moderna principal: Ras Tumeim. Coordenadas de referência: 35.256940,31.791200. Referências bíblicas: 2 Sam 3:16, 2 Sam 16:5, 2 Sam 17:18, 2 Sam 19:16, 2 Sam 23:31, 1 Kgs 2:8, 1 Chr 11:33. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Balah",
+      "text": "Lugar bíblico do tipo settlement, special. Identificação moderna principal: Tulul el Medbah. Coordenadas de referência: 34.912170,31.142053. Referências bíblicas: Josh 19:3. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Bamah",
+      "text": "Lugar bíblico do tipo altar, special. Identificação moderna principal: unknown location. Referências bíblicas: Ezek 20:29. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Bamoth",
+      "text": "Lugar bíblico do tipo settlement. Identificação moderna principal: Khirbet el Quweiqiyeh. Coordenadas de referência: 35.740891,31.731791. Referências bíblicas: Num 21:19, Num 21:20. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Bamoth-baal",
+      "text": "Lugar bíblico do tipo settlement. Identificação moderna principal: Khirbet el Quweiqiyeh. Coordenadas de referência: 35.740891,31.731791. Referências bíblicas: Num 22:41, Josh 13:17. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Bashan",
+      "text": "Lugar bíblico do tipo region. Identificação moderna principal: Bashan. Coordenadas de referência: 35.934722,32.781111. Referências bíblicas: Num 21:33, Num 32:33, Deut 1:4, Deut 3:1, Deut 3:3, Deut 3:4, Deut 3:6, Deut 3:10. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Batanea",
+      "text": "Lugar bíblico do tipo region. Identificação moderna principal: Batanea. Coordenadas de referência: 36.199340,32.852034.  A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Bath-rabbim",
+      "text": "Lugar bíblico do tipo gate. Identificação moderna principal: in Tell Hesban. Coordenadas de referência: 35.809062,31.800811. Referências bíblicas: Sng 7:4. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Bealoth 1",
+      "text": "Lugar bíblico do tipo settlement, special. Identificação moderna principal: Beer Yeroham. Coordenadas de referência: 34.911322,30.991038. Referências bíblicas: Josh 15:24. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Bealoth 2",
+      "text": "Lugar bíblico do tipo settlement, special. Identificação moderna principal: Beer Yeroham. Coordenadas de referência: 34.911322,30.991038. Referências bíblicas: 1 Kgs 4:16. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Beautiful Gate",
+      "text": "Lugar bíblico do tipo gate. Identificação moderna principal: in Jerusalem. Coordenadas de referência: 35.234167,31.776667. Referências bíblicas: Acts 3:2, Acts 3:10. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Beer 1",
+      "text": "Lugar bíblico do tipo campsite. Identificação moderna principal: along Wadi eth Themed. Coordenadas de referência: 35.893333,31.571944. Referências bíblicas: Num 21:16. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Beer 2",
+      "text": "Lugar bíblico do tipo settlement. Identificação moderna principal: El Bira. Coordenadas de referência: 35.504150,32.608230. Referências bíblicas: Judg 9:21. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Beer-elim",
+      "text": "Lugar bíblico do tipo campsite, settlement. Identificação moderna principal: along Wadi eth Themed. Coordenadas de referência: 35.893333,31.571944. Referências bíblicas: Isa 15:8. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Beer-lahai-roi",
+      "text": "Lugar bíblico do tipo well. Identificação moderna principal: Ain Muweileh. Coordenadas de referência: 34.333333,30.687500. Referências bíblicas: Gen 16:14, Gen 24:62, Gen 25:11. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Beeroth",
+      "text": "Lugar bíblico do tipo settlement. Identificação moderna principal: Khirbet el Burj. Coordenadas de referência: 35.187200,31.823830. Referências bíblicas: Josh 9:17, Josh 18:25, 2 Sam 4:2, 2 Sam 4:3, 2 Sam 4:5, 2 Sam 23:37, 1 Chr 11:39, Ezra 2:25. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Beeroth Bene-jaakan",
+      "text": "Lugar bíblico do tipo settlement. Identificação moderna principal: Birein. Coordenadas de referência: 34.472522,30.791764. Referências bíblicas: Deut 10:6. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Beersheba 1",
+      "text": "Lugar bíblico do tipo settlement. Identificação moderna principal: Tel Beer Sheva. Coordenadas de referência: 34.840833,31.244722. Referências bíblicas: Josh 15:28, Josh 19:2, Judg 20:1, 1 Sam 3:20, 1 Sam 8:2, 2 Sam 3:10, 2 Sam 17:11, 2 Sam 24:2. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Beersheba 2",
+      "text": "Lugar bíblico do tipo settlement. Identificação moderna principal: Tel Beer Sheva. Coordenadas de referência: 34.840833,31.244722. Referências bíblicas: Gen 21:14, Gen 21:31, Gen 21:32, Gen 21:33, Gen 22:19, Gen 26:23, Gen 26:33, Gen 28:10. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Beeshterah",
+      "text": "Lugar bíblico do tipo settlement. Identificação moderna principal: Tell Ashtara. Coordenadas de referência: 36.015833,32.804167. Referências bíblicas: Josh 21:27. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Belamon",
+      "text": "Lugar bíblico do tipo settlement. Identificação moderna principal: Tel Abel Beth Maacah. Coordenadas de referência: 35.581007,33.258051.  A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Bene-berak",
+      "text": "Lugar bíblico do tipo settlement. Identificação moderna principal: Al Khayriyya. Coordenadas de referência: 34.827669,32.036675. Referências bíblicas: Josh 19:45. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Bene-jaakan",
+      "text": "Lugar bíblico do tipo settlement. Identificação moderna principal: Birein. Coordenadas de referência: 34.472522,30.791764. Referências bíblicas: Num 33:31, Num 33:32. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Benjamin Gate",
+      "text": "Lugar bíblico do tipo gate. Identificação moderna principal: in Jerusalem. Coordenadas de referência: 35.234167,31.776667. Referências bíblicas: Jer 20:2, Jer 37:13, Jer 38:7, Zech 14:10. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Beon",
+      "text": "Lugar bíblico do tipo settlement. Identificação moderna principal: Ma‘in. Coordenadas de referência: 35.735321,31.679501. Referências bíblicas: Num 32:3. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Berea",
+      "text": "Lugar bíblico do tipo settlement. Identificação moderna principal: Veria. Coordenadas de referência: 22.200000,40.518333. Referências bíblicas: Acts 17:10, Acts 17:11, Acts 17:13, Acts 17:14, Acts 17:15, Acts 20:4. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Bered",
+      "text": "Lugar bíblico do tipo mountain, region, settlement. Identificação moderna principal: Haluza. Coordenadas de referência: 34.652000,31.097000. Referências bíblicas: Gen 16:14. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Berothah",
+      "text": "Lugar bíblico do tipo settlement, special. Identificação moderna principal: Brital. Coordenadas de referência: 36.150833,33.935278. Referências bíblicas: Ezek 47:16. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Berothai",
+      "text": "Lugar bíblico do tipo settlement, special. Identificação moderna principal: Brital. Coordenadas de referência: 36.150833,33.935278. Referências bíblicas: 2 Sam 8:8. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Besor",
+      "text": "Lugar bíblico do tipo river. Identificação moderna principal: Nahal HaBesor. Coordenadas de referência: 34.375680,31.464230. Referências bíblicas: 1 Sam 30:9, 1 Sam 30:10, 1 Sam 30:21. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Beten",
+      "text": "Lugar bíblico do tipo settlement. Identificação moderna principal: Khirbet Ibtin. Coordenadas de referência: 35.106580,32.764076. Referências bíblicas: Josh 19:25. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Beth-anath",
+      "text": "Lugar bíblico do tipo settlement. Identificação moderna principal: Safad el Battikh. Coordenadas de referência: 35.433060,33.200280. Referências bíblicas: Josh 19:38, Judg 1:33. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Beth-anoth",
+      "text": "Lugar bíblico do tipo settlement. Identificação moderna principal: Khirbet Beit Anun. Coordenadas de referência: 35.126220,31.562090. Referências bíblicas: Josh 15:59. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Bethany 1",
+      "text": "Lugar bíblico do tipo settlement. Identificação moderna principal: Al Eizariya. Coordenadas de referência: 35.255903,31.771661. Referências bíblicas: Matt 21:17, Matt 26:6, Mark 11:1, Mark 11:11, Mark 11:12, Mark 14:3, Luke 19:29, Luke 24:50. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    },
+    {
+      "title": "Bethany 2",
+      "text": "Lugar bíblico do tipo ford, region, settlement, special, wadi. Identificação moderna principal: Al Maghtas. Coordenadas de referência: 35.550301,31.837109. Referências bíblicas: John 1:28. A identificação geográfica pode ter diferentes graus de certeza conforme as fontes acadêmicas reunidas pelo OpenBible.info."
+    }
+  ]
+}
