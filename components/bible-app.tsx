@@ -1,0 +1,333 @@
+"use client";
+
+import { useDeferredValue, useEffect, useMemo, useState } from "react";
+import {
+  BookOpen, BookText, ChevronLeft, ChevronRight, Download, FileText,
+  GraduationCap, Highlighter, Info, MessageSquareText, Palette,
+  Search, Sparkles, X,
+} from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import { Sheet, SheetContent, SheetHeader, SheetTitle } from "@/components/ui/sheet";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { Textarea } from "@/components/ui/textarea";
+import { BOOK_INFO, BOOK_NAMES, ORIGINAL_WORDS, STUDIES, TOPICS, type ScriptureRef } from "@/lib/bible-content";
+
+type BibleVerse = { number: number; text: string };
+type BibleChapter = { chapter: number; verses: BibleVerse[] };
+type BibleBook = { bookId: number; chapters: BibleChapter[] };
+type BibleData = { version: string; language: string; books: BibleBook[] };
+type DictionaryEntry = {
+  term: string; category: string; definition: string; importance?: string; reading?: string;
+  perspective?: string; distinction?: string; application?: string; deeper?: string;
+};
+type DictionaryData = { title: string; project: string; author: string; identity: string; entries: DictionaryEntry[] };
+type DictionaryManifest = Omit<DictionaryData, "entries"> & { parts: string[] };
+type View = "bible" | "dictionary" | "topics" | "studies" | "appeal";
+type Theme = "default" | "brown" | "red" | "black";
+type Annotation = { color?: string; note?: string };
+type VerseSelection = { book: number; chapter: number; verse: BibleVerse };
+
+const COLORS = [
+  { name: "Amarelo", value: "#F8E58C" }, { name: "Azul", value: "#9FD6F5" },
+  { name: "Verde", value: "#AEE3B4" }, { name: "Vermelho", value: "#F2A7A7" },
+  { name: "Branco", value: "#FFFFFF" }, { name: "Preto", value: "#171717" },
+];
+
+const themeLabels: Record<Theme, string> = { default: "Padrão", brown: "Marrom", red: "Vermelho", black: "Preto" };
+const normalize = (value: string) => value.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+const verseKey = (book: number, chapter: number, verse: number) => `${book}-${chapter}-${verse}`;
+
+function loadLocal<T>(key: string, fallback: T): T {
+  if (typeof window === "undefined") return fallback;
+  try { return JSON.parse(localStorage.getItem(key) || "") as T; } catch { return fallback; }
+}
+
+export function BibleApp() {
+  const [bible, setBible] = useState<BibleData | null>(null);
+  const [dictionary, setDictionary] = useState<DictionaryData | null>(null);
+  const [view, setView] = useState<View>("bible");
+  const [bookIndex, setBookIndex] = useState(42);
+  const [chapterNumber, setChapterNumber] = useState(3);
+  const [focusVerse, setFocusVerse] = useState<number | null>(16);
+  const [selectedVerse, setSelectedVerse] = useState<VerseSelection | null>(null);
+  const [searchOpen, setSearchOpen] = useState(false);
+  const [searchText, setSearchText] = useState("");
+  const [dictionarySearch, setDictionarySearch] = useState("");
+  const [selectedEntry, setSelectedEntry] = useState<DictionaryEntry | null>(null);
+  const [theme, setTheme] = useState<Theme>("default");
+  const [themeOpen, setThemeOpen] = useState(false);
+  const [aboutOpen, setAboutOpen] = useState(false);
+  const [annotations, setAnnotations] = useState<Record<string, Annotation>>({});
+  const [noteDraft, setNoteDraft] = useState("");
+  const [status, setStatus] = useState("");
+  const deferredSearchText = useDeferredValue(searchText);
+  const deferredDictionarySearch = useDeferredValue(dictionarySearch);
+
+  useEffect(() => {
+    Promise.all([
+      fetch("https://raw.githubusercontent.com/midvash/bible-data/main/versions/pt/almeida-livre/almeida-livre.json").then((r) => r.json()),
+      fetch("/data/dictionary/manifest.json").then((r) => r.json() as Promise<DictionaryManifest>).then(async (manifest) => ({
+        ...manifest,
+        entries: (await Promise.all(manifest.parts.map((file: string) => fetch(`/data/dictionary/${file}`).then((r) => r.json())))).flat(),
+      })),
+    ]).then(([bibleData, dictionaryData]) => {
+      setBible(bibleData as BibleData);
+      setDictionary(dictionaryData as DictionaryData);
+    });
+    setAnnotations(loadLocal("lm-bible-annotations", {}));
+    setTheme(loadLocal<Theme>("lm-bible-theme", "default"));
+  }, []);
+
+  useEffect(() => { localStorage.setItem("lm-bible-annotations", JSON.stringify(annotations)); }, [annotations]);
+  useEffect(() => { localStorage.setItem("lm-bible-theme", JSON.stringify(theme)); }, [theme]);
+
+  const currentBook = bible?.books[bookIndex];
+  const currentChapter = currentBook?.chapters.find((chapter) => chapter.chapter === chapterNumber);
+  const bookInfo = BOOK_INFO[bookIndex];
+
+  const allVerses = useMemo(() => {
+    if (!bible) return [];
+    return bible.books.flatMap((bookData, bookNumber) => bookData.chapters.flatMap((chapter) =>
+      chapter.verses.map((verse) => ({ book: bookNumber, chapter: chapter.chapter, verse: verse.number, text: verse.text })),
+    ));
+  }, [bible]);
+
+  const searchResults = useMemo(() => {
+    const query = normalize(deferredSearchText.trim());
+    if (!query || query.length < 2) return [];
+    return allVerses.filter((item) => normalize(item.text).includes(query)).slice(0, 80);
+  }, [allVerses, deferredSearchText]);
+
+  const dictionaryResults = useMemo(() => {
+    if (!dictionary) return [];
+    const query = normalize(deferredDictionarySearch.trim());
+    if (!query) return dictionary.entries;
+    return dictionary.entries.filter((entry) => normalize(`${entry.term} ${entry.category} ${entry.definition}`).includes(query));
+  }, [dictionary, deferredDictionarySearch]);
+
+  const bookExtremes = useMemo(() => {
+    if (!currentBook) return null;
+    const verses = currentBook.chapters.flatMap((chapter) => chapter.verses.map((verse) => ({ ...verse, chapter: chapter.chapter })));
+    if (!verses.length) return null;
+    return {
+      longest: verses.reduce((a, b) => a.text.length > b.text.length ? a : b),
+      shortest: verses.reduce((a, b) => a.text.length < b.text.length ? a : b),
+    };
+  }, [currentBook]);
+
+  function goToReference(reference: ScriptureRef | { book: number; chapter: number; verse: number }) {
+    setBookIndex(reference.book); setChapterNumber(reference.chapter); setFocusVerse(reference.verse); setView("bible");
+    setSearchOpen(false); setSelectedVerse(null);
+    window.setTimeout(() => document.getElementById(`verse-${reference.verse}`)?.scrollIntoView({ behavior: "smooth", block: "center" }), 220);
+  }
+
+  function selectVerse(verse: BibleVerse) {
+    setSelectedVerse({ book: bookIndex, chapter: chapterNumber, verse });
+    setNoteDraft(annotations[verseKey(bookIndex, chapterNumber, verse.number)]?.note || "");
+  }
+
+  function saveColor(color?: string) {
+    if (!selectedVerse) return;
+    const key = verseKey(selectedVerse.book, selectedVerse.chapter, selectedVerse.verse.number);
+    setAnnotations((old) => ({ ...old, [key]: { ...old[key], color } }));
+  }
+
+  function saveNote() {
+    if (!selectedVerse) return;
+    const key = verseKey(selectedVerse.book, selectedVerse.chapter, selectedVerse.verse.number);
+    setAnnotations((old) => ({ ...old, [key]: { ...old[key], note: noteDraft.trim() } }));
+    setStatus("Nota salva neste aparelho.");
+    window.setTimeout(() => setStatus(""), 2400);
+  }
+
+  async function createVerseImage() {
+    if (!selectedVerse) return;
+    const canvas = document.createElement("canvas");
+    canvas.width = 1080; canvas.height = 1350;
+    const ctx = canvas.getContext("2d"); if (!ctx) return;
+    const palettes: Record<Theme, [string, string, string]> = {
+      default: ["#F7F0DF", "#6E4F22", "#201B16"], brown: ["#2E2018", "#C99A5D", "#FFF6E8"],
+      red: ["#350F13", "#E0A16E", "#FFF4EE"], black: ["#080808", "#C8A96A", "#F5F5F5"],
+    };
+    const [background, accent, foreground] = palettes[theme];
+    const gradient = ctx.createLinearGradient(0, 0, 1080, 1350); gradient.addColorStop(0, background); gradient.addColorStop(1, theme === "default" ? "#E6D6B7" : "#12100E");
+    ctx.fillStyle = gradient; ctx.fillRect(0, 0, 1080, 1350);
+    ctx.strokeStyle = accent; ctx.lineWidth = 4; ctx.strokeRect(62, 62, 956, 1226);
+    ctx.fillStyle = accent; ctx.font = "700 34px Georgia"; ctx.textAlign = "center"; ctx.fillText("BÍBLIA ON-LINE", 540, 150);
+    ctx.fillStyle = foreground; ctx.font = "52px Georgia";
+    const words = selectedVerse.verse.text.split(" "); let line = ""; const lines: string[] = [];
+    for (const word of words) { const test = `${line}${word} `; if (ctx.measureText(test).width > 850) { lines.push(line.trim()); line = `${word} `; } else line = test; }
+    if (line.trim()) lines.push(line.trim());
+    const start = 600 - (lines.length * 36); lines.forEach((text, index) => ctx.fillText(text, 540, start + index * 72));
+    ctx.fillStyle = accent; ctx.font = "700 38px Georgia"; ctx.fillText(`${BOOK_NAMES[selectedVerse.book]} ${selectedVerse.chapter}:${selectedVerse.verse.number}`, 540, 1080);
+    ctx.fillStyle = foreground; ctx.globalAlpha = .78; ctx.font = "26px Arial"; ctx.fillText("Almeida 1819 — Bíblia Livre", 540, 1150); ctx.fillText("Projeto L.M. Lemos", 540, 1193);
+    const blob = await new Promise<Blob | null>((resolve) => canvas.toBlob(resolve, "image/png")); if (!blob) return;
+    const file = new File([blob], `versiculo-${BOOK_NAMES[selectedVerse.book]}-${selectedVerse.chapter}-${selectedVerse.verse.number}.png`, { type: "image/png" });
+    if (navigator.canShare?.({ files: [file] })) { await navigator.share({ files: [file], title: `${BOOK_NAMES[selectedVerse.book]} ${selectedVerse.chapter}:${selectedVerse.verse.number}` }); }
+    else { const url = URL.createObjectURL(blob); const link = document.createElement("a"); link.href = url; link.download = file.name; link.click(); URL.revokeObjectURL(url); }
+  }
+
+  function changeChapter(delta: number) {
+    if (!bible) return;
+    let nextBook = bookIndex; let nextChapter = chapterNumber + delta;
+    if (nextChapter < 1 && nextBook > 0) { nextBook -= 1; nextChapter = bible.books[nextBook].chapters.length; }
+    if (nextChapter > bible.books[nextBook].chapters.length && nextBook < 65) { nextBook += 1; nextChapter = 1; }
+    setBookIndex(nextBook); setChapterNumber(nextChapter); setFocusVerse(null); window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+
+  const originalWords = selectedVerse && selectedVerse.book < 39 ? ORIGINAL_WORDS.old : ORIGINAL_WORDS.new;
+  const nearby = selectedVerse && bible ? bible.books[selectedVerse.book].chapters.find((c) => c.chapter === selectedVerse.chapter)?.verses.filter((v) => Math.abs(v.number - selectedVerse.verse.number) <= 1) : [];
+
+  return (
+    <div className={`bible-app theme-${theme}`}>
+      <header className="app-header">
+        <button className="brand" onClick={() => setView("bible")} aria-label="Abrir a Bíblia">
+          <span className="brand-mark"><BookOpen size={21} /></span>
+          <span><strong>Bíblia On-line</strong><small>Projeto L.M. Lemos</small></span>
+        </button>
+        <div className="header-actions">
+          <button className="icon-button" onClick={() => setSearchOpen(true)} aria-label="Pesquisar na Bíblia"><Search size={20} /></button>
+          <button className="icon-button" onClick={() => setThemeOpen(true)} aria-label="Escolher tema"><Palette size={20} /></button>
+          <button className="icon-button" onClick={() => setAboutOpen(true)} aria-label="Informações"><Info size={20} /></button>
+        </div>
+      </header>
+
+      <div className="desktop-shell">
+        <aside className="side-nav">
+          <NavButton icon={<BookOpen />} label="Bíblia" active={view === "bible"} onClick={() => setView("bible")} />
+          <NavButton icon={<BookText />} label="Dicionário" active={view === "dictionary"} onClick={() => setView("dictionary")} />
+          <NavButton icon={<Sparkles />} label="Assuntos" active={view === "topics"} onClick={() => setView("topics")} />
+          <NavButton icon={<GraduationCap />} label="Estudos" active={view === "studies"} onClick={() => setView("studies")} />
+          <NavButton icon={<MessageSquareText />} label="Conheça Jesus" active={view === "appeal"} onClick={() => setView("appeal")} />
+          <div className="side-source"><span>Texto bíblico</span><strong>Almeida 1819</strong><small>Bíblia Livre · domínio público</small></div>
+        </aside>
+
+        <main className="main-content">
+          {view === "bible" && (
+            <section className="reader-view">
+              <div className="mode-switch" aria-label="Alternar Bíblia e dicionário">
+                <button className="active" onClick={() => setView("bible")}><BookOpen size={17} /> Bíblia</button>
+                <button onClick={() => setView("dictionary")}><BookText size={17} /> Dicionário teológico</button>
+              </div>
+              <div className="reader-toolbar">
+                <Select value={String(bookIndex)} onValueChange={(value) => { setBookIndex(Number(value)); setChapterNumber(1); setFocusVerse(null); }}>
+                  <SelectTrigger className="book-select"><SelectValue /></SelectTrigger>
+                  <SelectContent>{BOOK_NAMES.map((book, index) => <SelectItem key={book} value={String(index)}>{book}</SelectItem>)}</SelectContent>
+                </Select>
+                <Select value={String(chapterNumber)} onValueChange={(value) => { setChapterNumber(Number(value)); setFocusVerse(null); }}>
+                  <SelectTrigger className="chapter-select"><SelectValue /></SelectTrigger>
+                  <SelectContent>{currentBook?.chapters.map((chapter) => <SelectItem key={chapter.chapter} value={String(chapter.chapter)}>Capítulo {chapter.chapter}</SelectItem>)}</SelectContent>
+                </Select>
+                <button className="search-pill" onClick={() => setSearchOpen(true)}><Search size={18} /><span>Pesquisar</span></button>
+              </div>
+
+              {!bible ? <ReaderSkeleton /> : (
+                <>
+                  <article className="book-intro">
+                    <span className="eyebrow">Antes da leitura</span><h1>{bookInfo.name}</h1><p className="book-summary">{bookInfo.summary}</p>
+                    <div className="book-facts">
+                      <Fact label="Autor" value={bookInfo.author} /><Fact label="Data provável" value={bookInfo.date} /><Fact label="Destinatários" value={bookInfo.audience} />
+                    </div>
+                    <div className="famous-verses"><strong>Textos conhecidos</strong><span>{bookInfo.famous.join(" · ")}</span></div>
+                    {bookExtremes && <div className="verse-extremes"><span><b>Maior versículo*</b> {bookInfo.name} {bookExtremes.longest.chapter}:{bookExtremes.longest.number}</span><span><b>Menor versículo*</b> {bookInfo.name} {bookExtremes.shortest.chapter}:{bookExtremes.shortest.number}</span><small>*Medidos pelo número de caracteres nesta edição.</small></div>}
+                  </article>
+                  <div className="chapter-heading"><span>Capítulo</span><strong>{chapterNumber}</strong><small>{BOOK_NAMES[bookIndex]}</small></div>
+                  <div className="verses">
+                    {currentChapter?.verses.map((verse) => {
+                      const annotation = annotations[verseKey(bookIndex, chapterNumber, verse.number)];
+                      const color = annotation?.color;
+                      const black = color === "#171717";
+                      return <button id={`verse-${verse.number}`} key={verse.number} onClick={() => selectVerse(verse)} className={`verse ${focusVerse === verse.number ? "verse-focused" : ""}`} style={color ? { backgroundColor: color, color: black ? "#fff" : "#171717" } : undefined}>
+                        <sup>{verse.number}</sup><span>{verse.text}</span>{annotation?.note && <FileText className="note-mark" size={14} />}
+                      </button>;
+                    })}
+                  </div>
+                  <div className="chapter-navigation"><Button variant="outline" onClick={() => changeChapter(-1)} disabled={bookIndex === 0 && chapterNumber === 1}><ChevronLeft /> Anterior</Button><Button onClick={() => changeChapter(1)} disabled={bookIndex === 65 && chapterNumber === 22}>Próximo <ChevronRight /></Button></div>
+                </>
+              )}
+            </section>
+          )}
+
+          {view === "dictionary" && (
+            <section className="content-view dictionary-view">
+              <div className="mode-switch"><button onClick={() => setView("bible")}><BookOpen size={17} /> Bíblia</button><button className="active" onClick={() => setView("dictionary")}><BookText size={17} /> Dicionário teológico</button></div>
+              <div className="page-title"><span className="eyebrow">Projeto L.M. Lemos</span><h1>Dicionário Teológico</h1><p>Amplo Conhecimento · identidade evangélica · 260 verbetes</p></div>
+              <label className="dictionary-search"><Search size={20} /><input value={dictionarySearch} onChange={(e) => setDictionarySearch(e.target.value)} placeholder="Pesquise graça, justificação, Trindade..." /></label>
+              {!dictionary ? <ReaderSkeleton /> : selectedEntry ? (
+                <article className="dictionary-entry">
+                  <button className="back-link" onClick={() => setSelectedEntry(null)}><ChevronLeft /> Voltar aos verbetes</button>
+                  <span className="category">{selectedEntry.category}</span><h2>{selectedEntry.term}</h2><p className="lead">{selectedEntry.definition}</p>
+                  <EntrySection title="Importância teológica" text={selectedEntry.importance} /><EntrySection title="Leitura bíblica" text={selectedEntry.reading} />
+                  <EntrySection title="Perspectiva desta obra" text={selectedEntry.perspective} /><EntrySection title="Não confunda" text={selectedEntry.distinction} />
+                  <EntrySection title="Aplicação" text={selectedEntry.application} /><EntrySection title="Para aprofundar" text={selectedEntry.deeper} />
+                </article>
+              ) : (
+                <div className="dictionary-grid">{dictionaryResults.map((entry) => <button key={entry.term} onClick={() => setSelectedEntry(entry)} className="dictionary-card"><span>{entry.category}</span><strong>{entry.term}</strong><p>{entry.definition}</p><small>Ler verbete <ChevronRight size={15} /></small></button>)}</div>
+              )}
+            </section>
+          )}
+
+          {view === "topics" && (
+            <section className="content-view"><div className="page-title"><span className="eyebrow">A Bíblia por tema</span><h1>Assuntos</h1><p>Abra um assunto e siga as principais passagens no próprio texto bíblico.</p></div>
+              <div className="topics-grid">{TOPICS.map((topic) => <article key={topic.name} className="topic-card"><span className="topic-icon"><Sparkles size={18} /></span><h2>{topic.name}</h2><p>{topic.description}</p><div className="reference-list">{topic.refs.map((item) => <button key={item.label} onClick={() => goToReference(item)}>{item.label}<ChevronRight size={14} /></button>)}</div></article>)}</div>
+            </section>
+          )}
+
+          {view === "studies" && (
+            <section className="content-view"><div className="page-title"><span className="eyebrow">Formação cristã</span><h1>Estudos bíblicos</h1><p>Estudos evangélicos com a Bíblia como autoridade final.</p></div>
+              <div className="studies-list">{STUDIES.map((study, index) => <article key={study.title} className="study-card"><div className="study-number">{String(index + 1).padStart(2,"0")}</div><div><span className="category">Estudo essencial</span><h2>{study.title}</h2><p className="study-subtitle">{study.subtitle}</p><ol>{study.sections.map((section) => <li key={section}>{section}</li>)}</ol><div className="study-refs">{study.refs.map((item) => <span key={item}>{item}</span>)}</div></div></article>)}</div>
+            </section>
+          )}
+
+          {view === "appeal" && (
+            <section className="appeal-view"><div className="appeal-cross" aria-hidden="true"/><span className="eyebrow">Um convite do Evangelho</span><h1>Jesus Cristo é Senhor</h1><p className="appeal-lead">A Bíblia anuncia que Jesus é o Filho de Deus, morreu pelos pecados, ressuscitou dentre os mortos e voltará com poder e glória.</p>
+              <blockquote>“Se com a tua boca confessares ao Senhor Jesus, e em teu coração creres que Deus o ressuscitou dentre os mortos, serás salvo.”<cite>Romanos 10:9 — Almeida 1819, Bíblia Livre</cite></blockquote>
+              <div className="appeal-steps"><div><b>1</b><span><strong>Reconheça</strong>Confesse seu pecado e sua necessidade da graça de Deus.</span></div><div><b>2</b><span><strong>Arrependa-se</strong>Volte-se do pecado para Deus e não adie esse chamado.</span></div><div><b>3</b><span><strong>Creia em Jesus</strong>Confie no Filho de Deus, em sua morte e ressurreição.</span></div><div><b>4</b><span><strong>Confesse e siga</strong>Confesse Jesus como Senhor e caminhe em obediência, numa igreja fiel à Palavra.</span></div></div>
+              <div className="return-call"><Sparkles /><div><strong>Jesus voltará!</strong><p>Hoje é tempo de buscar a Deus. A salvação é pela graça, mediante a fé — não é comprada por obras, dinheiro ou religião.</p></div></div>
+              <Button size="lg" onClick={() => goToReference({ book: 44, chapter: 10, verse: 9 })}>Ler Romanos 10 <BookOpen /></Button>
+            </section>
+          )}
+        </main>
+      </div>
+
+      <nav className="mobile-nav" aria-label="Navegação principal">
+        <NavButton icon={<BookOpen />} label="Bíblia" active={view === "bible"} onClick={() => setView("bible")} />
+        <NavButton icon={<BookText />} label="Dicionário" active={view === "dictionary"} onClick={() => setView("dictionary")} />
+        <NavButton icon={<Sparkles />} label="Assuntos" active={view === "topics"} onClick={() => setView("topics")} />
+        <NavButton icon={<GraduationCap />} label="Estudos" active={view === "studies"} onClick={() => setView("studies")} />
+        <NavButton icon={<MessageSquareText />} label="Jesus" active={view === "appeal"} onClick={() => setView("appeal")} />
+      </nav>
+
+      <Dialog open={searchOpen} onOpenChange={setSearchOpen}>
+        <DialogContent className="search-dialog"><DialogHeader><DialogTitle>Pesquisar na Bíblia</DialogTitle></DialogHeader>
+          <label className="global-search"><Search /><input autoFocus value={searchText} onChange={(e) => setSearchText(e.target.value)} placeholder="Digite uma palavra ou frase..." /></label>
+          <div className="search-results">{searchText.length < 2 ? <p className="empty-message">Digite pelo menos duas letras para pesquisar nos 31.102 versículos.</p> : searchResults.length ? searchResults.map((item) => <button key={`${item.book}-${item.chapter}-${item.verse}`} onClick={() => goToReference(item)}><strong>{BOOK_NAMES[item.book]} {item.chapter}:{item.verse}</strong><span>{item.text}</span></button>) : <p className="empty-message">Nenhum versículo encontrado.</p>}</div>
+        </DialogContent>
+      </Dialog>
+
+      <Sheet open={!!selectedVerse} onOpenChange={(open) => !open && setSelectedVerse(null)}>
+        <SheetContent side="bottom" className="verse-sheet"><SheetHeader><SheetTitle>{selectedVerse && `${BOOK_NAMES[selectedVerse.book]} ${selectedVerse.chapter}:${selectedVerse.verse.number}`}</SheetTitle></SheetHeader>
+          {selectedVerse && <div className="verse-tools"><p className="selected-text">{selectedVerse.verse.text}</p>
+            <section><h3><Highlighter /> Marcar com cor</h3><div className="color-row">{COLORS.map((color) => <button key={color.value} onClick={() => saveColor(color.value)} title={color.name} aria-label={color.name} style={{ background: color.value }} />)}<button className="clear-color" onClick={() => saveColor(undefined)} aria-label="Remover cor"><X /></button></div></section>
+            <section><h3><FileText /> Minha nota</h3><Textarea value={noteDraft} onChange={(e) => setNoteDraft(e.target.value)} placeholder="Escreva aqui o que você aprendeu..." rows={4} /><Button onClick={saveNote}>Salvar nota</Button>{status && <span className="saved-status">{status}</span>}</section>
+            <section><h3><Download /> Criar imagem</h3><p>Crie um cartão deste versículo no tema escolhido e salve ou compartilhe no celular.</p><Button variant="outline" onClick={createVerseImage}>Criar imagem do versículo</Button></section>
+            <section className="deep-study"><h3><GraduationCap /> Estudo profundo</h3><div className="original-language"><span>{selectedVerse.book < 39 ? "Hebraico bíblico" : "Grego koiné"}</span>{originalWords.slice(0,4).map((word) => <div key={word.script}><b dir={selectedVerse.book < 39 ? "rtl" : "ltr"}>{word.script}</b><span><strong>{word.transliteration}</strong><small>Pronúncia aproximada: {word.pronunciation}</small><em>{word.meaning}</em></span></div>)}</div>
+              <div className="context-box"><strong>Contexto literário</strong><p>{BOOK_INFO[selectedVerse.book].summary} Este versículo deve ser lido dentro do argumento do capítulo {selectedVerse.chapter}, observando os versos anteriores e posteriores.</p>{nearby?.map((verse) => <p key={verse.number} className={verse.number === selectedVerse.verse.number ? "current-context" : ""}><b>{verse.number}</b> {verse.text}</p>)}</div>
+              <div className="study-guidance"><strong>Como aprofundar</strong><p>Observe quem fala, para quem fala e qual problema ou promessa está em foco. Compare passagens claras sobre o mesmo tema. As palavras acima são termos-chave representativos do idioma original; a aplicação deve permanecer subordinada ao contexto completo das Escrituras.</p></div>
+            </section>
+          </div>}
+        </SheetContent>
+      </Sheet>
+
+      <Sheet open={themeOpen} onOpenChange={setThemeOpen}><SheetContent side="right" className="theme-sheet"><SheetHeader><SheetTitle>Escolha o tema</SheetTitle></SheetHeader><div className="theme-options">{(Object.keys(themeLabels) as Theme[]).map((item) => <button key={item} className={`theme-option preview-${item} ${theme === item ? "selected" : ""}`} onClick={() => { setTheme(item); setThemeOpen(false); }}><span/><strong>{themeLabels[item]}</strong>{theme === item && <small>Em uso</small>}</button>)}</div></SheetContent></Sheet>
+
+      <Dialog open={aboutOpen} onOpenChange={setAboutOpen}><DialogContent><DialogHeader><DialogTitle>Sobre esta edição</DialogTitle></DialogHeader><div className="about-content"><p><strong>Bíblia:</strong> Almeida 1819 — Bíblia Livre. A fonte de dados identifica esta versão histórica como domínio público.</p><p><strong>Dicionário:</strong> Dicionário Teológico — Amplo Conhecimento, Projeto L.M. Lemos, por Luan Maciel de Lemos.</p><p><strong>Identidade:</strong> cristã evangélica, com influência reformada, cânon protestante de 66 livros e autoridade final das Escrituras.</p><p>Comentários, introduções e estudos são recursos humanos de apoio. Eles não possuem a mesma autoridade do texto bíblico.</p></div></DialogContent></Dialog>
+    </div>
+  );
+}
+
+function NavButton({ icon, label, active, onClick }: { icon: React.ReactNode; label: string; active: boolean; onClick: () => void }) { return <button className={`nav-button ${active ? "active" : ""}`} onClick={onClick}>{icon}<span>{label}</span></button>; }
+function Fact({ label, value }: { label: string; value: string }) { return <div><span>{label}</span><strong>{value}</strong></div>; }
+function EntrySection({ title, text }: { title: string; text?: string }) { if (!text) return null; return <section><h3>{title}</h3><p>{text}</p></section>; }
+function ReaderSkeleton() { return <div className="reader-skeleton"><span/><span/><span/><span/><span/></div>; }
