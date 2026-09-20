@@ -186,3 +186,22 @@ button { cursor: pointer; }
 }
 
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; } }
+
+
+/* Conta, listas salvas e navegação A-Z */
+.account-library-actions { display:grid; grid-template-columns:1fr 1fr; gap:8px; }
+.dictionary-letters { display:flex; gap:3px; overflow-x:auto; padding:7px 1px 12px; scrollbar-width:thin; }
+.dictionary-letters button { flex:0 0 auto; min-width:27px; height:27px; padding:0 6px; border:1px solid var(--app-line); border-radius:7px; background:var(--app-surface); color:var(--app-muted); font-size:10px; font-weight:800; }
+.dictionary-letters button.active { background:var(--app-accent); color:var(--app-surface); border-color:var(--app-accent); transform:translateY(-1px); }
+.color-row button { transition:transform .18s ease, box-shadow .18s ease, outline-color .18s ease; }
+.color-row button.color-selected { animation:colorPicked .42s ease; outline:3px solid var(--app-accent); outline-offset:3px; box-shadow:0 0 0 5px color-mix(in srgb, var(--app-accent) 20%, transparent); }
+@keyframes colorPicked { 0%{transform:scale(1)} 45%{transform:scale(1.28) rotate(-5deg)} 75%{transform:scale(.94) rotate(2deg)} 100%{transform:scale(1)} }
+.saved-list-dialog { max-width:620px; max-height:82dvh; overflow:hidden; }
+.saved-list { display:grid; gap:8px; max-height:65dvh; overflow-y:auto; padding:2px; }
+.saved-list > button { display:grid; gap:5px; width:100%; padding:13px; text-align:left; border:1px solid var(--app-line); border-radius:12px; background:var(--app-surface); color:var(--app-text); }
+.saved-list > button:hover { border-color:var(--app-accent); transform:translateY(-1px); }
+.saved-reference { display:flex; align-items:center; gap:7px; color:var(--app-accent); font-weight:800; }
+.saved-reference i { width:13px; height:13px; border-radius:50%; border:1px solid #0002; }
+.saved-list strong { font-size:13px; line-height:1.45; }
+.saved-list small { color:var(--app-muted); line-height:1.45; }
+@media (max-width:620px){ .account-library-actions{grid-template-columns:1fr;} .dictionary-letters{margin-inline:-2px;} }
