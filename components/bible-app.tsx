@@ -210,8 +210,17 @@ export function BibleApp() {
     const query = normalize(deferredDictionarySearch.trim());
     return dictionary.entries
       .filter((entry) => dictionaryLetter === "TODAS" || normalize(entry.term).startsWith(normalize(dictionaryLetter)))
-      .filter((entry) => !query || normalize(`${entry.term} ${entry.category} ${entry.definition} ${entry.importance || ""} ${entry.reading || ""} ${entry.perspective || ""} ${entry.distinction || ""} ${entry.application || ""} ${entry.deeper || ""}`).includes(query))
-      .sort((a, b) => a.term.localeCompare(b.term, "pt-BR", { sensitivity: "base" }));
+      .filter((entry) => !query || normalize(entry.term).includes(query))
+      .sort((a, b) => {
+        if (query) {
+          const aTerm = normalize(a.term);
+          const bTerm = normalize(b.term);
+          const aExact = aTerm === query ? 0 : aTerm.startsWith(query) ? 1 : 2;
+          const bExact = bTerm === query ? 0 : bTerm.startsWith(query) ? 1 : 2;
+          if (aExact !== bExact) return aExact - bExact;
+        }
+        return a.term.localeCompare(b.term, "pt-BR", { sensitivity: "base" });
+      });
   }, [dictionary, deferredDictionarySearch, dictionaryLetter]);
 
   const savedItems = useMemo(() => Object.entries(annotations).map(([key, annotation]) => {
