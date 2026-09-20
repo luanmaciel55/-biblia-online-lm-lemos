@@ -1,0 +1,807 @@
+{
+  "source": "STEP Bible TIPNR via Patristic Text Archive conversion",
+  "license": "CC BY 4.0",
+  "count": 200,
+  "entries": [
+    {
+      "title": "Aaron",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Aaron_Exo.4.14. A referência que distingue esta pessoa de homônimos é Exo 4:14. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Abagtha",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Abagtha_Est.1.10. A referência que distingue esta pessoa de homônimos é Est 1:10. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Abda",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Abda_1Ki.4.6. A referência que distingue esta pessoa de homônimos é 1Ki 4:6. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Abdeel",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Abdeel_Jer.36.26. A referência que distingue esta pessoa de homônimos é Jer 36:26. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Abdi",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Abdi_1Ch.6.44. A referência que distingue esta pessoa de homônimos é 1Ch 6:44. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Abdi",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Abdi_2Ch.29.12. A referência que distingue esta pessoa de homônimos é 2Ch 29:12. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Abdi",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Abdi_Ezr.10.26. A referência que distingue esta pessoa de homônimos é Ezr 10:26. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Abdiel",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Abdiel_1Ch.5.15. A referência que distingue esta pessoa de homônimos é 1Ch 5:15. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Abdon",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Abdon_Jdg.12.13. A referência que distingue esta pessoa de homônimos é Jdg 12:13. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Abdon",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Abdon_1Ch.8.23. A referência que distingue esta pessoa de homônimos é 1Ch 8:23. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Abdon",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Abdon_1Ch.8.30. A referência que distingue esta pessoa de homônimos é 1Ch 8:30. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Abel",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Abel_Gen.4.2. A referência que distingue esta pessoa de homônimos é Gen 4:2. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Abi",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Abi_2Ki.18.2. A referência que distingue esta pessoa de homônimos é 2Ki 18:2. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Abiah",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Abiah_1Ch.2.24. A referência que distingue esta pessoa de homônimos é 1Ch 2:24. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Abi Albon",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Abi-albon_2Sa.23.31. A referência que distingue esta pessoa de homônimos é 2Sa 23:31. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Abiathar",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Abiathar_1Sa.22.20. A referência que distingue esta pessoa de homônimos é 1Sa 22:20. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Abida",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Abida_Gen.25.4. A referência que distingue esta pessoa de homônimos é Gen 25:4. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Abidan",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Abidan_Num.1.11. A referência que distingue esta pessoa de homônimos é Num 1:11. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Abiel",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Abiel_1Sa.9.1. A referência que distingue esta pessoa de homônimos é 1Sa 9:1. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Abiezer",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Abiezer_Num.26.30. A referência que distingue esta pessoa de homônimos é Num 26:30. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Abiezer",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Abiezer_2Sa.23.27. A referência que distingue esta pessoa de homônimos é 2Sa 23:27. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Abiezer",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Abiezer_1Ch.7.18. A referência que distingue esta pessoa de homônimos é 1Ch 7:18. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Abigail",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Abigail_1Sa.25.3. A referência que distingue esta pessoa de homônimos é 1Sa 25:3. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Abigail",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Abigail_2Sa.17.25. A referência que distingue esta pessoa de homônimos é 2Sa 17:25. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Abihail",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Abihail_Num.3.35. A referência que distingue esta pessoa de homônimos é Num 3:35. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Abihail",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Abihail_1Ch.2.29. A referência que distingue esta pessoa de homônimos é 1Ch 2:29. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Abihail",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Abihail_1Ch.5.14. A referência que distingue esta pessoa de homônimos é 1Ch 5:14. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Abihail",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Abihail_2Ch.11.18. A referência que distingue esta pessoa de homônimos é 2Ch 11:18. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Abihail",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Abihail_Est.2.15. A referência que distingue esta pessoa de homônimos é Est 2:15. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Abihu",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Abihu_Exo.6.23. A referência que distingue esta pessoa de homônimos é Exo 6:23. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Abihud",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Abihud_1Ch.8.3. A referência que distingue esta pessoa de homônimos é 1Ch 8:3. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Abijah",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Abijah_1Sa.8.2. A referência que distingue esta pessoa de homônimos é 1Sa 8:2. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Abijah",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Abijah_1Ki.14.1. A referência que distingue esta pessoa de homônimos é 1Ki 14:1. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Abijah",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Abijah_1Ki.14.31. A referência que distingue esta pessoa de homônimos é 1Ki 14:31. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Abijah",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Abijah_1Ch.7.8. A referência que distingue esta pessoa de homônimos é 1Ch 7:8. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Abijah",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Abijah_1Ch.24.10. A referência que distingue esta pessoa de homônimos é 1Ch 24:10. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Abijah",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Abijah_Neh.10.7. A referência que distingue esta pessoa de homônimos é Neh 10:7. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Abimael",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Abimael_Gen.10.28. A referência que distingue esta pessoa de homônimos é Gen 10:28. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Abimelech",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Abimelech_Gen.20.2. A referência que distingue esta pessoa de homônimos é Gen 20:2. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Abimelech",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Abimelech_Jdg.8.31. A referência que distingue esta pessoa de homônimos é Jdg 8:31. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Abinadab",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Abinadab_1Sa.7.1. A referência que distingue esta pessoa de homônimos é 1Sa 7:1. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Abinadab",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Abinadab_1Sa.14.49. A referência que distingue esta pessoa de homônimos é 1Sa 14:49. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Abinadab",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Abinadab_1Sa.16.8. A referência que distingue esta pessoa de homônimos é 1Sa 16:8. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Abinadab",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Abinadab_1Ki.4.11. A referência que distingue esta pessoa de homônimos é 1Ki 4:11. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Abinoam",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Abinoam_Jdg.4.6. A referência que distingue esta pessoa de homônimos é Jdg 4:6. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Abiram",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Abiram_Num.16.1. A referência que distingue esta pessoa de homônimos é Num 16:1. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Abiram",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Abiram_1Ki.16.34. A referência que distingue esta pessoa de homônimos é 1Ki 16:34. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Abishag",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Abishag_1Ki.1.3. A referência que distingue esta pessoa de homônimos é 1Ki 1:3. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Abishai",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Abishai_1Sa.26.6. A referência que distingue esta pessoa de homônimos é 1Sa 26:6. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Abishua",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Abishua_1Ch.6.4. A referência que distingue esta pessoa de homônimos é 1Ch 6:4. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Abishua",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Abishua_1Ch.8.4. A referência que distingue esta pessoa de homônimos é 1Ch 8:4. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Abishur",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Abishur_1Ch.2.28. A referência que distingue esta pessoa de homônimos é 1Ch 2:28. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Abital",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Abital_2Sa.3.4. A referência que distingue esta pessoa de homônimos é 2Sa 3:4. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Abitub",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Abitub_1Ch.8.11. A referência que distingue esta pessoa de homônimos é 1Ch 8:11. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Abiud",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Abiud_Mat.1.13. A referência que distingue esta pessoa de homônimos é Mat 1:13. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Abner",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Abner_1Sa.14.50. A referência que distingue esta pessoa de homônimos é 1Sa 14:50. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Abraham",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Abraham_Gen.11.26. A referência que distingue esta pessoa de homônimos é Gen 11:26. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Absalom",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Absalom_2Sa.3.3. A referência que distingue esta pessoa de homônimos é 2Sa 3:3. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Achaicus",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Achaicus_1Co.16.17. A referência que distingue esta pessoa de homônimos é 1Co 16:17. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Achan",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Achan_Jos.7.1. A referência que distingue esta pessoa de homônimos é Jos 7:1. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Achbor",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Achbor_Gen.36.38. A referência que distingue esta pessoa de homônimos é Gen 36:38. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Achbor",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Achbor_2Ki.22.12. A referência que distingue esta pessoa de homônimos é 2Ki 22:12. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Achim",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Achim_Mat.1.14. A referência que distingue esta pessoa de homônimos é Mat 1:14. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Achish",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Achish_1Sa.21.10. A referência que distingue esta pessoa de homônimos é 1Sa 21:10. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Achsah",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Achsah_Jos.15.16. A referência que distingue esta pessoa de homônimos é Jos 15:16. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Achsah",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Achsah_1Ch.2.49. A referência que distingue esta pessoa de homônimos é 1Ch 2:49. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Adah",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Adah_Gen.4.19. A referência que distingue esta pessoa de homônimos é Gen 4:19. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Adah",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Adah_Gen.26.34. A referência que distingue esta pessoa de homônimos é Gen 26:34. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Adaiah",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Adaiah_2Ki.22.1. A referência que distingue esta pessoa de homônimos é 2Ki 22:1. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Adaiah",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Adaiah_1Ch.8.21. A referência que distingue esta pessoa de homônimos é 1Ch 8:21. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Adaiah",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Adaiah_1Ch.9.12. A referência que distingue esta pessoa de homônimos é 1Ch 9:12. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Adaiah",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Adaiah_2Ch.23.1. A referência que distingue esta pessoa de homônimos é 2Ch 23:1. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Adaiah",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Adaiah_Ezr.10.29. A referência que distingue esta pessoa de homônimos é Ezr 10:29. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Adaiah",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Adaiah_Ezr.10.39. A referência que distingue esta pessoa de homônimos é Ezr 10:39. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Adaiah",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Adaiah_Neh.11.5. A referência que distingue esta pessoa de homônimos é Neh 11:5. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Adalia",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Adalia_Est.9.8. A referência que distingue esta pessoa de homônimos é Est 9:8. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Adam",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Adam_Gen.2.19. A referência que distingue esta pessoa de homônimos é Gen 2:19. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Adbeel",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Adbeel_Gen.25.13. A referência que distingue esta pessoa de homônimos é Gen 25:13. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Addar",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Addar_1Ch.8.3. A referência que distingue esta pessoa de homônimos é 1Ch 8:3. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Addi",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Addi_Luk.3.28. A referência que distingue esta pessoa de homônimos é Luk 3:28. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Adiel",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Adiel_1Ch.4.36. A referência que distingue esta pessoa de homônimos é 1Ch 4:36. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Adiel",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Adiel_1Ch.9.12. A referência que distingue esta pessoa de homônimos é 1Ch 9:12. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Adiel",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Adiel_1Ch.27.25. A referência que distingue esta pessoa de homônimos é 1Ch 27:25. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Adin",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Adin_Ezr.2.15. A referência que distingue esta pessoa de homônimos é Ezr 2:15. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Adin",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Adin_Neh.10.16. A referência que distingue esta pessoa de homônimos é Neh 10:16. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Adina",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Adina_1Ch.11.42. A referência que distingue esta pessoa de homônimos é 1Ch 11:42. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Adino",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Adino_2Sa.23.8. A referência que distingue esta pessoa de homônimos é 2Sa 23:8. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Adlai",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Adlai_1Ch.27.29. A referência que distingue esta pessoa de homônimos é 1Ch 27:29. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Admatha",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Admatha_Est.1.14. A referência que distingue esta pessoa de homônimos é Est 1:14. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Adna",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Adna_Ezr.10.30. A referência que distingue esta pessoa de homônimos é Ezr 10:30. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Adna",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Adna_Neh.12.15. A referência que distingue esta pessoa de homônimos é Neh 12:15. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Adnah",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Adnah_1Ch.12.20. A referência que distingue esta pessoa de homônimos é 1Ch 12:20. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Adnah",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Adnah_2Ch.17.14. A referência que distingue esta pessoa de homônimos é 2Ch 17:14. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Adoni Bezek",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Adoni-bezek_Jdg.1.5. A referência que distingue esta pessoa de homônimos é Jdg 1:5. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Adonijah",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Adonijah_2Sa.3.4. A referência que distingue esta pessoa de homônimos é 2Sa 3:4. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Adonijah",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Adonijah_2Ch.17.8. A referência que distingue esta pessoa de homônimos é 2Ch 17:8. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Adonijah",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Adonijah_Neh.10.16. A referência que distingue esta pessoa de homônimos é Neh 10:16. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Adonikam",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Adonikam_Ezr.2.13. A referência que distingue esta pessoa de homônimos é Ezr 2:13. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Adoni Zedek",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Adoni-zedek_Jos.10.1. A referência que distingue esta pessoa de homônimos é Jos 10:1. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Adoram",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Adoram_2Sa.20.24. A referência que distingue esta pessoa de homônimos é 2Sa 20:24. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Adrammelech",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Adrammelech_2Ki.17.31. A referência que distingue esta pessoa de homônimos é 2Ki 17:31. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Adrammelech",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Adrammelech_2Ki.19.37. A referência que distingue esta pessoa de homônimos é 2Ki 19:37. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Adriel",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Adriel_1Sa.18.19. A referência que distingue esta pessoa de homônimos é 1Sa 18:19. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Aeneas",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Aeneas_Act.9.33. A referência que distingue esta pessoa de homônimos é Act 9:33. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Agabus",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Agabus_Act.11.28. A referência que distingue esta pessoa de homônimos é Act 11:28. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Agag",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Agag_Num.24.7. A referência que distingue esta pessoa de homônimos é Num 24:7. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Agag",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Agag_1Sa.15.8. A referência que distingue esta pessoa de homônimos é 1Sa 15:8. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Agee",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Agee_2Sa.23.11. A referência que distingue esta pessoa de homônimos é 2Sa 23:11. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Agrippa",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Agrippa_Act.25.13. A referência que distingue esta pessoa de homônimos é Act 25:13. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Agur",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Agur_Pro.30.1. A referência que distingue esta pessoa de homônimos é Pro 30:1. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Ahab",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Ahab_1Ki.16.28. A referência que distingue esta pessoa de homônimos é 1Ki 16:28. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Ahab",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Ahab_Jer.29.21. A referência que distingue esta pessoa de homônimos é Jer 29:21. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Aharhel",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Aharhel_1Ch.4.8. A referência que distingue esta pessoa de homônimos é 1Ch 4:8. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Ahasbai",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Ahasbai_2Sa.23.34. A referência que distingue esta pessoa de homônimos é 2Sa 23:34. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Ahasuerus",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Ahasuerus_Ezr.4.6. A referência que distingue esta pessoa de homônimos é Ezr 4:6. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Ahaz",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Ahaz_2Ki.15.38. A referência que distingue esta pessoa de homônimos é 2Ki 15:38. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Ahaz",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Ahaz_1Ch.8.35. A referência que distingue esta pessoa de homônimos é 1Ch 8:35. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Ahaziah",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Ahaziah_1Ki.22.40. A referência que distingue esta pessoa de homônimos é 1Ki 22:40. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Ahaziah",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Ahaziah_2Ki.8.24. A referência que distingue esta pessoa de homônimos é 2Ki 8:24. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Ahban",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Ahban_1Ch.2.29. A referência que distingue esta pessoa de homônimos é 1Ch 2:29. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Aher",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Aher_1Ch.7.12. A referência que distingue esta pessoa de homônimos é 1Ch 7:12. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Ahi",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Ahi_1Ch.5.15. A referência que distingue esta pessoa de homônimos é 1Ch 5:15. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Ahi",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Ahi_1Ch.7.34. A referência que distingue esta pessoa de homônimos é 1Ch 7:34. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Ahiah",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Ahiah_Neh.10.26. A referência que distingue esta pessoa de homônimos é Neh 10:26. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Ahiam",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Ahiam_2Sa.23.33. A referência que distingue esta pessoa de homônimos é 2Sa 23:33. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Ahian",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Ahian_1Ch.7.19. A referência que distingue esta pessoa de homônimos é 1Ch 7:19. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Ahiezer",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Ahiezer_Num.1.12. A referência que distingue esta pessoa de homônimos é Num 1:12. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Ahiezer",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Ahiezer_1Ch.12.3. A referência que distingue esta pessoa de homônimos é 1Ch 12:3. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Ahihud",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Ahihud_Num.34.27. A referência que distingue esta pessoa de homônimos é Num 34:27. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Ahihud",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Ahihud_1Ch.8.7. A referência que distingue esta pessoa de homônimos é 1Ch 8:7. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Ahijah",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Ahijah_1Ki.4.3. A referência que distingue esta pessoa de homônimos é 1Ki 4:3. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Ahijah",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Ahijah_1Ki.11.29. A referência que distingue esta pessoa de homônimos é 1Ki 11:29. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Ahijah",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Ahijah_1Ki.15.27. A referência que distingue esta pessoa de homônimos é 1Ki 15:27. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Ahijah",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Ahijah_1Ch.2.25. A referência que distingue esta pessoa de homônimos é 1Ch 2:25. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Ahijah",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Ahijah_1Ch.8.7. A referência que distingue esta pessoa de homônimos é 1Ch 8:7. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Ahijah",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Ahijah_1Ch.11.36. A referência que distingue esta pessoa de homônimos é 1Ch 11:36. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Ahijah",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Ahijah_1Ch.26.20. A referência que distingue esta pessoa de homônimos é 1Ch 26:20. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Ahikam",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Ahikam_2Ki.22.12. A referência que distingue esta pessoa de homônimos é 2Ki 22:12. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Ahilud",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Ahilud_2Sa.8.16. A referência que distingue esta pessoa de homônimos é 2Sa 8:16. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Ahimaaz",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Ahimaaz_1Sa.14.50. A referência que distingue esta pessoa de homônimos é 1Sa 14:50. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Ahimaaz",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Ahimaaz_2Sa.15.27. A referência que distingue esta pessoa de homônimos é 2Sa 15:27. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Ahimaaz",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Ahimaaz_1Ki.4.15. A referência que distingue esta pessoa de homônimos é 1Ki 4:15. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Ahiman",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Ahiman_Num.13.22. A referência que distingue esta pessoa de homônimos é Num 13:22. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Ahiman",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Ahiman_1Ch.9.17. A referência que distingue esta pessoa de homônimos é 1Ch 9:17. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Ahimelech",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Ahimelech_1Sa.14.3. A referência que distingue esta pessoa de homônimos é 1Sa 14:3. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Ahimelech",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Ahimelech_1Sa.26.6. A referência que distingue esta pessoa de homônimos é 1Sa 26:6. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Ahimelech",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Ahimelech_2Sa.8.17. A referência que distingue esta pessoa de homônimos é 2Sa 8:17. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Ahimoth",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Ahimoth_1Ch.6.25. A referência que distingue esta pessoa de homônimos é 1Ch 6:25. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Ahinadab",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Ahinadab_1Ki.4.14. A referência que distingue esta pessoa de homônimos é 1Ki 4:14. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Ahinoam",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Ahinoam_1Sa.14.50. A referência que distingue esta pessoa de homônimos é 1Sa 14:50. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Ahinoam",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Ahinoam_1Sa.25.43. A referência que distingue esta pessoa de homônimos é 1Sa 25:43. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Ahio",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Ahio_2Sa.6.3. A referência que distingue esta pessoa de homônimos é 2Sa 6:3. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Ahio",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Ahio_1Ch.8.14. A referência que distingue esta pessoa de homônimos é 1Ch 8:14. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Ahio",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Ahio_1Ch.8.31. A referência que distingue esta pessoa de homônimos é 1Ch 8:31. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Ahira",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Ahira_Num.1.15. A referência que distingue esta pessoa de homônimos é Num 1:15. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Ahiram",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Ahiram_Num.26.38. A referência que distingue esta pessoa de homônimos é Num 26:38. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Ahisamach",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Ahisamach_Exo.31.6. A referência que distingue esta pessoa de homônimos é Exo 31:6. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Ahishahar",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Ahishahar_1Ch.7.10. A referência que distingue esta pessoa de homônimos é 1Ch 7:10. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Ahishar",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Ahishar_1Ki.4.6. A referência que distingue esta pessoa de homônimos é 1Ki 4:6. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Ahithophel",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Ahithophel_2Sa.15.12. A referência que distingue esta pessoa de homônimos é 2Sa 15:12. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Ahitub",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Ahitub_1Sa.14.3. A referência que distingue esta pessoa de homônimos é 1Sa 14:3. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Ahitub",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Ahitub_2Sa.8.17. A referência que distingue esta pessoa de homônimos é 2Sa 8:17. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Ahitub",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Ahitub_1Ch.6.11. A referência que distingue esta pessoa de homônimos é 1Ch 6:11. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Ahlai",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Ahlai_1Ch.2.31. A referência que distingue esta pessoa de homônimos é 1Ch 2:31. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Ahlai",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Ahlai_1Ch.11.41. A referência que distingue esta pessoa de homônimos é 1Ch 11:41. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Ahohi",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Ahohi_2Sa.23.9. A referência que distingue esta pessoa de homônimos é 2Sa 23:9. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Ahumai",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Ahumai_1Ch.4.2. A referência que distingue esta pessoa de homônimos é 1Ch 4:2. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Ahuzzam",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Ahuzzam_1Ch.4.6. A referência que distingue esta pessoa de homônimos é 1Ch 4:6. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Ahuzzath",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Ahuzzath_Gen.26.26. A referência que distingue esta pessoa de homônimos é Gen 26:26. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Aiah",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Aiah_Gen.36.24. A referência que distingue esta pessoa de homônimos é Gen 36:24. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Aiah",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Aiah_2Sa.3.7. A referência que distingue esta pessoa de homônimos é 2Sa 3:7. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Akan",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Akan_Gen.36.27. A referência que distingue esta pessoa de homônimos é Gen 36:27. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Akkub",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Akkub_1Ch.3.24. A referência que distingue esta pessoa de homônimos é 1Ch 3:24. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Akkub",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Akkub_1Ch.9.17. A referência que distingue esta pessoa de homônimos é 1Ch 9:17. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Akkub",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Akkub_Ezr.2.45. A referência que distingue esta pessoa de homônimos é Ezr 2:45. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Akkub",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Akkub_Neh.8.7. A referência que distingue esta pessoa de homônimos é Neh 8:7. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Alemeth",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Alemeth_1Ch.7.8. A referência que distingue esta pessoa de homônimos é 1Ch 7:8. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Alemeth",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Alemeth_1Ch.8.36. A referência que distingue esta pessoa de homônimos é 1Ch 8:36. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Alexander",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Alexander_Mrk.15.21. A referência que distingue esta pessoa de homônimos é Mrk 15:21. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Alexander",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Alexander_Act.4.6. A referência que distingue esta pessoa de homônimos é Act 4:6. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Alexander",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Alexander_Act.19.33. A referência que distingue esta pessoa de homônimos é Act 19:33. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Alexander",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Alexander_1Ti.1.20. A referência que distingue esta pessoa de homônimos é 1Ti 1:20. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Allon",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Allon_1Ch.4.37. A referência que distingue esta pessoa de homônimos é 1Ch 4:37. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Almodad",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Almodad_Gen.10.26. A referência que distingue esta pessoa de homônimos é Gen 10:26. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Alphaeus",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Alphaeus_Mat.10.3. A referência que distingue esta pessoa de homônimos é Mat 10:3. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Alphaeus",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Alphaeus_Mrk.2.14. A referência que distingue esta pessoa de homônimos é Mrk 2:14. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Alvah",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Alvah_Gen.36.40. A referência que distingue esta pessoa de homônimos é Gen 36:40. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Alvan",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Alvan_Gen.36.23. A referência que distingue esta pessoa de homônimos é Gen 36:23. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Amal",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Amal_1Ch.7.35. A referência que distingue esta pessoa de homônimos é 1Ch 7:35. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Amalek",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Amalek_Gen.36.12. A referência que distingue esta pessoa de homônimos é Gen 36:12. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Amariah",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Amariah_1Ch.6.7. A referência que distingue esta pessoa de homônimos é 1Ch 6:7. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Amariah",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Amariah_1Ch.6.11. A referência que distingue esta pessoa de homônimos é 1Ch 6:11. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Amariah",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Amariah_1Ch.23.19. A referência que distingue esta pessoa de homônimos é 1Ch 23:19. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Amariah",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Amariah_2Ch.19.11. A referência que distingue esta pessoa de homônimos é 2Ch 19:11. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Amariah",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Amariah_2Ch.31.15. A referência que distingue esta pessoa de homônimos é 2Ch 31:15. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Amariah",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Amariah_Ezr.10.42. A referência que distingue esta pessoa de homônimos é Ezr 10:42. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Amariah",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Amariah_Neh.10.3. A referência que distingue esta pessoa de homônimos é Neh 10:3. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Amariah",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Amariah_Neh.11.4. A referência que distingue esta pessoa de homônimos é Neh 11:4. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Amariah",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Amariah_Zep.1.1. A referência que distingue esta pessoa de homônimos é Zep 1:1. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    },
+    {
+      "title": "Amasa",
+      "text": "Pessoa bíblica individualizada na base TIPNR do STEP Bible. Identificador de origem: Amasa_2Sa.17.25. A referência que distingue esta pessoa de homônimos é 2Sa 17:25. Esta entrada mantém a individualização do conjunto de dados para evitar juntar personagens diferentes que compartilham o mesmo nome."
+    }
+  ]
+}
