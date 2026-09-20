@@ -249,7 +249,11 @@ export function BibleApp() {
         if (error || !data?.length) throw error || new Error("Sem dados");
         setExternalResourceItems(prev => ({...prev,[moreResource]:data.map((x:any)=>({title:x.title,text:x.body}))}));
       })
-      .catch(() => setExternalResourceItems(prev => ({...prev,[moreResource]:RESOURCE_DATA[moreResource as Exclude<MoreResource, null>]||[]})));
+      .catch(() => {
+        const resource = moreResource;
+        if (!resource) return;
+        setExternalResourceItems(prev => ({ ...prev, [resource]: RESOURCE_DATA[resource] || [] }));
+      });
   }, [moreResource, externalResourceItems]);
 
   const savedItems = useMemo(() => Object.entries(annotations).map(([key, annotation]) => {
