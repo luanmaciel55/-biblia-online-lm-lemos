@@ -32,6 +32,7 @@ type VerseSelection = { book: number; chapter: number; verse: BibleVerse };
 type AuthMode = "login" | "register";
 type StatsRange = "day" | "month" | "year" | "all";
 type SavedListMode = "notes" | "marks" | null;
+type MoreResource = "Strong" | "Estudos STEP Bible" | "Mapas Bíblicos" | "Pessoas" | "Lugares" | "Genealogias" | "Referências Cruzadas" | "Pesos e Medidas" | "Viagens Bíblicas" | "Assuntos Bíblicos" | null;
 type SiteSettings = {
   external_button_label: string;
   external_button_url: string;
@@ -84,6 +85,7 @@ export function BibleApp() {
   const [dictionaryLetter, setDictionaryLetter] = useState("TODAS");
   const [savedListMode, setSavedListMode] = useState<SavedListMode>(null);
   const [selectedColor, setSelectedColor] = useState<string | null>(null);
+  const [moreResource, setMoreResource] = useState<MoreResource>(null);
   const [selectedEntry, setSelectedEntry] = useState<DictionaryEntry | null>(null);
   const [theme, setTheme] = useState<Theme>("default");
   const [themeOpen, setThemeOpen] = useState(false);
@@ -510,25 +512,31 @@ export function BibleApp() {
 
           {view === "more" && (
             <section className="content-view more-resources-view">
-              <div className="page-title"><span className="eyebrow">Ferramentas para aprofundar</span><h1>Mais recursos</h1><p>Escolha uma ferramenta de estudo bíblico.</p></div>
-              <div className="more-resources-grid">
-                {[
-                  ["Strong", "Palavras do hebraico e grego, números Strong e significados."],
-                  ["Estudos STEP Bible", "Recursos para estudo dos textos e idiomas originais."],
-                  ["Mapas Bíblicos", "Explore os lugares e a geografia dos acontecimentos bíblicos."],
-                  ["Pessoas", "Conheça personagens, relações e referências bíblicas."],
-                  ["Lugares", "Consulte cidades, regiões e outros lugares mencionados na Bíblia."],
-                  ["Genealogias", "Acompanhe famílias e linhagens registradas nas Escrituras."],
-                  ["Referências Cruzadas", "Encontre outros textos relacionados a uma passagem."],
-                  ["Pesos e Medidas", "Entenda unidades, valores e medidas usadas no mundo bíblico."],
-                  ["Viagens Bíblicas", "Acompanhe jornadas e deslocamentos narrados na Bíblia."],
-                  ["Assuntos Bíblicos", "Estude temas bíblicos por assunto e suas referências."],
-                ].map(([title, description]) => (
-                  <button key={title} className="more-resource-card">
-                    <strong>{title}</strong><span>{description}</span><ChevronRight size={18} />
-                  </button>
-                ))}
-              </div>
+              {moreResource ? <>
+                <button className="back-link" onClick={() => setMoreResource(null)}><ChevronLeft /> Voltar aos recursos</button>
+                <div className="page-title"><span className="eyebrow">Mais recursos</span><h1>{moreResource}</h1></div>
+                <ResourceContent resource={moreResource} goToReference={goToReference} />
+              </> : <>
+                <div className="page-title"><span className="eyebrow">Ferramentas para aprofundar</span><h1>Mais recursos</h1><p>Escolha uma ferramenta de estudo bíblico.</p></div>
+                <div className="more-resources-grid">
+                  {[
+                    ["Strong", "Palavras do hebraico e grego, números Strong e significados."],
+                    ["Estudos STEP Bible", "Recursos para estudo dos textos e idiomas originais."],
+                    ["Mapas Bíblicos", "Explore os lugares e a geografia dos acontecimentos bíblicos."],
+                    ["Pessoas", "Conheça personagens, relações e referências bíblicas."],
+                    ["Lugares", "Consulte cidades, regiões e outros lugares mencionados na Bíblia."],
+                    ["Genealogias", "Acompanhe famílias e linhagens registradas nas Escrituras."],
+                    ["Referências Cruzadas", "Encontre outros textos relacionados a uma passagem."],
+                    ["Pesos e Medidas", "Entenda unidades, valores e medidas usadas no mundo bíblico."],
+                    ["Viagens Bíblicas", "Acompanhe jornadas e deslocamentos narrados na Bíblia."],
+                    ["Assuntos Bíblicos", "Estude temas bíblicos por assunto e suas referências."],
+                  ].map(([title, description]) => (
+                    <button key={title} className="more-resource-card" onClick={() => setMoreResource(title as MoreResource)}>
+                      <strong>{title}</strong><span>{description}</span><ChevronRight size={18} />
+                    </button>
+                  ))}
+                </div>
+              </>}
             </section>
           )}
 
@@ -648,6 +656,87 @@ export function BibleApp() {
     </div>
   );
 }
+
+const RESOURCE_DATA: Record<string, {title:string; text:string; refs?: ScriptureRef[]}[]> = {
+  "Strong": [
+    {title:"G5485 · χάρις · cháris", text:"Graça, favor, bondade concedida. Número Strong usado para identificar o lema grego."},
+    {title:"G4102 · πίστις · pístis", text:"Fé, confiança, fidelidade."},
+    {title:"G26 · ἀγάπη · agápē", text:"Amor; termo grego frequentemente usado no Novo Testamento."},
+    {title:"H2617 · חֶסֶד · chésed", text:"Bondade, misericórdia, amor leal ou fidelidade de aliança."},
+    {title:"H7965 · שָׁלוֹם · shalóm", text:"Paz, integridade, bem-estar, plenitude."}
+  ],
+  "Estudos STEP Bible": [
+    {title:"Léxicos", text:"O STEP Bible disponibiliza léxicos hebraicos e gregos, incluindo Extended Strong's."},
+    {title:"Morfologia", text:"Permite estudar formas gramaticais do hebraico e do grego bíblicos."},
+    {title:"Nomes próprios", text:"Dados distinguem pessoas, lugares e outras entidades e reúnem referências bíblicas."},
+    {title:"Texto original", text:"Bases etiquetadas conectam palavras do texto a lemas, números Strong e informação morfológica."}
+  ],
+  "Mapas Bíblicos": [
+    {title:"Terra de Israel", text:"Região central de grande parte da narrativa bíblica. Use Lugares e Viagens para explorar pontos relacionados."},
+    {title:"Êxodo", text:"Egito, deserto e Canaã formam o eixo geográfico da narrativa do Êxodo."},
+    {title:"Mundo do Novo Testamento", text:"Judeia, Galileia, Síria, Ásia Menor, Macedônia, Acaia e Roma aparecem nas narrativas apostólicas."}
+  ],
+  "Pessoas": [
+    {title:"Abraão", text:"Patriarca chamado por Deus; pai de Isaque.", refs:[{label:"Gênesis 12:1",book:0,chapter:12,verse:1}]},
+    {title:"Moisés", text:"Líder de Israel no Êxodo e figura central da entrega da Lei.", refs:[{label:"Êxodo 3:10",book:1,chapter:3,verse:10}]},
+    {title:"Davi", text:"Rei de Israel, filho de Jessé.", refs:[{label:"1 Samuel 16:13",book:8,chapter:16,verse:13}]},
+    {title:"Maria", text:"Mãe de Jesus.", refs:[{label:"Lucas 1:30",book:41,chapter:1,verse:30}]},
+    {title:"Paulo", text:"Apóstolo e missionário do cristianismo primitivo.", refs:[{label:"Atos 9:15",book:43,chapter:9,verse:15}]}
+  ],
+  "Lugares": [
+    {title:"Jerusalém", text:"Cidade central na história de Israel e nos acontecimentos finais do ministério terreno de Jesus."},
+    {title:"Belém", text:"Cidade associada a Davi e ao nascimento de Jesus."},
+    {title:"Nazaré", text:"Cidade da Galileia onde Jesus cresceu."},
+    {title:"Cafarnaum", text:"Cidade da Galileia ligada a muitos episódios do ministério de Jesus."},
+    {title:"Corinto", text:"Importante cidade grega visitada por Paulo."},
+    {title:"Éfeso", text:"Cidade da Ásia Menor ligada ao ministério de Paulo e à igreja de Éfeso."}
+  ],
+  "Genealogias": [
+    {title:"Patriarcas", text:"Abraão → Isaque → Jacó → doze filhos, origem das tribos de Israel."},
+    {title:"Linha real", text:"Jessé → Davi → Salomão, seguindo a linhagem real de Judá."},
+    {title:"Genealogia de Jesus em Mateus", text:"Mateus 1 apresenta a linhagem de Abraão até Jesus.", refs:[{label:"Mateus 1:1",book:39,chapter:1,verse:1}]},
+    {title:"Genealogia de Jesus em Lucas", text:"Lucas 3 apresenta outra organização genealógica, retrocedendo até Adão.", refs:[{label:"Lucas 3:23",book:41,chapter:3,verse:23}]}
+  ],
+  "Referências Cruzadas": [
+    {title:"João 3:16", text:"Compare o tema do amor de Deus e da salvação.", refs:[{label:"Romanos 5:8",book:44,chapter:5,verse:8},{label:"1 João 4:9",book:61,chapter:4,verse:9}]},
+    {title:"Efésios 2:8", text:"Textos relacionados à salvação pela graça mediante a fé.", refs:[{label:"Romanos 3:24",book:44,chapter:3,verse:24},{label:"Tito 3:5",book:55,chapter:3,verse:5}]},
+    {title:"Salmo 23:1", text:"Textos relacionados à imagem de Deus como pastor.", refs:[{label:"João 10:11",book:42,chapter:10,verse:11},{label:"1 Pedro 5:4",book:59,chapter:5,verse:4}]}
+  ],
+  "Pesos e Medidas": [
+    {title:"Côvado", text:"Medida de comprimento baseada aproximadamente no antebraço. O valor exato variava; costuma ser estimado em cerca de 45 cm."},
+    {title:"Siclo", text:"Unidade de peso usada também em contextos monetários. Seu peso variou historicamente."},
+    {title:"Talento", text:"Grande unidade de peso; o valor exato depende do período e padrão adotado."},
+    {title:"Denário", text:"Moeda romana; no Novo Testamento aparece como pagamento aproximado de um dia de trabalho em uma parábola (Mateus 20:2)."},
+    {title:"Estádio", text:"Medida greco-romana de distância, aproximadamente 185 m, com variações históricas."}
+  ],
+  "Viagens Bíblicas": [
+    {title:"Abraão", text:"Mesopotâmia → Harã → Canaã → Egito → Canaã."},
+    {title:"Êxodo", text:"Egito → deserto → Sinai → jornadas em direção à terra de Canaã."},
+    {title:"Primeira viagem de Paulo", text:"Antioquia da Síria → Chipre → regiões da Ásia Menor → retorno a Antioquia."},
+    {title:"Segunda viagem de Paulo", text:"Síria e Cilícia → Ásia Menor → Macedônia → Acaia → retorno."},
+    {title:"Viagem a Roma", text:"Cesareia → Mediterrâneo → Malta → Roma, narrada no fim de Atos."}
+  ],
+  "Assuntos Bíblicos": [
+    {title:"Graça", text:"Passagens sobre a graça de Deus.", refs:[{label:"Efésios 2:8",book:48,chapter:2,verse:8},{label:"Romanos 3:24",book:44,chapter:3,verse:24}]},
+    {title:"Fé", text:"Passagens sobre fé e confiança em Deus.", refs:[{label:"Hebreus 11:1",book:57,chapter:11,verse:1},{label:"Romanos 10:17",book:44,chapter:10,verse:17}]},
+    {title:"Oração", text:"Passagens para estudar a oração.", refs:[{label:"Mateus 6:6",book:39,chapter:6,verse:6},{label:"Filipenses 4:6",book:49,chapter:4,verse:6}]},
+    {title:"Perdão", text:"Passagens sobre perdão.", refs:[{label:"1 João 1:9",book:61,chapter:1,verse:9},{label:"Efésios 4:32",book:48,chapter:4,verse:32}]},
+    {title:"Ressurreição", text:"Passagens sobre a ressurreição.", refs:[{label:"1 Coríntios 15:20",book:45,chapter:15,verse:20},{label:"João 11:25",book:42,chapter:11,verse:25}]}
+  ]
+};
+
+function ResourceContent({ resource, goToReference }: { resource: Exclude<MoreResource, null>; goToReference: (ref: ScriptureRef) => void }) {
+  const items = RESOURCE_DATA[resource] || [];
+  return <div className="resource-content">
+    <div className="resource-note">
+      <strong>Recurso de estudo</strong>
+      <p>{resource === "Strong" || resource === "Estudos STEP Bible" ? "Dados linguísticos apresentados como apoio ao estudo. A integração completa dos bancos abertos será ampliada progressivamente." : "Use estes dados como guia de estudo e abra as referências diretamente na Bíblia."}</p>
+    </div>
+    <div className="resource-list">{items.map((item) => <article key={item.title} className="resource-item"><h2>{item.title}</h2><p>{item.text}</p>{item.refs?.length ? <div className="reference-list">{item.refs.map((ref) => <button key={ref.label} onClick={() => goToReference(ref)}>{ref.label}<ChevronRight size={14}/></button>)}</div> : null}</article>)}</div>
+    <div className="resource-credits"><strong>Fontes abertas previstas para integração completa</strong><p>STEP Bible Data (CC BY 4.0), OpenBible.info Bible Geocoding (CC BY 4.0), referências cruzadas OpenBible/TSK e Nave's Topical Bible (domínio público/compilações abertas).</p></div>
+  </div>;
+}
+
 
 function NavButton({ icon, label, active, onClick }: { icon: React.ReactNode; label: string; active: boolean; onClick: () => void }) { return <button className={`nav-button ${active ? "active" : ""}`} onClick={onClick}>{icon}<span>{label}</span></button>; }
 function Fact({ label, value }: { label: string; value: string }) { return <div><span>{label}</span><strong>{value}</strong></div>; }
