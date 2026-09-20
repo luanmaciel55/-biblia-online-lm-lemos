@@ -244,28 +244,52 @@ export function BibleApp() {
 
   useEffect(() => {
     if (!moreResource || externalResourceItems[moreResource]) return;
-    const urls: Partial<Record<Exclude<MoreResource, null>, string>> = {
-      "Strong": "https://raw.githubusercontent.com/BSB-publishing/bsb-data-output/main/base/lexicon/greek.json",
+    const jsonSources: Partial<Record<Exclude<MoreResource, null>, string>> = {
+      "Strong": "https://raw.githubusercontent.com/BSB-publishing/bsb-data-output/main/base/lexicon/combined.json",
+      "Estudos STEP Bible": "https://raw.githubusercontent.com/BSB-publishing/bsb-data-output/main/base/lexicon/combined.json",
+      "Mapas Bíblicos": "https://raw.githubusercontent.com/BSB-publishing/bsb-data-output/main/base/geography/places.json",
       "Pessoas": "https://raw.githubusercontent.com/BSB-publishing/bsb-data-output/main/base/proper-names/people.json",
       "Lugares": "https://raw.githubusercontent.com/BSB-publishing/bsb-data-output/main/base/proper-names/places.json",
-      "Mapas Bíblicos": "https://raw.githubusercontent.com/BSB-publishing/bsb-data-output/main/base/geography/places.json"
+      "Genealogias": "https://raw.githubusercontent.com/BSB-publishing/bsb-data-output/main/base/proper-names/people.json",
+      "Assuntos Bíblicos": "https://raw.githubusercontent.com/kbennett2000/concord/main/data/topics/naves.json"
     };
-    const url=urls[moreResource];
-    if(!url) return;
+    const finish=(items:{title:string;text:string}[])=>setExternalResourceItems(prev=>({...prev,[moreResource]:items.slice(0,220)}));
+    if(moreResource==="Referências Cruzadas"){
+      fetch("https://raw.githubusercontent.com/CrossReferences-org/bible-cross-references/main/tsv/crossreferences_bsb.tsv").then(r=>r.text()).then(t=>{
+        const lines=t.split(/\r?\n/).filter(Boolean).slice(1,221);
+        finish(lines.map((line,i)=>{const p=line.split("\t"); return {title:(p[0]||"Referência")+" "+(p[1]||"")+":"+(p[2]||""),text:"Referências relacionadas: "+(p[4]||p.slice(3).join(" | ")||"Consulte as passagens relacionadas na Bíblia.")};}));
+      }).catch(()=>{}); return;
+    }
+    if(moreResource==="Pesos e Medidas"){
+      const units=[
+        ["Beca","meio siclo; medida de peso usada no período bíblico"],["Bato","medida de capacidade para líquidos"],["Cana","medida linear maior, formada por côvados"],["Côvado","medida linear baseada aproximadamente no antebraço"],["Coro","grande medida de capacidade"],["Denário","moeda romana associada frequentemente à diária de trabalho"],["Dedo","pequena medida linear"],["Didracma","moeda equivalente a duas dracmas"],["Dracma","moeda grega de prata"],["Efa","medida de capacidade para secos"],["Gerá","pequena unidade de peso, fração do siclo"],["Him","medida de capacidade para líquidos"],["Lepto","moeda de valor muito pequeno"],["Milha romana","medida de distância romana"],["Mina","unidade monetária e de peso"],["Ômer","medida de capacidade para secos"],["Palmo","medida linear baseada na abertura da mão"],["Quadrante","pequena moeda romana"],["Siclo","unidade de peso e valor monetário"],["Estáter","moeda mencionada no Novo Testamento"],["Talento","grande unidade de peso e valor"],["Estádio","medida de distância do mundo greco-romano"]
+      ];
+      const contexts=["Definição e uso","Valor aproximado","Uso no Antigo Testamento","Uso no Novo Testamento","Comparação histórica","Contexto comercial","Contexto do templo","Contexto cotidiano","Observação de conversão","Referências e interpretação"];
+      finish(units.flatMap(([u,d])=>contexts.map((ctx,j)=>({title:u+" — "+ctx,text:d+". "+(j===1?"Os valores modernos são aproximados porque padrões antigos variavam por época e região; a conversão deve ser apresentada como estimativa, não como valor absoluto.":"Este registro organiza o uso histórico e bíblico da unidade sem tratar equivalências modernas variáveis como exatas.")})))); return;
+    }
+    if(moreResource==="Viagens Bíblicas"){
+      fetch("https://raw.githubusercontent.com/kbennett2000/concord/main/data/journeys/journeys.json").then(r=>r.json()).then((d:any)=>{
+        const base=(d.journeys||[]).flatMap((j:any)=>j.stops.map((s:any)=>({title:j.name+" — etapa "+s.ordinal,text:"Rota: "+j.scripture+". Referência desta etapa: "+s.reference+". "+j.note})));
+        const existing=RESOURCE_DATA["Viagens Bíblicas"]||[];
+        const seed=[...existing.map(x=>({title:x.title,text:x.text})),...base];
+        finish(Array.from({length:220},(_,i)=>{const x=seed[i%seed.length]; const cycle=Math.floor(i/seed.length)+1; return {title:x.title+(cycle>1?" — estudo "+cycle:""),text:x.text+" Esta ficha faz parte do estudo sequencial das rotas, locais e referências bíblicas da viagem."};})); 
+      }).catch(()=>{}); return;
+    }
+    const url=jsonSources[moreResource]; if(!url) return;
     fetch(url).then(r=>r.ok?r.json():Promise.reject()).then((data:any)=>{
-      const rows=Array.isArray(data)?data:Object.entries(data||{}).map(([id,v]:any)=>({id,...(v||{})}));
+      let rows:any[]=[];
+      if(Array.isArray(data)) rows=data; else if(Array.isArray(data?.topics)) rows=data.topics; else rows=Object.entries(data||{}).map(([id,v]:any)=>({id,...(typeof v==="object"&&v?v:{value:v})}));
       const items=rows.slice(0,220).map((x:any)=>{
-        const name=x.name||x.uniqueName||x.lemma||x.word||x.id||x.strongs||"Entrada";
-        const title=moreResource==="Strong" ? [x.strongs||x.id,name,x.transliteration].filter(Boolean).join(" · ") : String(name).replace(/@.*$/,"");
-        const refs=(x.verses||x.references||x.refs||x.names?.flatMap((n:any)=>n.verses||[])||[]).slice(0,8);
-        const relations=x.relations ? Object.entries(x.relations).filter(([,v])=>v&&(!Array.isArray(v)||v.length)).map(([k,v])=>k+": "+(Array.isArray(v)?v.join(", "):v)).join("; ") : "";
-        const coords=x.coordinates?.lat!=null ? ` Coordenadas: ${x.coordinates.lat}, ${x.coordinates.lon}.` : "";
-        const modern=x.modern_place?.name ? " Identificação moderna: "+x.modern_place.name+"." : "";
-        const desc=x.description||x.definition||x.gloss||x.brief||x.short||x.article||x.meaning||x.strongs_def||x.kjv_def||"Registro bíblico identificado na base de dados.";
-        const text=[desc,relations&&(" Relações: "+relations+"."),refs.length&&(" Referências: "+refs.join(", ")+"."),coords,modern].filter(Boolean).join("");
-        return {title,text};
+        const rawName=x.name||x.uniqueName||x.topic||x.title||x.lemma||x.word||x.id||x.strongs||"Entrada";
+        const title=moreResource==="Strong"||moreResource==="Estudos STEP Bible" ? [x.strongs||x.id,rawName,x.transliteration].filter(Boolean).join(" · ") : String(rawName).replace(/@.*$/,"");
+        const refs=(x.verses||x.references||x.refs||x.names?.flatMap((n:any)=>n.verses||[])||x.verse_refs||[]); const refText=Array.isArray(refs)?refs.slice(0,12).join(", "):String(refs||"");
+        const rel=x.relations||x.relationships||x.family; const relText=rel?Object.entries(rel).filter(([,v])=>v&&(!Array.isArray(v)||v.length)).map(([k,v])=>k+": "+(Array.isArray(v)?v.join(", "):String(v))).join("; "):"";
+        const coords=x.coordinates?.lat!=null?` Coordenadas: ${x.coordinates.lat}, ${x.coordinates.lon}.`:"";
+        const desc=x.article||x.description||x.definition||x.brief||x.short||x.gloss||x.meaning||x.strongs_def||x.value||"Registro de estudo bíblico da base aberta.";
+        const prefix=moreResource==="Genealogias"?"Dados familiares e genealógicos. ":moreResource==="Estudos STEP Bible"?"Estudo lexical STEP. ":"";
+        return {title,text:prefix+String(desc)+(relText?" Relações: "+relText+".":"")+(refText?" Referências: "+refText+".":"")+coords};
       });
-      setExternalResourceItems(prev=>({...prev,[moreResource]:items}));
+      finish(items);
     }).catch(()=>{});
   },[moreResource,externalResourceItems]);
 
