@@ -810,8 +810,7 @@ const RESOURCE_DATA: Record<string, {title:string; text:string; refs?: Scripture
 };
 
 function cleanResourceText(value:string, resource:string, title:boolean) {
-  let text=value.replace(/\
-/g," ").replace(/\\_/g,"_").replace(/\s+/g," ").trim();
+  let text=value.split("\\n").join(" ").replace(/\\_/g,"_").replace(/\s+/g," ").trim();
   const books:Record<string,string>={GEN:"Gn",EXO:"Êx",LEV:"Lv",NUM:"Nm",DEU:"Dt",JOS:"Js",JDG:"Jz",RUT:"Rt","1SA":"1Sm","2SA":"2Sm","1KI":"1Rs","2KI":"2Rs","1CH":"1Cr","2CH":"2Cr",EZR:"Ed",NEH:"Ne",EST:"Et",JOB:"Jó",PSA:"Sl",PRO:"Pv",ECC:"Ec",SNG:"Ct",ISA:"Is",JER:"Jr",LAM:"Lm",EZK:"Ez",DAN:"Dn",HOS:"Os",JOL:"Jl",AMO:"Am",OBA:"Ob",JON:"Jn",MIC:"Mq",NAM:"Na",HAB:"Hc",ZEP:"Sf",HAG:"Ag",ZEC:"Zc",MAL:"Ml",MAT:"Mt",MRK:"Mc",LUK:"Lc",JHN:"Jo",ACT:"At",ROM:"Rm","1CO":"1Co","2CO":"2Co",GAL:"Gl",EPH:"Ef",PHP:"Fp",COL:"Cl","1TH":"1Ts","2TH":"2Ts","1TI":"1Tm","2TI":"2Tm",TIT:"Tt",PHM:"Fm",HEB:"Hb",JAS:"Tg","1PE":"1Pe","2PE":"2Pe","1JN":"1Jo","2JN":"2Jo","3JN":"3Jo",JUD:"Jd",REV:"Ap"};
   text=text.replace(/\b(1CH|2CH|1SA|2SA|1KI|2KI|1CO|2CO|1TH|2TH|1TI|2TI|1PE|2PE|1JN|2JN|3JN|GEN|EXO|LEV|NUM|DEU|JOS|JDG|RUT|EZR|NEH|EST|JOB|PSA|PRO|ECC|SNG|ISA|JER|LAM|EZK|DAN|HOS|JOL|AMO|OBA|JON|MIC|NAM|HAB|ZEP|HAG|ZEC|MAL|MAT|MRK|LUK|JHN|ACT|ROM|GAL|EPH|PHP|COL|TIT|PHM|HEB|JAS|JUD|REV)[.]?(\d+)[.:](\d+)\b/g,(_,b,ch,v)=>`${books[b]||b} ${ch}:${v}`);
   if(resource==="Genealogias"||resource==="Pessoas"){
