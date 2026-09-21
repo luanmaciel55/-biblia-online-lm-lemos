@@ -25,7 +25,7 @@ type DictionaryEntry = {
 };
 type DictionaryData = { title: string; project: string; author: string; identity: string; entries: DictionaryEntry[] };
 type DictionaryManifest = Omit<DictionaryData, "entries"> & { parts: string[] };
-type View = "bible" | "dictionary" | "topics" | "studies" | "appeal" | "more" | "help";
+type View = "bible" | "dictionary" | "topics" | "studies" | "appeal" | "more" | "help" | "aboutMore";
 type Theme = "default" | "brown" | "red" | "black";
 type Annotation = { color?: string; note?: string };
 type VerseSelection = { book: number; chapter: number; verse: BibleVerse };
@@ -42,6 +42,10 @@ type SiteSettings = {
   donation_button_label: string;
   donation_url: string;
   donation_note: string;
+  about_more_title: string; about_more_content: string;
+  social_1_label: string; social_1_url: string; social_2_label: string; social_2_url: string;
+  social_3_label: string; social_3_url: string; social_4_label: string; social_4_url: string;
+  personal_site_url: string; books_projects_url: string; whatsapp_channel_url: string;
 };
 type AccessStats = { guest: number; registered: number; total: number; users: number };
 
@@ -60,7 +64,10 @@ const defaultSettings: SiteSettings = {
   help_content: "Este projeto existe para servir, ensinar e compartilhar a Palavra de Deus gratuitamente. Não aceitamos dinheiro para pregar o Evangelho e o ensino bíblico não está à venda. Se você desejar contribuir voluntariamente, sua doação ajuda a manter este trabalho e também nas necessidades da vida, como alimentação, água e outras despesas essenciais.",
   donation_button_label: "Fazer doação e ofertar",
   donation_url: "",
-  donation_note: "Você pode doar o valor que quiser. Toda contribuição é voluntária."
+  donation_note: "Você pode doar o valor que quiser. Toda contribuição é voluntária.",
+  about_more_title: "Saiba mais",
+  about_more_content: "A Bíblia Online L.M. Lemos foi criada para facilitar o acesso gratuito à Palavra de Deus e a recursos de estudo bíblico. Luan Maciel de Lemos entende que o Evangelho não deve ser transformado em produto: não aceita dinheiro para pregar o Evangelho nem para oferecer estudos bíblicos. O objetivo deste projeto é servir, ensinar e compartilhar conhecimento bíblico gratuitamente.",
+  social_1_label:"", social_1_url:"", social_2_label:"", social_2_url:"", social_3_label:"", social_3_url:"", social_4_label:"", social_4_url:"", personal_site_url:"", books_projects_url:"", whatsapp_channel_url:""
 };
 
 function getVisitorId() {
@@ -210,7 +217,7 @@ export function BibleApp() {
 
   useEffect(() => {
     let active = true;
-    supabase.from("site_settings").select("external_button_label,external_button_url,information_content,help_title,help_content,donation_button_label,donation_url,donation_note").eq("id", 1).maybeSingle()
+    supabase.from("site_settings").select("external_button_label,external_button_url,information_content,help_title,help_content,donation_button_label,donation_url,donation_note,about_more_title,about_more_content,social_1_label,social_1_url,social_2_label,social_2_url,social_3_label,social_3_url,social_4_label,social_4_url,personal_site_url,books_projects_url,whatsapp_channel_url").eq("id", 1).maybeSingle()
       .then(({ data }) => { if (active && data) { setSettings(data); setSettingsDraft(data); } });
     supabase.auth.getSession().then(({ data }) => {
       if (!active) return;
@@ -414,6 +421,8 @@ export function BibleApp() {
       donation_button_label: settingsDraft.donation_button_label.trim() || "Fazer doação e ofertar",
       donation_url: settingsDraft.donation_url.trim(),
       donation_note: settingsDraft.donation_note.trim(),
+      about_more_title: settingsDraft.about_more_title.trim() || "Saiba mais", about_more_content: settingsDraft.about_more_content.trim(),
+      social_1_label: settingsDraft.social_1_label.trim(), social_1_url: settingsDraft.social_1_url.trim(), social_2_label: settingsDraft.social_2_label.trim(), social_2_url: settingsDraft.social_2_url.trim(), social_3_label: settingsDraft.social_3_label.trim(), social_3_url: settingsDraft.social_3_url.trim(), social_4_label: settingsDraft.social_4_label.trim(), social_4_url: settingsDraft.social_4_url.trim(), personal_site_url: settingsDraft.personal_site_url.trim(), books_projects_url: settingsDraft.books_projects_url.trim(), whatsapp_channel_url: settingsDraft.whatsapp_channel_url.trim(),
     };
     const { error } = await supabase.from("site_settings").update({
       ...clean, updated_at: new Date().toISOString(), updated_by: user.id,
@@ -648,7 +657,7 @@ export function BibleApp() {
             </section>
           )}
 
-          {view === "appeal" && (
+          {view === "aboutMore" && (\n            <section className="about-more-view"><button className="help-back" onClick={() => setView("bible")}><ChevronLeft /> Voltar para a Bíblia</button><article className="about-more-card"><span className="eyebrow">Projeto L.M. Lemos</span><h1>{settings.about_more_title || "Saiba mais"}</h1><div className="about-more-copy">{settings.about_more_content}</div><div className="about-more-principle"><ShieldCheck /><div><strong>O Evangelho não está à venda</strong><p>Luan Maciel de Lemos não aceita dinheiro para pregar o Evangelho nem para oferecer estudos bíblicos. O acesso a este projeto e ao ensino bíblico aqui oferecido permanece gratuito.</p></div></div><div className="about-links">{[[settings.social_1_label,settings.social_1_url],[settings.social_2_label,settings.social_2_url],[settings.social_3_label,settings.social_3_url],[settings.social_4_label,settings.social_4_url]].map(([label,url],i)=>label&&url?<a key={i} href={url} target="_blank" rel="noopener noreferrer">{label}<ExternalLink size={16}/></a>:null)}{settings.personal_site_url&&<a href={settings.personal_site_url} target="_blank" rel="noopener noreferrer">Site <ExternalLink size={16}/></a>}{settings.books_projects_url&&<a href={settings.books_projects_url} target="_blank" rel="noopener noreferrer">Conheça livros e projetos <BookOpen size={16}/></a>}{settings.whatsapp_channel_url&&<a href={settings.whatsapp_channel_url} target="_blank" rel="noopener noreferrer">Canal do WhatsApp <MessageSquareText size={16}/></a>}</div></article></section>\n          )}\n\n          {view === "appeal" && (
             <section className="appeal-view"><div className="appeal-cross" aria-hidden="true"/><span className="eyebrow">Um convite do Evangelho</span><h1>Jesus Cristo é Senhor</h1><p className="appeal-lead">A Bíblia anuncia que Jesus é o Filho de Deus, morreu pelos pecados, ressuscitou dentre os mortos e voltará com poder e glória.</p>
               <blockquote>“Se com a tua boca confessares ao Senhor Jesus, e em teu coração creres que Deus o ressuscitou dentre os mortos, serás salvo.”<cite>Romanos 10:9 — Almeida 1819, Bíblia Livre</cite></blockquote>
               <div className="appeal-steps"><div><b>1</b><span><strong>Reconheça</strong>Confesse seu pecado e sua necessidade da graça de Deus.</span></div><div><b>2</b><span><strong>Arrependa-se</strong>Volte-se do pecado para Deus e não adie esse chamado.</span></div><div><b>3</b><span><strong>Creia em Jesus</strong>Confie no Filho de Deus, em sua morte e ressurreição.</span></div><div><b>4</b><span><strong>Confesse e siga</strong>Confesse Jesus como Senhor e caminhe em obediência, numa igreja fiel à Palavra.</span></div></div>
@@ -695,7 +704,7 @@ export function BibleApp() {
         <div className="info-notice"><ShieldCheck /><div><strong>Projeto gratuito para todos</strong><p>É proibida a venda deste sistema. Ele foi criado para servir às pessoas e compartilhar a Palavra de Deus.</p></div></div>
         <p>Devemos respeitar e sempre temer a Deus: não roubar, não trapacear e, sim, amar o próximo.</p>
         {settings.information_content && <div className="custom-info"><strong>Informação adicional</strong><p>{settings.information_content}</p></div>}
-        {settings.external_button_label && settings.external_button_url && <a className="external-info-button" href={settings.external_button_url} target="_blank" rel="noopener noreferrer">{settings.external_button_label}<ExternalLink size={16} /></a>}
+        <button className="external-info-button about-more-button" onClick={() => { setAboutOpen(false); setView("aboutMore"); }}>Saiba mais <ChevronRight size={16}/></button>\n        {settings.external_button_label && settings.external_button_url && <a className="external-info-button" href={settings.external_button_url} target="_blank" rel="noopener noreferrer">{settings.external_button_label}<ExternalLink size={16} /></a>}
         <p><strong>Bíblia:</strong> Almeida 1819 — Bíblia Livre. A fonte de dados identifica esta versão histórica como domínio público.</p><p><strong>Dicionário:</strong> Dicionário Teológico — Amplo Conhecimento, Projeto L.M. Lemos, por Luan Maciel de Lemos.</p><p><strong>Identidade:</strong> cristã evangélica, com influência reformada, cânon protestante de 66 livros e autoridade final das Escrituras.</p><p>Comentários, introduções e estudos são recursos humanos de apoio. Eles não possuem a mesma autoridade do texto bíblico.</p>
       </div></DialogContent></Dialog>
 
@@ -745,7 +754,7 @@ export function BibleApp() {
               <label>Nome do botão personalizado<input value={settingsDraft.external_button_label} onChange={(event) => setSettingsDraft((old) => ({ ...old, external_button_label: event.target.value }))} placeholder="Ex.: Conheça nosso ministério" /></label>
               <label>Link externo<input type="url" value={settingsDraft.external_button_url} onChange={(event) => setSettingsDraft((old) => ({ ...old, external_button_url: event.target.value }))} placeholder="https://..." /></label>
               <label>Informação adicional<Textarea rows={4} value={settingsDraft.information_content} onChange={(event) => setSettingsDraft((old) => ({ ...old, information_content: event.target.value }))} placeholder="Escreva o texto que aparecerá na página de informações." /></label>
-              <div className="admin-help-divider"><strong>Página “Como ajudar”</strong><small>Estes textos podem ser alterados quando quiser. O recebimento continua na InfinitePay da conta luanmacielxx.</small></div>
+              <div className="admin-help-divider"><strong>Página “Saiba mais”</strong><small>Configure o texto e os links públicos. Você pode adicionar até quatro redes sociais.</small></div>\n              <label>Título<input value={settingsDraft.about_more_title} onChange={(e)=>setSettingsDraft(o=>({...o,about_more_title:e.target.value}))}/></label>\n              <label>Texto da página<Textarea rows={7} value={settingsDraft.about_more_content} onChange={(e)=>setSettingsDraft(o=>({...o,about_more_content:e.target.value}))}/></label>\n              <label>Rede social 1 — nome<input value={settingsDraft.social_1_label} onChange={(e)=>setSettingsDraft(o=>({...o,social_1_label:e.target.value}))}/></label><label>Rede social 1 — link<input type="url" value={settingsDraft.social_1_url} onChange={(e)=>setSettingsDraft(o=>({...o,social_1_url:e.target.value}))}/></label>\n              <label>Rede social 2 — nome<input value={settingsDraft.social_2_label} onChange={(e)=>setSettingsDraft(o=>({...o,social_2_label:e.target.value}))}/></label><label>Rede social 2 — link<input type="url" value={settingsDraft.social_2_url} onChange={(e)=>setSettingsDraft(o=>({...o,social_2_url:e.target.value}))}/></label>\n              <label>Rede social 3 — nome<input value={settingsDraft.social_3_label} onChange={(e)=>setSettingsDraft(o=>({...o,social_3_label:e.target.value}))}/></label><label>Rede social 3 — link<input type="url" value={settingsDraft.social_3_url} onChange={(e)=>setSettingsDraft(o=>({...o,social_3_url:e.target.value}))}/></label>\n              <label>Rede social 4 — nome<input value={settingsDraft.social_4_label} onChange={(e)=>setSettingsDraft(o=>({...o,social_4_label:e.target.value}))}/></label><label>Rede social 4 — link<input type="url" value={settingsDraft.social_4_url} onChange={(e)=>setSettingsDraft(o=>({...o,social_4_url:e.target.value}))}/></label>\n              <label>Link do site<input type="url" value={settingsDraft.personal_site_url} onChange={(e)=>setSettingsDraft(o=>({...o,personal_site_url:e.target.value}))}/></label>\n              <label>Link “Conheça livros e projetos”<input type="url" value={settingsDraft.books_projects_url} onChange={(e)=>setSettingsDraft(o=>({...o,books_projects_url:e.target.value}))}/></label>\n              <label>Link do canal do WhatsApp<input type="url" value={settingsDraft.whatsapp_channel_url} onChange={(e)=>setSettingsDraft(o=>({...o,whatsapp_channel_url:e.target.value}))}/></label>\n              <div className="admin-help-divider"><strong>Página “Como ajudar”</strong><small>Estes textos podem ser alterados quando quiser. O recebimento continua na InfinitePay da conta luanmacielxx.</small></div>
               <label>Título da página<input value={settingsDraft.help_title} onChange={(event) => setSettingsDraft((old) => ({ ...old, help_title: event.target.value }))} /></label>
               <label>Texto principal<Textarea rows={6} value={settingsDraft.help_content} onChange={(event) => setSettingsDraft((old) => ({ ...old, help_content: event.target.value }))} /></label>
               <label>Texto do botão<input value={settingsDraft.donation_button_label} onChange={(event) => setSettingsDraft((old) => ({ ...old, donation_button_label: event.target.value }))} /></label>
