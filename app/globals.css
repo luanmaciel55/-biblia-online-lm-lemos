@@ -255,3 +255,23 @@ button { cursor: pointer; }
 .admin-help-divider { display:grid; gap:4px; padding:13px; margin-top:5px; border-left:3px solid #187a3d; background:var(--app-soft); border-radius:9px; }
 .admin-help-divider small { color:var(--app-muted); line-height:1.4; }
 @media(max-width:620px){ .help-card{padding:24px 17px;border-radius:20px}.donation-box{padding:17px}.help-content{font-size:17px}.help-back{width:100%;justify-content:center} }
+
+/* Recursos bíblicos: leitura limpa no celular */
+.resource-content{padding-bottom:150px}
+.resource-list{display:grid;gap:14px;margin-top:18px}
+.resource-item{padding:20px 22px!important;border-radius:18px!important}
+.resource-item h2{font-size:clamp(20px,4.8vw,27px)!important;line-height:1.25!important;margin:0 0 10px!important}
+.resource-item p{font-size:clamp(15px,4vw,18px)!important;line-height:1.62!important;margin:0!important;overflow-wrap:anywhere;word-break:normal}
+.resource-note{padding:16px 18px!important;border-radius:16px!important}
+.resource-note strong{font-size:20px!important}
+.resource-note p{font-size:15px!important;line-height:1.45!important;margin-top:6px!important}
+.resource-letters{scrollbar-width:none;padding-bottom:4px}
+.resource-letters::-webkit-scrollbar{display:none}
+.resource-credits{font-size:13px;line-height:1.5}
+@media(max-width:620px){
+ .resource-content .dictionary-search{position:relative;z-index:1}
+ .resource-item{padding:18px!important}
+ .resource-item p{font-size:16px!important}
+ .resource-note strong{font-size:18px!important}
+ .resource-note p{font-size:14px!important}
+}
