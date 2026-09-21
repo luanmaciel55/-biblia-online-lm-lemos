@@ -840,7 +840,29 @@ const FIRST_TEN_JOURNEY_MAPS = [
 ]
 
 function JourneyMaps(){
-  return <section className="journey-maps"><div className="journey-maps-heading"><strong>Mapas das viagens de Paulo</strong><p>Esquemas visuais do percurso, em ordem narrativa. As linhas indicam a sequência dos lugares e não uma escala geográfica exata.</p></div><div className="journey-map-grid">{FIRST_TEN_JOURNEY_MAPS.map((journey,index)=><article className="journey-map-card" key={journey.title}><div className="journey-map-title"><span>{index+1}</span><div><h2>{journey.title}</h2><small>{journey.ref}</small></div></div><div className="journey-map-canvas" role="img" aria-label={`Mapa esquemático da viagem de ${journey.title}`}><svg viewBox="0 0 600 230" preserveAspectRatio="none" aria-hidden="true"><path d="M45 175 C115 70 180 185 250 105 S390 55 455 125 S525 180 565 70" fill="none" stroke="currentColor" strokeWidth="5" strokeLinecap="round" strokeDasharray="9 10"/></svg>{journey.places.map((place,i)=>{const total=Math.max(journey.places.length-1,1);const left=8+(i/total)*84;const top=72+Math.sin(i*1.65)*23;return <div className="journey-stop" key={place+i} style={{left:`${left}%`,top:`${top}%`}}><b>{i+1}</b><span>{place}</span></div>})}</div></article>)}</div></section>;
+  return <section style={{margin:"0 0 28px",padding:"18px",border:"2px solid #2f7d4a",borderRadius:"18px",background:"#f7fbf8"}}>
+    <div style={{marginBottom:"16px"}}>
+      <strong style={{display:"block",fontSize:"24px",color:"#173d26"}}>Mapas das viagens de Paulo</strong>
+      <p style={{margin:"6px 0 0",lineHeight:1.5,color:"#445"}}>Percursos esquemáticos em ordem narrativa. Cada número representa uma parada da viagem.</p>
+    </div>
+    <div style={{display:"grid",gap:"16px"}}>
+      {FIRST_TEN_JOURNEY_MAPS.map((journey,index)=><article key={journey.title} style={{padding:"16px",border:"1px solid #b8d7c2",borderRadius:"15px",background:"#fff"}}>
+        <h2 style={{margin:"0 0 4px",fontSize:"20px",color:"#173d26"}}>{index+1}. {journey.title}</h2>
+        <small style={{fontWeight:700,color:"#667"}}>{journey.ref}</small>
+        <div style={{marginTop:"14px",padding:"14px 10px",borderRadius:"12px",background:"#eef7f1",overflowX:"auto"}}>
+          <div style={{display:"flex",alignItems:"center",minWidth:"max-content"}}>
+            {journey.places.map((place,i)=><div key={place+i} style={{display:"flex",alignItems:"center"}}>
+              <div style={{display:"flex",flexDirection:"column",alignItems:"center",width:"96px",textAlign:"center"}}>
+                <b style={{display:"grid",placeItems:"center",width:"30px",height:"30px",borderRadius:"50%",background:"#267447",color:"#fff"}}>{i+1}</b>
+                <span style={{marginTop:"6px",fontSize:"12px",fontWeight:800,lineHeight:1.15,color:"#233"}}>{place}</span>
+              </div>
+              {i<journey.places.length-1?<span aria-hidden="true" style={{fontSize:"24px",fontWeight:900,color:"#267447"}}>→</span>:null}
+            </div>)}
+          </div>
+        </div>
+      </article>)}
+    </div>
+  </section>;
 }
 
 function ResourceContent({ resource, goToReference, search, setSearch, letter, setLetter, externalItems }: { resource: Exclude<MoreResource, null>; goToReference: (ref: ScriptureRef) => void; search:string; setSearch:(v:string)=>void; letter:string; setLetter:(v:string)=>void; externalItems:{title:string;text:string;refs?:ScriptureRef[]}[] }) {
