@@ -230,3 +230,28 @@ button { cursor: pointer; }
 .resource-item h2 { margin:0 0 7px; font-size:1.08rem; }
 .resource-item p { margin:0; line-height:1.55; opacity:.82; }
 .resource-item .reference-list { margin-top:12px; }
+
+
+/* Página Como ajudar */
+.help-account-button { background:#187a3d !important; color:#fff !important; border:1px solid #4aa3df !important; box-shadow:0 0 0 3px rgba(74,163,223,.16),0 8px 22px rgba(24,122,61,.18); }
+.help-view { max-width:760px; margin:0 auto; display:grid; gap:18px; }
+.help-back { justify-self:start; display:flex; align-items:center; gap:7px; padding:10px 14px; border:1px solid var(--app-line); border-radius:12px; background:var(--app-surface); color:var(--app-text); font-weight:800; }
+.help-card { padding:clamp(24px,5vw,48px); border:1px solid var(--app-line); border-radius:26px; background:var(--app-surface); box-shadow:0 16px 45px rgba(0,0,0,.07); }
+.help-card h1 { margin:8px 0 18px; font:700 clamp(36px,6vw,54px) Georgia,serif; }
+.help-content { white-space:pre-wrap; color:var(--app-muted); font:18px/1.7 Georgia,serif; }
+.help-principle { display:flex; gap:14px; margin:24px 0; padding:18px; border:1px solid var(--app-line); border-radius:16px; background:var(--app-soft); }
+.help-principle > svg { flex:0 0 auto; color:#187a3d; }
+.help-principle p { margin:5px 0 0; color:var(--app-muted); line-height:1.55; }
+.donation-box { display:grid; gap:13px; margin-top:24px; padding:22px; border:1px solid rgba(74,163,223,.55); border-radius:20px; box-shadow:0 0 0 4px rgba(74,163,223,.08); }
+.donation-box label { display:grid; gap:8px; font-weight:800; }
+.donation-input { display:flex; align-items:center; height:54px; overflow:hidden; border:1px solid var(--app-line); border-radius:13px; background:var(--app-bg); }
+.donation-input span { padding:0 13px; color:var(--app-muted); font-weight:900; }
+.donation-input input { flex:1; min-width:0; height:100%; padding:0 14px 0 0; border:0; outline:0; background:transparent; color:var(--app-text); font-size:20px; font-weight:800; }
+.donation-box small,.donation-provider { color:var(--app-muted); line-height:1.5; }
+.donation-button { display:flex; align-items:center; justify-content:center; gap:9px; min-height:56px; padding:0 18px; border:1px solid #58aee7; border-radius:999px; background:#187a3d; color:#fff; font-size:16px; font-weight:900; box-shadow:0 0 0 4px rgba(74,163,223,.14),0 10px 25px rgba(24,122,61,.24); }
+.donation-button:disabled { opacity:.65; cursor:wait; }
+.donation-provider { margin:0; text-align:center; font-size:12px; }
+.help-back-bottom { justify-self:center; min-height:46px; padding-inline:22px; }
+.admin-help-divider { display:grid; gap:4px; padding:13px; margin-top:5px; border-left:3px solid #187a3d; background:var(--app-soft); border-radius:9px; }
+.admin-help-divider small { color:var(--app-muted); line-height:1.4; }
+@media(max-width:620px){ .help-card{padding:24px 17px;border-radius:20px}.donation-box{padding:17px}.help-content{font-size:17px}.help-back{width:100%;justify-content:center} }
