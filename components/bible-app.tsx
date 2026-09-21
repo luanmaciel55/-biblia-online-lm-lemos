@@ -25,7 +25,7 @@ type DictionaryEntry = {
 };
 type DictionaryData = { title: string; project: string; author: string; identity: string; entries: DictionaryEntry[] };
 type DictionaryManifest = Omit<DictionaryData, "entries"> & { parts: string[] };
-type View = "bible" | "dictionary" | "topics" | "studies" | "appeal" | "more";
+type View = "bible" | "dictionary" | "topics" | "studies" | "appeal" | "more" | "help";
 type Theme = "default" | "brown" | "red" | "black";
 type Annotation = { color?: string; note?: string };
 type VerseSelection = { book: number; chapter: number; verse: BibleVerse };
@@ -37,6 +37,11 @@ type SiteSettings = {
   external_button_label: string;
   external_button_url: string;
   information_content: string;
+  help_title: string;
+  help_content: string;
+  donation_button_label: string;
+  donation_url: string;
+  donation_note: string;
 };
 type AccessStats = { guest: number; registered: number; total: number; users: number };
 
@@ -49,7 +54,14 @@ const COLORS = [
 const themeLabels: Record<Theme, string> = { default: "Padrão", brown: "Marrom", red: "Vermelho", black: "Preto" };
 const normalize = (value: string) => value.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
 const verseKey = (book: number, chapter: number, verse: number) => `${book}-${chapter}-${verse}`;
-const defaultSettings: SiteSettings = { external_button_label: "", external_button_url: "", information_content: "" };
+const defaultSettings: SiteSettings = {
+  external_button_label: "", external_button_url: "", information_content: "",
+  help_title: "Como ajudar",
+  help_content: "Este projeto existe para servir, ensinar e compartilhar a Palavra de Deus gratuitamente. Não aceitamos dinheiro para pregar o Evangelho e o ensino bíblico não está à venda. Se você desejar contribuir voluntariamente, sua doação ajuda a manter este trabalho e também nas necessidades da vida, como alimentação, água e outras despesas essenciais.",
+  donation_button_label: "Fazer doação e ofertar",
+  donation_url: "",
+  donation_note: "Você pode doar o valor que quiser. Toda contribuição é voluntária."
+};
 
 function getVisitorId() {
   const key = "lm-bible-visitor-id";
@@ -128,6 +140,9 @@ export function BibleApp() {
   const [settings, setSettings] = useState<SiteSettings>(defaultSettings);
   const [settingsDraft, setSettingsDraft] = useState<SiteSettings>(defaultSettings);
   const [settingsBusy, setSettingsBusy] = useState(false);
+  const [donationAmount, setDonationAmount] = useState("");
+  const [donationBusy, setDonationBusy] = useState(false);
+  const [donationMessage, setDonationMessage] = useState("");
   const deferredSearchText = useDeferredValue(searchText);
   const deferredDictionarySearch = useDeferredValue(dictionarySearch);
 
@@ -195,7 +210,7 @@ export function BibleApp() {
 
   useEffect(() => {
     let active = true;
-    supabase.from("site_settings").select("external_button_label,external_button_url,information_content").eq("id", 1).maybeSingle()
+    supabase.from("site_settings").select("external_button_label,external_button_url,information_content,help_title,help_content,donation_button_label,donation_url,donation_note").eq("id", 1).maybeSingle()
       .then(({ data }) => { if (active && data) { setSettings(data); setSettingsDraft(data); } });
     supabase.auth.getSession().then(({ data }) => {
       if (!active) return;
@@ -394,6 +409,11 @@ export function BibleApp() {
       external_button_label: settingsDraft.external_button_label.trim(),
       external_button_url: url,
       information_content: settingsDraft.information_content.trim(),
+      help_title: settingsDraft.help_title.trim() || "Como ajudar",
+      help_content: settingsDraft.help_content.trim(),
+      donation_button_label: settingsDraft.donation_button_label.trim() || "Fazer doação e ofertar",
+      donation_url: settingsDraft.donation_url.trim(),
+      donation_note: settingsDraft.donation_note.trim(),
     };
     const { error } = await supabase.from("site_settings").update({
       ...clean, updated_at: new Date().toISOString(), updated_by: user.id,
@@ -404,6 +424,30 @@ export function BibleApp() {
     setSettingsDraft(clean);
     setStatus("Informações públicas atualizadas.");
     window.setTimeout(() => setStatus(""), 2400);
+  }
+
+  async function startDonation() {
+    const normalized = donationAmount.replace(",", ".").trim();
+    const amount = Number(normalized);
+    if (!Number.isFinite(amount) || amount < 1) {
+      setDonationMessage("Digite um valor de pelo menos R$ 1,00.");
+      return;
+    }
+    setDonationBusy(true);
+    setDonationMessage("");
+    try {
+      const response = await fetch("/api/donation", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ amount })
+      });
+      const data = await response.json();
+      if (!response.ok || !data.url) throw new Error("checkout");
+      window.location.href = data.url;
+    } catch {
+      setDonationMessage("Não foi possível abrir o pagamento agora. Tente novamente.");
+      setDonationBusy(false);
+    }
   }
 
   async function createVerseImage() {
@@ -584,6 +628,26 @@ export function BibleApp() {
             </section>
           )}
 
+          {view === "help" && (
+            <section className="help-view">
+              <button className="help-back" onClick={() => setView("bible")}><ChevronLeft /> Voltar para a Bíblia</button>
+              <div className="help-card">
+                <span className="eyebrow">Contribuição voluntária</span>
+                <h1>{settings.help_title || "Como ajudar"}</h1>
+                <p className="help-content">{settings.help_content}</p>
+                <div className="help-principle"><ShieldCheck /><div><strong>O Evangelho não está à venda</strong><p>Não cobramos para pregar ou ensinar a Palavra de Deus. A contribuição é voluntária e ajuda nas necessidades da vida e na continuidade deste trabalho.</p></div></div>
+                <div className="donation-box">
+                  <label>Quanto você deseja doar ou ofertar?<div className="donation-input"><span>R$</span><input inputMode="decimal" value={donationAmount} onChange={(e) => setDonationAmount(e.target.value.replace(/[^0-9,.]/g, ""))} placeholder="0,00" /></div></label>
+                  <small>{settings.donation_note || "Você pode doar o valor que quiser. Toda contribuição é voluntária."}</small>
+                  <button className="donation-button" onClick={startDonation} disabled={donationBusy}><ShieldCheck /> {donationBusy ? "Abrindo pagamento..." : (settings.donation_button_label || "Fazer doação e ofertar")}</button>
+                  <p className="donation-provider">Pagamento processado com segurança pela InfinitePay.</p>
+                  {donationMessage && <p className="auth-message" role="status">{donationMessage}</p>}
+                </div>
+              </div>
+              <button className="help-back help-back-bottom" onClick={() => setView("bible")}><BookOpen /> Voltar para a Bíblia</button>
+            </section>
+          )}
+
           {view === "appeal" && (
             <section className="appeal-view"><div className="appeal-cross" aria-hidden="true"/><span className="eyebrow">Um convite do Evangelho</span><h1>Jesus Cristo é Senhor</h1><p className="appeal-lead">A Bíblia anuncia que Jesus é o Filho de Deus, morreu pelos pecados, ressuscitou dentre os mortos e voltará com poder e glória.</p>
               <blockquote>“Se com a tua boca confessares ao Senhor Jesus, e em teu coração creres que Deus o ressuscitou dentre os mortos, serás salvo.”<cite>Romanos 10:9 — Almeida 1819, Bíblia Livre</cite></blockquote>
@@ -643,6 +707,7 @@ export function BibleApp() {
             <Button variant="outline" onClick={() => setSavedListMode("notes")}><FileText /> Minhas anotações</Button>
             <Button variant="outline" onClick={() => setSavedListMode("marks")}><Highlighter /> Minhas marcações</Button>
           </div>
+          <Button className="help-account-button" onClick={() => { setAuthOpen(false); setView("help"); }}><Sparkles /> Como ajudar</Button>
           {isAdmin && <Button onClick={() => { setAuthOpen(false); setAdminOpen(true); }}><ShieldCheck /> Painel administrador</Button>}
           <Button variant="outline" onClick={signOut}><LogOut /> Sair da conta</Button>
         </div> : <>
@@ -680,6 +745,11 @@ export function BibleApp() {
               <label>Nome do botão personalizado<input value={settingsDraft.external_button_label} onChange={(event) => setSettingsDraft((old) => ({ ...old, external_button_label: event.target.value }))} placeholder="Ex.: Conheça nosso ministério" /></label>
               <label>Link externo<input type="url" value={settingsDraft.external_button_url} onChange={(event) => setSettingsDraft((old) => ({ ...old, external_button_url: event.target.value }))} placeholder="https://..." /></label>
               <label>Informação adicional<Textarea rows={4} value={settingsDraft.information_content} onChange={(event) => setSettingsDraft((old) => ({ ...old, information_content: event.target.value }))} placeholder="Escreva o texto que aparecerá na página de informações." /></label>
+              <div className="admin-help-divider"><strong>Página “Como ajudar”</strong><small>Estes textos podem ser alterados quando quiser. O recebimento continua na InfinitePay da conta luanmacielxx.</small></div>
+              <label>Título da página<input value={settingsDraft.help_title} onChange={(event) => setSettingsDraft((old) => ({ ...old, help_title: event.target.value }))} /></label>
+              <label>Texto principal<Textarea rows={6} value={settingsDraft.help_content} onChange={(event) => setSettingsDraft((old) => ({ ...old, help_content: event.target.value }))} /></label>
+              <label>Texto do botão<input value={settingsDraft.donation_button_label} onChange={(event) => setSettingsDraft((old) => ({ ...old, donation_button_label: event.target.value }))} /></label>
+              <label>Observação sobre a contribuição<Textarea rows={3} value={settingsDraft.donation_note} onChange={(event) => setSettingsDraft((old) => ({ ...old, donation_note: event.target.value }))} /></label>
               <Button type="submit" disabled={settingsBusy}><Save /> {settingsBusy ? "Salvando..." : "Salvar informações"}</Button>{status && <span className="saved-status">{status}</span>}
             </form>
           </section>
