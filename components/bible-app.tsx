@@ -832,6 +832,23 @@ function cleanResourceText(value:string, resource:string, title:boolean) {
   return text.replace(/\\?"/g,"").replace(/\s+([.,;:])/g,"$1").trim();
 }
 
+const FIRST_TEN_JOURNEY_MAPS = [
+  {title:"Abraão",ref:"Gênesis 11–13",places:["Ur","Harã","Canaã","Egito","Canaã"]},
+  {title:"Jacó",ref:"Gênesis 28–35; 46",places:["Canaã","Betel","Harã","Gileade","Canaã","Egito"]},
+  {title:"José",ref:"Gênesis 37–47",places:["Hebrom","Dotã","Egito"]},
+  {title:"Êxodo",ref:"Êxodo 12–19",places:["Egito","Mar","Deserto","Sinai"]},
+  {title:"Espias",ref:"Números 13–14",places:["Cades-Barneia","Neguebe","Hebrom","Canaã","Cades-Barneia"]},
+  {title:"Josué",ref:"Josué 1–12",places:["Jordão","Gilgal","Jericó","Ai","Siquém"]},
+  {title:"Rute",ref:"Rute 1",places:["Moabe","Caminho de Judá","Belém"]},
+  {title:"Davi",ref:"1 Samuel 16–31; 2 Samuel 2–5",places:["Belém","Gibeá","Deserto de Judá","Hebrom","Jerusalém"]},
+  {title:"Elias",ref:"1 Reis 17–19",places:["Tisbe","Querite","Sarepta","Carmelo","Horebe"]},
+  {title:"Jonas",ref:"Jonas 1–3",places:["Israel","Jope","Mar","Nínive"]}
+];
+
+function JourneyMaps(){
+  return <section className="journey-maps"><div className="journey-maps-heading"><strong>10 mapas de viagens bíblicas</strong><p>Esquemas visuais do percurso, em ordem narrativa. As linhas indicam a sequência dos lugares e não uma escala geográfica exata.</p></div><div className="journey-map-grid">{FIRST_TEN_JOURNEY_MAPS.map((journey,index)=><article className="journey-map-card" key={journey.title}><div className="journey-map-title"><span>{index+1}</span><div><h2>{journey.title}</h2><small>{journey.ref}</small></div></div><div className="journey-map-canvas" role="img" aria-label={`Mapa esquemático da viagem de ${journey.title}`}><svg viewBox="0 0 600 230" preserveAspectRatio="none" aria-hidden="true"><path d="M45 175 C115 70 180 185 250 105 S390 55 455 125 S525 180 565 70" fill="none" stroke="currentColor" strokeWidth="5" strokeLinecap="round" strokeDasharray="9 10"/></svg>{journey.places.map((place,i)=>{const total=Math.max(journey.places.length-1,1);const left=8+(i/total)*84;const top=72+Math.sin(i*1.65)*23;return <div className="journey-stop" key={place+i} style={{left:`${left}%`,top:`${top}%`}}><b>{i+1}</b><span>{place}</span></div>})}</div></article>)}</div></section>;
+}
+
 function ResourceContent({ resource, goToReference, search, setSearch, letter, setLetter, externalItems }: { resource: Exclude<MoreResource, null>; goToReference: (ref: ScriptureRef) => void; search:string; setSearch:(v:string)=>void; letter:string; setLetter:(v:string)=>void; externalItems:{title:string;text:string;refs?:ScriptureRef[]}[] }) {
   const q=normalize(search.trim());
   const baseItems=externalItems.length ? externalItems : (RESOURCE_DATA[resource]||[]);
