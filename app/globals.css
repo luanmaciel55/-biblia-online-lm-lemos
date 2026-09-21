@@ -275,3 +275,16 @@ button { cursor: pointer; }
  .resource-note strong{font-size:18px!important}
  .resource-note p{font-size:14px!important}
 }
+
+
+/* Página Saiba mais */
+.about-more-view{max-width:800px;margin:0 auto;display:grid;gap:18px}
+.about-more-card{padding:clamp(24px,5vw,48px);border:1px solid var(--app-line);border-radius:26px;background:var(--app-surface);box-shadow:0 16px 45px rgba(0,0,0,.07)}
+.about-more-card h1{margin:8px 0 18px;font:700 clamp(36px,6vw,54px) Georgia,serif}
+.about-more-copy{white-space:pre-wrap;color:var(--app-muted);font:18px/1.7 Georgia,serif}
+.about-more-principle{display:flex;gap:14px;margin:24px 0;padding:18px;border:1px solid var(--app-line);border-radius:16px;background:var(--app-soft)}
+.about-more-principle>svg{flex:0 0 auto;color:#187a3d}.about-more-principle p{margin:5px 0 0;color:var(--app-muted);line-height:1.55}
+.about-links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:22px}
+.about-links a,.about-more-button{display:flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:10px 15px;border:1px solid var(--app-line);border-radius:13px;background:var(--app-soft);color:var(--app-text);font-weight:800;text-decoration:none}
+.about-links a:hover,.about-more-button:hover{border-color:var(--app-accent);transform:translateY(-1px)}
+@media(max-width:620px){.about-more-card{padding:24px 17px;border-radius:20px}.about-more-copy{font-size:17px}.about-links{grid-template-columns:1fr}}
