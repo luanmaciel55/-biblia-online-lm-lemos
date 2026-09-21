@@ -547,7 +547,7 @@ export function BibleApp() {
               {moreResource ? <>
                 <button className="back-link" onClick={() => { setMoreResource(null); setResourceSearch(""); setResourceLetter("TODAS"); }}><ChevronLeft /> Voltar aos recursos</button>
                 <div className="page-title"><span className="eyebrow">Mais recursos</span><h1>{moreResource}</h1></div>
-                <ResourceContent resource={moreResource} goToReference={goToReference} search={resourceSearch} setSearch={setResourceSearch} letter={resourceLetter} setLetter={setResourceLetter} externalItems={resourceExternal[moreResource] || []} />
+                <ResourceContent resource={moreResource} goToReference={goToReference} search={resourceSearch} setSearch={setResourceSearch} letter={resourceLetter} setLetter={setResourceLetter} externalItems={externalResourceItems[moreResource] || resourceExternal[moreResource] || []} />
               </> : <>
                 <div className="page-title"><span className="eyebrow">Ferramentas para aprofundar</span><h1>Mais recursos</h1><p>Escolha uma ferramenta de estudo bíblico.</p></div>
                 <div className="more-resources-grid">
