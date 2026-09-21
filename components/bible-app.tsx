@@ -812,11 +812,19 @@ function ResourceContent({ resource, goToReference, search, setSearch, letter, s
   const q=normalize(search.trim());
   const baseItems=externalItems.length ? externalItems : (RESOURCE_DATA[resource]||[]);
   const cleaned=baseItems.map(item=>({ ...item, title: cleanResourceText(item.title, resource, true), text: cleanResourceText(item.text, resource, false) }));
-  const alphaLabel=(title:string)=>{
-    const withoutCodes=title.replace(/^(?:G|H)\d+\s*[·—-]?\s*/i,"").replace(/^Estudo lexical\s+\d+\s*[—-]\s*/i,"").replace(/^Relações familiares\s*[—-]\s*/i,"").trim();
-    return normalize(withoutCodes);
+  const alphaLabel=(item:{title:string;text:string})=>{
+    let label=item.title.replace(/^(?:G|H)\d+\s*[·—-]?\s*/i,"").replace(/^Estudo lexical\s+\d+\s*[—-]\s*/i,"").replace(/^Relações familiares\s*[—-]\s*/i,"").trim();
+    if(resource==="Strong") {
+      const meaning=item.text.match(/Significado(?: resumido)?:\s*([^.;]+)/i)?.[1]?.trim();
+      if(meaning) label=meaning;
+    }
+    if(resource==="Estudos STEP Bible") {
+      const meaning=item.text.match(/Significado resumido:\s*([^.;]+)/i)?.[1]?.trim();
+      if(meaning) label=meaning;
+    }
+    return normalize(label);
   };
-  const items=cleaned.filter(item=>{ const searchOk=!q||normalize(item.title+" "+item.text).includes(q); const letterOk=letter==="TODAS"||alphaLabel(item.title).startsWith(normalize(letter)); return searchOk&&letterOk; }).sort((a,b)=>alphaLabel(a.title).localeCompare(alphaLabel(b.title),"pt-BR"));
+  const items=cleaned.filter(item=>{ const searchOk=!q||normalize(item.title+" "+item.text).includes(q); const letterOk=letter==="TODAS"||alphaLabel(item).startsWith(normalize(letter)); return searchOk&&letterOk; }).sort((a,b)=>alphaLabel(a).localeCompare(alphaLabel(b),"pt-BR"));
   return <div className="resource-content">
     <label className="dictionary-search"><Search size={20}/><input value={search} onChange={e=>setSearch(e.target.value)} placeholder={"Pesquisar em "+resource+"..."} /></label>
     <div className="dictionary-letters resource-letters" aria-label="Filtrar por letra"><button className={letter==="TODAS"?"active":""} onClick={()=>setLetter("TODAS")}>Todas</button>{"ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("").map(l=><button key={l} className={letter===l?"active":""} onClick={()=>setLetter(l)}>{l}</button>)}</div>
